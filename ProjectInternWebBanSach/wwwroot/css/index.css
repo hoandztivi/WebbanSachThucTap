@@ -1,0 +1,106 @@
+﻿/* Electric Card Transparent – no black background */
+.ec-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    isolation: isolate;
+}
+
+/* Khung card */
+.ec-card {
+    --ec-glow: #ffb300;
+    position: relative;
+    width: 260px;
+    height: 360px;
+    padding: 2px;
+    border-radius: 24px;
+    background: radial-gradient(circle at 50% 50%, var(--ec-glow) 0%, transparent 70%) 0 0/200% 200%;
+    animation: ec-flicker 2s infinite linear, ec-rotate 4s linear infinite;
+    flex-shrink: 0;
+}
+
+/* Lớp trong – không nền đen nữa, dùng trong suốt */
+.ec-inner {
+    position: relative;
+    background: transparent; /* ✅ xóa nền đen */
+    border-radius: 22px;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 24px var(--ec-glow);
+    overflow: hidden;
+}
+
+/* Tia điện chính */
+.ec-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient( 115deg, var(--ec-glow) 10%, rgba(255, 255, 255, 0.3) 30%, transparent 60%, var(--ec-glow) 90% );
+    filter: blur(2px);
+    background-size: 200% 200%;
+    animation: ec-electric 1.5s linear infinite, ec-flicker 2s infinite;
+    z-index: 0;
+}
+
+/* Hiệu ứng sáng mờ xung quanh */
+.ec-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    box-shadow: 0 0 40px var(--ec-glow);
+    opacity: 0.4;
+    animation: ec-flicker 2s infinite;
+    z-index: 0;
+}
+@keyframes ec-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Nội dung */
+.ec-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--ec-glow);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.ec-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000; /* chữ đen để hợp nền sáng */
+    margin-bottom: 0.75rem;
+    z-index: 1;
+}
+
+.ec-desc {
+    font-size: 0.9rem;
+    color: #555;
+    opacity: 0.8;
+    line-height: 1.4;
+    z-index: 1;
+}
