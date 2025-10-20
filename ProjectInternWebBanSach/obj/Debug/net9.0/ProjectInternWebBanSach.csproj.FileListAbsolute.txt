@@ -143,8 +143,6 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\ProjectInternWebBanSach.pdb
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\ProjectInternWebBanSach.genruntimeconfig.cache
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\ref\ProjectInternWebBanSach.dll
-D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\vafft29i51-tahfr54h0m.gz
-D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\52ssw23cbm-pfqioaxq2v.gz
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\fwazyg83e9-zh91bhsm9d.gz
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Humanizer.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -328,7 +326,6 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\v6m6a1wz7h-mz7u9x0pl7.gz
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\fwiik1uoic-igjixy4k1r.gz
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -338,7 +335,6 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\System.Formats.Asn1.dll
-D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\vgirmm37ih-yj6hv6y9dk.gz
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.Build.Locator.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
@@ -356,3 +352,13 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\ProjectInternWebBanSach.sourcelink.json
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\x4e6dlueq7-o2xtgbvug2.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\1vqkyc30s8-6uzqmz7q5k.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\vgirmm37ih-7znkvb9sqz.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\ciifuj2kny-1ct3fg3pqw.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\52ssw23cbm-ie4tpbcgxq.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\0dqc9zea82-ihtywg1yha.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\v6m6a1wz7h-4et4qs8wn8.gz
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\obj\Debug\net9.0\compressed\vafft29i51-tzbwm91860.gz

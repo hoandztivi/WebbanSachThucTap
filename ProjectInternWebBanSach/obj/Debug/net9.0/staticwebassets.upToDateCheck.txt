@@ -1,7 +1,9 @@
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\js\index.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery\dist\jquery.slim.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\js\register.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery\dist\jquery.min.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\index.css
@@ -17,6 +19,7 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery\dist\jquery.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\theotheloai.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -56,6 +59,7 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery\dist\jquery.slim.min.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\register.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery\dist\jquery.slim.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery-validation\dist\additional-methods.js
@@ -65,13 +69,31 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 wwwroot\css\index.css
 wwwroot\css\login.css
+wwwroot\css\register.css
 wwwroot\css\site.css
+wwwroot\css\theotheloai.css
 wwwroot\favicon.ico
 wwwroot\images\avtv2.jpg
 wwwroot\images\bo-cong-thuong.png
+wwwroot\images\cursor.png
 wwwroot\images\logo1.png
 wwwroot\images\logo2.png
+wwwroot\img\anhdaidien\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png
+wwwroot\img\banner\banner1.png
+wwwroot\img\banner\banner2.png
+wwwroot\img\sach\conan1.jpg
+wwwroot\img\sach\conan2.jpg
+wwwroot\img\sach\conan3.jpg
+wwwroot\img\sach\conan4.jpg
+wwwroot\img\sach\conan5.jpg
+wwwroot\img\sach\doraemon1.jpg
+wwwroot\img\sach\doraemon2.jpg
+wwwroot\img\sach\doraemon3.jpg
+wwwroot\img\sach\doraemon4.jpg
+wwwroot\img\sach\doraemon5.jpg
+wwwroot\js\index.js
 wwwroot\js\login.js
+wwwroot\js\register.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

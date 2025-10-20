@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ProjectInternWebBanSach.Models.TheLoaiSach>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="divide-y divide-amber-600">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@Url.Action("TheoTheLoai", "Products", new { id = item.MaTheLoai })"
+                   class="block px-6 py-3 text-white hover:bg-amber-600 transition">
+                    @item.TenTheLoai
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p class="px-6 py-3 text-white text-sm">Không có thể loại nào</p>
+}

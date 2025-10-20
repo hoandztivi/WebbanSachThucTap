@@ -1,106 +1,129 @@
-﻿/* Electric Card Transparent – no black background */
-.ec-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    isolation: isolate;
-}
+﻿/* theo-the-loai.css */
 
-/* Khung card */
-.ec-card {
-    --ec-glow: #ffb300;
-    position: relative;
-    width: 260px;
-    height: 360px;
-    padding: 2px;
-    border-radius: 24px;
-    background: radial-gradient(circle at 50% 50%, var(--ec-glow) 0%, transparent 70%) 0 0/200% 200%;
-    animation: ec-flicker 2s infinite linear, ec-rotate 4s linear infinite;
-    flex-shrink: 0;
-}
-
-/* Lớp trong – không nền đen nữa, dùng trong suốt */
-.ec-inner {
-    position: relative;
-    background: transparent; /* ✅ xóa nền đen */
-    border-radius: 22px;
-    width: 100%;
-    height: 100%;
-    padding: 2rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 0 24px var(--ec-glow);
+/* Product Card */
+.product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* Tia điện chính */
-.ec-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    padding: 2px;
-    background: linear-gradient( 115deg, var(--ec-glow) 10%, rgba(255, 255, 255, 0.3) 30%, transparent 60%, var(--ec-glow) 90% );
-    filter: blur(2px);
-    background-size: 200% 200%;
-    animation: ec-electric 1.5s linear infinite, ec-flicker 2s infinite;
-    z-index: 0;
-}
-
-/* Hiệu ứng sáng mờ xung quanh */
-.ec-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    box-shadow: 0 0 40px var(--ec-glow);
-    opacity: 0.4;
-    animation: ec-flicker 2s infinite;
-    z-index: 0;
-}
-@keyframes ec-rotate {
-    0% {
-        filter: hue-rotate(0deg);
+    .product-card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transform: translateY(-4px);
     }
 
-    100% {
-        filter: hue-rotate(360deg);
+/* Discount Badge */
+.discount-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 10;
+    background-color: #dc2626;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 768px) {
+    .discount-badge {
+        font-size: 0.875rem;
     }
 }
 
-/* Nội dung */
-.ec-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid var(--ec-glow);
-    border-radius: 20px;
-    padding: 0.25rem 0.75rem;
-    font-size: 12px;
-    color: #333;
-    letter-spacing: 1px;
-    z-index: 1;
+/* Product Title */
+.product-card .title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1f2937;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.ec-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #000; /* chữ đen để hợp nền sáng */
-    margin-bottom: 0.75rem;
-    z-index: 1;
+@media (min-width: 768px) {
+    .product-card .title {
+        font-size: 1rem;
+        min-height: 3rem;
+    }
 }
 
-.ec-desc {
-    font-size: 0.9rem;
-    color: #555;
-    opacity: 0.8;
-    line-height: 1.4;
-    z-index: 1;
+/* Price Styling */
+.product-card .price {
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .product-card .price {
+        font-size: 1.125rem;
+    }
+}
+
+.product-card .old-price {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    text-decoration: line-through;
+}
+
+@media (min-width: 768px) {
+    .product-card .old-price {
+        font-size: 0.875rem;
+    }
+}
+
+/* Aspect Ratio */
+.aspect-\[3\/4\] {
+    aspect-ratio: 3 / 4;
+}
+
+/* Fallback for older browsers */
+@supports not (aspect-ratio: 3 / 4) {
+    .aspect-\[3\/4\] {
+        position: relative;
+        padding-bottom: 133.33%;
+    }
+
+        .aspect-\[3\/4\] img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+}
+
+/* Focus Accessibility */
+.product-card a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+}
+
+/* Tap Highlight */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Print Styles */
+@media print {
+    .product-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+        .product-card:hover {
+            transform: none;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
 }

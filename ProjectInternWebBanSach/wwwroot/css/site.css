@@ -1,4 +1,7 @@
-﻿:root {
+﻿body {
+    cursor: url('/images/cursor.png'), auto;
+}
+:root {
     --transition-speed: 0.3s;
 }
 
@@ -7,7 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -131,4 +133,52 @@ img {
     .footer-right {
         text-align: right;
     }
+}
+/* ===================== HEADER OPTIMIZATION ===================== */
+header .container {
+    max-width: 1280px;
+    padding: 0 1rem;
+}
+
+header .flex.flex-col.lg\:flex-row.items-center.justify-between {
+    gap: 0.75rem; /* giảm khoảng cách giữa các khối */
+}
+
+/* Các icon giỏ hàng, wishlist, menu sát hơn */
+header .flex.items-center.gap-4 {
+    gap: 0.75rem;
+}
+
+/* Logo & chữ */
+#logoImage {
+    width: 48px;
+    height: 48px;
+    transition: opacity 0.5s ease-in-out, transform 0.2s ease;
+}
+
+    #logoImage:hover {
+        transform: scale(1.05);
+    }
+
+/* ===================== AVATAR ===================== */
+.avatar-wrapper img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .avatar-wrapper img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+/* Tên và số dư hiển thị sát hơn */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
 }

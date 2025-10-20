@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectInternWebBanSach.Models;
 
@@ -45,6 +46,12 @@ public partial class NguoiDung
 
 
 
-    // lưu coookie
+    // lưu coookie [NotMapped] để không tạo cột trong database
+    [NotMapped]
     public bool RememberMe { get; set; }
+    [NotMapped]
+    public string? ConfirmPassword { get; set; }
+    [NotMapped]
+    public string? AcceptTerms { get; set; }
+
 }

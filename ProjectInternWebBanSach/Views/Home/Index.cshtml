@@ -1,21 +1,85 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<link rel="stylesheet" href="~/css/index.css" />
-<div class="ec-wrapper">
-    <div class="ec-card" style="--ec-glow:#ffb300;">
-        <div class="ec-inner">
-            <span class="ec-badge">ANIMATED</span>
-            <h2 class="ec-title">Electric Border</h2>
-            <p class="ec-desc">In case you'd like to emphasize something very dramatically.</p>
-        </div>
-    </div>
+﻿@model IEnumerable<dynamic>
 
-    <div class="ec-card" style="--ec-glow:#8b5cf6;">
-        <div class="ec-inner">
-            <span class="ec-badge">ANIMATED</span>
-            <h2 class="ec-title">Electric Border</h2>
-            <p class="ec-desc">In case you'd like to emphasize something very dramatically.</p>
-        </div>
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+<link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+
+<!-- Banner Carousel -->
+<div class="banner-carousel relative overflow-hidden mb-8">
+    <div class="carousel-container flex transition-transform duration-500 ease-in-out">
+        @foreach (var banner in ViewBag.Banners)
+        {
+            <div class="carousel-slide min-w-full relative">
+                <a href="@banner.LienKet">
+                    <img src="@banner.HinhAnh"
+                         alt="@banner.TieuDe"
+                         class="w-full h-64 md:h-96 lg:h-[500px] object-cover" />
+                </a>
+                @if (!string.IsNullOrEmpty(banner.MoTa))
+                {
+                    <div class="absolute bottom-4 left-6 bg-black/60 text-white px-4 py-2 rounded-lg text-sm md:text-base">
+                        @banner.MoTa
+                    </div>
+                }
+            </div>
+        }
     </div>
 </div>
+
+<div class="container mx-auto px-4 py-10 max-w-7xl">
+    @foreach (var cat in Model)
+    {
+        <section class="mb-12">
+            <!-- Tiêu đề thể loại -->
+            <div class="text-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 uppercase inline-block border-b-4 border-red-500 pb-1">
+                    @cat.TheLoai.TenTheLoai
+                </h2>
+            </div>
+
+            <!-- Danh sách 5 sách -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+                @foreach (var product in cat.Sach)
+                {
+                    <div class="product-card">
+                        <a href="@Url.Action("Details", "Products", new { id = product.MaSach })" class="block">
+                            <div class="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+                                @if (product.GiamGia > 0)
+                                {
+                                    <div class="discount-badge">
+                                        -@product.GiamGia?.ToString("N0")đ
+                                    </div>
+                                }
+                                <img src="@product.HinhAnh"
+                                     alt="@product.TieuDe"
+                                     class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                     loading="lazy" />
+                            </div>
+                            <div class="p-3 md:p-4">
+                                <h3 class="title">@product.TieuDe</h3>
+                                <div class="flex items-center gap-2 flex-wrap mt-1">
+                                    <span class="price text-red-600 font-bold text-base md:text-lg">
+                                        @product.Gia?.ToString("N0")đ
+                                    </span>
+                                    @if (product.GiamGia > 0 && product.GiamGia < product.Gia)
+                                    {
+                                        <span class="old-price text-gray-400 text-xs md:text-sm line-through">
+                                            @product.GiamGia?.ToString("N0")đ
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+            <div class="text-center mt-6">
+                <a href="@Url.Action("ByCategory", "Category", new { id = cat.TheLoai.MaTheLoai })"
+                   class="inline-block text-red-600 hover:text-red-700 font-medium text-sm md:text-base transition">
+                    Xem thêm >>
+                </a>
+        </section>
+    }
+</div>
+<script src="~/js/index.js" asp-append-version="true"></script>

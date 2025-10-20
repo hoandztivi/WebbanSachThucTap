@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qe/eys5/rY9sh5eLsgIDgLmVFHSQnmZ82ayLvt2TMDQ=",
+  "Hash": "Lnbfj9xyrlmRaN4Y3rMwPV1hU0Py7RLmdyjgsM9+L5Y=",
   "Source": "ProjectInternWebBanSach",
   "BasePath": "_content/ProjectInternWebBanSach",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\0dqc9zea82-ihtywg1yha.gz",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "js/index#[.{fingerprint=ihtywg1yha}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ycealhuvgi",
+      "Integrity": "zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js"
     },
     {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\0svr7cxpup-ud6wck7f7s.gz",
@@ -143,6 +164,27 @@
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\1vqkyc30s8-6uzqmz7q5k.gz",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "js/register#[.{fingerprint=6uzqmz7q5k}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "fkg6xuwc3n",
+      "Integrity": "X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js"
+    },
+    {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\38chhry6mc-pk9g2wxc8p.gz",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
@@ -185,12 +227,12 @@
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-pfqioaxq2v.gz",
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-ie4tpbcgxq.gz",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/ProjectInternWebBanSach",
-      "RelativePath": "css/index#[.{fingerprint=pfqioaxq2v}]?.css.gz",
+      "RelativePath": "css/index#[.{fingerprint=ie4tpbcgxq}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -199,8 +241,8 @@
       "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\index.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jvi1p0ccqk",
-      "Integrity": "z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI=",
+      "Fingerprint": "o1fwoosjor",
+      "Integrity": "LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\index.css"
@@ -456,6 +498,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\ciifuj2kny-1ct3fg3pqw.gz",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "css/theotheloai#[.{fingerprint=1ct3fg3pqw}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\theotheloai.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "zix5ncs32t",
+      "Integrity": "BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\theotheloai.css"
     },
     {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\d257qxnxm5-r4e9w2rdcm.gz",
@@ -1109,12 +1172,12 @@
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-mz7u9x0pl7.gz",
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-4et4qs8wn8.gz",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/ProjectInternWebBanSach",
-      "RelativePath": "css/site#[.{fingerprint=mz7u9x0pl7}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=4et4qs8wn8}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1123,19 +1186,19 @@
       "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ewass5aqar",
-      "Integrity": "0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0=",
+      "Fingerprint": "2q6hl72sf9",
+      "Integrity": "Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tahfr54h0m.gz",
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tzbwm91860.gz",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/ProjectInternWebBanSach",
-      "RelativePath": "js/site#[.{fingerprint=tahfr54h0m}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=tzbwm91860}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1144,8 +1207,8 @@
       "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jobftc9oby",
-      "Integrity": "42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc=",
+      "Fingerprint": "7x2yqf4t67",
+      "Integrity": "tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\site.js"
@@ -1172,12 +1235,12 @@
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-yj6hv6y9dk.gz",
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-7znkvb9sqz.gz",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/ProjectInternWebBanSach",
-      "RelativePath": "css/login#[.{fingerprint=yj6hv6y9dk}]?.css.gz",
+      "RelativePath": "css/login#[.{fingerprint=7znkvb9sqz}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1186,8 +1249,8 @@
       "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\login.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "efdhkpfvb8",
-      "Integrity": "xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE=",
+      "Fingerprint": "722wvhrc6e",
+      "Integrity": "kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\login.css"
@@ -1275,6 +1338,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\x4e6dlueq7-o2xtgbvug2.gz",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "css/register#[.{fingerprint=o2xtgbvug2}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ce1654fdny",
+      "Integrity": "lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css"
     },
     {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\xrhen8dyeq-vr1egmr9el.gz",
@@ -1480,8 +1564,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pfqioaxq2v",
-      "Integrity": "VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A=",
+      "Fingerprint": "ie4tpbcgxq",
+      "Integrity": "ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
@@ -1501,11 +1585,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yj6hv6y9dk",
-      "Integrity": "kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40=",
+      "Fingerprint": "7znkvb9sqz",
+      "Integrity": "nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "css/register#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o2xtgbvug2",
+      "Integrity": "sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
     },
     {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
@@ -1522,11 +1627,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mz7u9x0pl7",
-      "Integrity": "Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA=",
+      "Fingerprint": "4et4qs8wn8",
+      "Integrity": "NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\theotheloai.css",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "css/theotheloai#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1ct3fg3pqw",
+      "Integrity": "vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\theotheloai.css"
     },
     {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\favicon.ico",
@@ -1592,6 +1718,27 @@
       "OriginalItemSpec": "wwwroot\\images\\bo-cong-thuong.png"
     },
     {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\cursor.png",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "images/cursor#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "76y4cu555d",
+      "Integrity": "/9nRgGK1H6ogU2cmsJcidcvvs4DcuKpJx+wUDWAOszI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cursor.png"
+    },
+    {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\logo1.png",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
@@ -1634,6 +1781,300 @@
       "OriginalItemSpec": "wwwroot\\images\\logo2.png"
     },
     {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\anhdaidien\\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/anhdaidien/ce170bdc-258c-48ca-bcbf-628b8fff5a23#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "96p1k14rj8",
+      "Integrity": "T5Iz+Y1JTFLH52r8Hn58My1Ls3xvIVJ6R0RP5MQHchU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\anhdaidien\\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner1.png",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/banner/banner1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pkgdo6wwqf",
+      "Integrity": "KYXAmsUO9iVGIYSkvtAFuLMvuELy6UnLQT1K8NQFX7A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner\\banner1.png"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner2.png",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/banner/banner2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kz7bwso3zy",
+      "Integrity": "0LKqRDFGF+3iUjW9roJ8DKteCH3J/yAFASRhH8BouVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner\\banner2.png"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan1.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/conan1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8tumifgmtn",
+      "Integrity": "fLMgl5SVfcc7+6HqoL/FxT2URVyAhnDpJOzTPf4ThgE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\conan1.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan2.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/conan2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lwxy5go2e0",
+      "Integrity": "27qoWOxbiOnGbMM7mr2uvFGoEhmC/fTD0fonNINJPsA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\conan2.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan3.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/conan3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uw42r9mfi5",
+      "Integrity": "XmQcEGOEMHd+XAibC9FKY6A7C2lY0AosyEVdtlU/7xk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\conan3.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan4.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/conan4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "txymybzj3l",
+      "Integrity": "n0cOnspIw47w9DqqZk1zaT5Dc5oGisIDZ/uKni5taPE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\conan4.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan5.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/conan5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rpgucoasl0",
+      "Integrity": "4cO8Q14tmFnsgwTQ4gjLTggkDAk7o313zNW6RcaalNw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\conan5.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon1.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/doraemon1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s594c1fjoy",
+      "Integrity": "oBheKVUa7InHynq4RzbAK2AwJLqEtU7ejj5ygr448P4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\doraemon1.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon2.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/doraemon2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ofcci6j8lx",
+      "Integrity": "DNzgo++qBeuAAoWp6MR+gfCzPYchRXY/Qr3wL3xI1Dg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\doraemon2.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon3.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/doraemon3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifi9fiw6vb",
+      "Integrity": "csP2qQ3Qwm/X5go2HDby3kRjZqibH6cdbcr/EW5FmG8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\doraemon3.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon4.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/doraemon4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zjgsradnkn",
+      "Integrity": "zzVOKgZvfS9rwKNq0NMkR2aZQ4Z5noBhoQJ5r40U/qE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\doraemon4.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon5.jpg",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "img/sach/doraemon5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l3hvmpbrn7",
+      "Integrity": "UbJtlK5J899tYqZYo6P3vDlkie0DSa5L5z2HYv8gIgA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\sach\\doraemon5.jpg"
+    },
+    {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "js/index#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ihtywg1yha",
+      "Integrity": "xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\index.js"
+    },
+    {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\login.js",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
@@ -1655,6 +2096,27 @@
       "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
+      "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js",
+      "SourceId": "ProjectInternWebBanSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\",
+      "BasePath": "_content/ProjectInternWebBanSach",
+      "RelativePath": "js/register#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6uzqmz7q5k",
+      "Integrity": "7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\register.js"
+    },
+    {
       "Identity": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\site.js",
       "SourceId": "ProjectInternWebBanSach",
       "SourceType": "Discovered",
@@ -1669,8 +2131,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tahfr54h0m",
-      "Integrity": "q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M=",
+      "Fingerprint": "tzbwm91860",
+      "Integrity": "ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -2939,12 +3401,12 @@
   "Endpoints": [
     {
       "Route": "css/index.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-pfqioaxq2v.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-ie4tpbcgxq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001038421599"
+          "Quality": "0.001111111111"
         }
       ],
       "ResponseHeaders": [
@@ -2954,15 +3416,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "962"
+          "Value": "899"
         },
         {
           "Name": "ETag",
-          "Value": "\"z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI=\""
+          "Value": "\"LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 21:05:49 GMT"
+          "Value": "Sun, 19 Oct 2025 03:58:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2982,13 +3444,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A=\""
+          "Value": "W/\"ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A="
+          "Value": "sha256-ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ="
         }
       ]
     },
@@ -3003,7 +3465,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2499"
+          "Value": "2699"
         },
         {
           "Name": "Content-Type",
@@ -3011,11 +3473,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A=\""
+          "Value": "\"ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 21:05:49 GMT"
+          "Value": "Sun, 19 Oct 2025 03:58:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3025,13 +3487,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A="
+          "Value": "sha256-ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ="
         }
       ]
     },
     {
       "Route": "css/index.css.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-pfqioaxq2v.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-ie4tpbcgxq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3040,7 +3502,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "962"
+          "Value": "899"
         },
         {
           "Name": "Content-Type",
@@ -3048,11 +3510,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI=\""
+          "Value": "\"LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 21:05:49 GMT"
+          "Value": "Sun, 19 Oct 2025 03:58:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3070,18 +3532,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI="
+          "Value": "sha256-LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk="
         }
       ]
     },
     {
-      "Route": "css/index.pfqioaxq2v.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-pfqioaxq2v.gz",
+      "Route": "css/index.ie4tpbcgxq.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-ie4tpbcgxq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001038421599"
+          "Quality": "0.001111111111"
         }
       ],
       "ResponseHeaders": [
@@ -3091,15 +3553,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "962"
+          "Value": "899"
         },
         {
           "Name": "ETag",
-          "Value": "\"z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI=\""
+          "Value": "\"LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 21:05:49 GMT"
+          "Value": "Sun, 19 Oct 2025 03:58:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3119,13 +3581,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A=\""
+          "Value": "W/\"ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pfqioaxq2v"
+          "Value": "ie4tpbcgxq"
         },
         {
           "Name": "label",
@@ -3133,12 +3595,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A="
+          "Value": "sha256-ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ="
         }
       ]
     },
     {
-      "Route": "css/index.pfqioaxq2v.css",
+      "Route": "css/index.ie4tpbcgxq.css",
       "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\index.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3148,7 +3610,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2499"
+          "Value": "2699"
         },
         {
           "Name": "Content-Type",
@@ -3156,11 +3618,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A=\""
+          "Value": "\"ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 21:05:49 GMT"
+          "Value": "Sun, 19 Oct 2025 03:58:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3170,7 +3632,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pfqioaxq2v"
+          "Value": "ie4tpbcgxq"
         },
         {
           "Name": "label",
@@ -3178,13 +3640,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VWYwpSlrc74YVCkBJ1/CWrkRhxNOJBn/KbPYcunQR2A="
+          "Value": "sha256-ikB87aZYodZrbGkG8ifceEJ0NbSdSxtlt6NtMWSioNQ="
         }
       ]
     },
     {
-      "Route": "css/index.pfqioaxq2v.css.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-pfqioaxq2v.gz",
+      "Route": "css/index.ie4tpbcgxq.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\52ssw23cbm-ie4tpbcgxq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3193,7 +3655,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "962"
+          "Value": "899"
         },
         {
           "Name": "Content-Type",
@@ -3201,11 +3663,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI=\""
+          "Value": "\"LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 21:05:49 GMT"
+          "Value": "Sun, 19 Oct 2025 03:58:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3223,7 +3685,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pfqioaxq2v"
+          "Value": "ie4tpbcgxq"
         },
         {
           "Name": "label",
@@ -3231,18 +3693,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z46bCa0BPQoUXiQRdfrYwlKBW6tgVBlT/brJaR32WBI="
+          "Value": "sha256-LAzWUaxb0xA+ot2wDtmekInzyK/nItyFhn1b4ppX3Mk="
         }
       ]
     },
     {
-      "Route": "css/login.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-yj6hv6y9dk.gz",
+      "Route": "css/login.7znkvb9sqz.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-7znkvb9sqz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000574052813"
+          "Quality": "0.000556483027"
         }
       ],
       "ResponseHeaders": [
@@ -3252,19 +3714,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1741"
+          "Value": "1796"
         },
         {
           "Name": "ETag",
-          "Value": "\"xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE=\""
+          "Value": "\"kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 05:23:49 GMT"
+          "Value": "Thu, 16 Oct 2025 09:48:19 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -3280,18 +3742,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40=\""
+          "Value": "W/\"nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "7znkvb9sqz"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40="
+          "Value": "sha256-nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ="
         }
       ]
     },
     {
-      "Route": "css/login.css",
+      "Route": "css/login.7znkvb9sqz.css",
       "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\login.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3301,7 +3771,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6894"
+          "Value": "7609"
         },
         {
           "Name": "Content-Type",
@@ -3309,121 +3779,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40=\""
+          "Value": "\"nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 05:23:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40="
-        }
-      ]
-    },
-    {
-      "Route": "css/login.css.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-yj6hv6y9dk.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1741"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 05:23:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE="
-        }
-      ]
-    },
-    {
-      "Route": "css/login.yj6hv6y9dk.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-yj6hv6y9dk.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000574052813"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1741"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 05:23:49 GMT"
+          "Value": "Thu, 16 Oct 2025 09:48:19 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yj6hv6y9dk"
+          "Value": "7znkvb9sqz"
         },
         {
           "Name": "label",
@@ -3431,13 +3801,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40="
+          "Value": "sha256-nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ="
         }
       ]
     },
     {
-      "Route": "css/login.yj6hv6y9dk.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\login.css",
+      "Route": "css/login.7znkvb9sqz.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-7znkvb9sqz.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3446,7 +3816,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6894"
+          "Value": "1796"
         },
         {
           "Name": "Content-Type",
@@ -3454,56 +3824,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40=\""
+          "Value": "\"kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 05:23:49 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yj6hv6y9dk"
-        },
-        {
-          "Name": "label",
-          "Value": "css/login.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-kg1MQtUWrxKfVFJoi3X5lkP/NfHQfp5bLEQ781ybn40="
-        }
-      ]
-    },
-    {
-      "Route": "css/login.yj6hv6y9dk.css.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-yj6hv6y9dk.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1741"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 05:23:49 GMT"
+          "Value": "Thu, 16 Oct 2025 09:48:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3521,7 +3846,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yj6hv6y9dk"
+          "Value": "7znkvb9sqz"
         },
         {
           "Name": "label",
@@ -3529,18 +3854,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xlnSXtL57EP7z3IyrouYk+nOb8Zsy3UjXiZ0GQIYPqE="
+          "Value": "sha256-kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU="
         }
       ]
     },
     {
-      "Route": "css/site.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-mz7u9x0pl7.gz",
+      "Route": "css/login.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-7znkvb9sqz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001092896175"
+          "Quality": "0.000556483027"
         }
       ],
       "ResponseHeaders": [
@@ -3550,15 +3875,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "914"
+          "Value": "1796"
         },
         {
           "Name": "ETag",
-          "Value": "\"0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0=\""
+          "Value": "\"kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 03:51:48 GMT"
+          "Value": "Thu, 16 Oct 2025 09:48:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3578,18 +3903,461 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA=\""
+          "Value": "W/\"nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA="
+          "Value": "sha256-nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/login.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:48:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nS6VYtf0M+mUxADlCQbW5k0ilRYM95wGmkVaoqoaycQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vgirmm37ih-7znkvb9sqz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:48:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRqKHqxKKHeNN9ltuHRZhlRD3u2IFFolNq8oKpMQntU="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\x4e6dlueq7-o2xtgbvug2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000598444045"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:34:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6997"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:34:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\x4e6dlueq7-o2xtgbvug2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:34:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.o2xtgbvug2.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\x4e6dlueq7-o2xtgbvug2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000598444045"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:34:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o2xtgbvug2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.o2xtgbvug2.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6997"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:34:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o2xtgbvug2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNjq+HNpQapjIv/f2eOY4m4NByYTH4QOAQQxY9JEaGY="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.o2xtgbvug2.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\x4e6dlueq7-o2xtgbvug2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:34:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o2xtgbvug2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lDHJFGn++gsPa/y5Bcnf7JUEk5XiRlmVKBKRxxj3xrA="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.4et4qs8wn8.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-4et4qs8wn8.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000760456274"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1314"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:28:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4et4qs8wn8"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.4et4qs8wn8.css",
       "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3599,7 +4367,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2307"
+          "Value": "3514"
         },
         {
           "Name": "Content-Type",
@@ -3607,121 +4375,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA=\""
+          "Value": "\"NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 03:51:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-mz7u9x0pl7.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "914"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 03:51:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.mz7u9x0pl7.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-mz7u9x0pl7.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001092896175"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "914"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 03:51:48 GMT"
+          "Value": "Sun, 19 Oct 2025 08:28:03 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mz7u9x0pl7"
+          "Value": "4et4qs8wn8"
         },
         {
           "Name": "label",
@@ -3729,13 +4397,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA="
+          "Value": "sha256-NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4="
         }
       ]
     },
     {
-      "Route": "css/site.mz7u9x0pl7.css",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
+      "Route": "css/site.4et4qs8wn8.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-4et4qs8wn8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3744,7 +4412,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2307"
+          "Value": "1314"
         },
         {
           "Name": "Content-Type",
@@ -3752,56 +4420,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA=\""
+          "Value": "\"Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 03:51:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mz7u9x0pl7"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Dm8vfQBw5nqyuszBsgS0zNA5yhZa1boOxN/wSiLXemA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.mz7u9x0pl7.css.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-mz7u9x0pl7.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "914"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 15 Oct 2025 03:51:48 GMT"
+          "Value": "Sun, 19 Oct 2025 08:28:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3819,7 +4442,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mz7u9x0pl7"
+          "Value": "4et4qs8wn8"
         },
         {
           "Name": "label",
@@ -3827,7 +4450,442 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0un56uPjlzKAuBuPQIpLDP+CyZ8G22FXU/W5221Y8b0="
+          "Value": "sha256-Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-4et4qs8wn8.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000760456274"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1314"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:28:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:28:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMiQkRMTYgOXQCIGs0+vVd8nO5hNOkVLsEVX0NRYrX4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\v6m6a1wz7h-4et4qs8wn8.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:28:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sg0RVH7exwx3bT0uI8zTitOeI/WwsjniiarlaVVlbKs="
+        }
+      ]
+    },
+    {
+      "Route": "css/theotheloai.1ct3fg3pqw.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\ciifuj2kny-1ct3fg3pqw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001091703057"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:53:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1ct3fg3pqw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/theotheloai.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s="
+        }
+      ]
+    },
+    {
+      "Route": "css/theotheloai.1ct3fg3pqw.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\theotheloai.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3147"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:53:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1ct3fg3pqw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/theotheloai.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s="
+        }
+      ]
+    },
+    {
+      "Route": "css/theotheloai.1ct3fg3pqw.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\ciifuj2kny-1ct3fg3pqw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:53:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1ct3fg3pqw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/theotheloai.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI="
+        }
+      ]
+    },
+    {
+      "Route": "css/theotheloai.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\ciifuj2kny-1ct3fg3pqw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001091703057"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:53:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s="
+        }
+      ]
+    },
+    {
+      "Route": "css/theotheloai.css",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\theotheloai.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3147"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:53:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vymXEgyqMQuYT7XAmDYxFjnpXwI7pAwq0yfFXwaGU8s="
+        }
+      ]
+    },
+    {
+      "Route": "css/theotheloai.css.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\ciifuj2kny-1ct3fg3pqw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "915"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:53:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BSC4Cb69xR2dUnAGYtPyZWivXWaI6bNQEwhnKd46CgI="
         }
       ]
     },
@@ -4294,6 +5352,88 @@
       ]
     },
     {
+      "Route": "images/cursor.76y4cu555d.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\cursor.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/9nRgGK1H6ogU2cmsJcidcvvs4DcuKpJx+wUDWAOszI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Oct 2025 16:45:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "76y4cu555d"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cursor.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/9nRgGK1H6ogU2cmsJcidcvvs4DcuKpJx+wUDWAOszI="
+        }
+      ]
+    },
+    {
+      "Route": "images/cursor.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\cursor.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/9nRgGK1H6ogU2cmsJcidcvvs4DcuKpJx+wUDWAOszI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Oct 2025 16:45:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/9nRgGK1H6ogU2cmsJcidcvvs4DcuKpJx+wUDWAOszI="
+        }
+      ]
+    },
+    {
       "Route": "images/logo1.dv5qll4v8k.png",
       "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\logo1.png",
       "Selectors": [],
@@ -4454,6 +5594,1370 @@
         {
           "Name": "integrity",
           "Value": "sha256-nPCJHEhCVly0kWGJfeo/Sfd4TWynSRs2f96UtRV8WNo="
+        }
+      ]
+    },
+    {
+      "Route": "img/anhdaidien/ce170bdc-258c-48ca-bcbf-628b8fff5a23.96p1k14rj8.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\anhdaidien\\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "788008"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T5Iz+Y1JTFLH52r8Hn58My1Ls3xvIVJ6R0RP5MQHchU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:08:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "96p1k14rj8"
+        },
+        {
+          "Name": "label",
+          "Value": "img/anhdaidien/ce170bdc-258c-48ca-bcbf-628b8fff5a23.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T5Iz+Y1JTFLH52r8Hn58My1Ls3xvIVJ6R0RP5MQHchU="
+        }
+      ]
+    },
+    {
+      "Route": "img/anhdaidien/ce170bdc-258c-48ca-bcbf-628b8fff5a23.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\anhdaidien\\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "788008"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T5Iz+Y1JTFLH52r8Hn58My1Ls3xvIVJ6R0RP5MQHchU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:08:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T5Iz+Y1JTFLH52r8Hn58My1Ls3xvIVJ6R0RP5MQHchU="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner/banner1.pkgdo6wwqf.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2105225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KYXAmsUO9iVGIYSkvtAFuLMvuELy6UnLQT1K8NQFX7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 04:50:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pkgdo6wwqf"
+        },
+        {
+          "Name": "label",
+          "Value": "img/banner/banner1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KYXAmsUO9iVGIYSkvtAFuLMvuELy6UnLQT1K8NQFX7A="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner/banner1.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2105225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KYXAmsUO9iVGIYSkvtAFuLMvuELy6UnLQT1K8NQFX7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 04:50:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KYXAmsUO9iVGIYSkvtAFuLMvuELy6UnLQT1K8NQFX7A="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner/banner2.kz7bwso3zy.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2656256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0LKqRDFGF+3iUjW9roJ8DKteCH3J/yAFASRhH8BouVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:20:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kz7bwso3zy"
+        },
+        {
+          "Name": "label",
+          "Value": "img/banner/banner2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0LKqRDFGF+3iUjW9roJ8DKteCH3J/yAFASRhH8BouVk="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner/banner2.png",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2656256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0LKqRDFGF+3iUjW9roJ8DKteCH3J/yAFASRhH8BouVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:20:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0LKqRDFGF+3iUjW9roJ8DKteCH3J/yAFASRhH8BouVk="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan1.8tumifgmtn.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "191423"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fLMgl5SVfcc7+6HqoL/FxT2URVyAhnDpJOzTPf4ThgE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:39:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8tumifgmtn"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/conan1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fLMgl5SVfcc7+6HqoL/FxT2URVyAhnDpJOzTPf4ThgE="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan1.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "191423"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fLMgl5SVfcc7+6HqoL/FxT2URVyAhnDpJOzTPf4ThgE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:39:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fLMgl5SVfcc7+6HqoL/FxT2URVyAhnDpJOzTPf4ThgE="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan2.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "197217"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"27qoWOxbiOnGbMM7mr2uvFGoEhmC/fTD0fonNINJPsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:42:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-27qoWOxbiOnGbMM7mr2uvFGoEhmC/fTD0fonNINJPsA="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan2.lwxy5go2e0.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "197217"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"27qoWOxbiOnGbMM7mr2uvFGoEhmC/fTD0fonNINJPsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:42:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lwxy5go2e0"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/conan2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-27qoWOxbiOnGbMM7mr2uvFGoEhmC/fTD0fonNINJPsA="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan3.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XmQcEGOEMHd+XAibC9FKY6A7C2lY0AosyEVdtlU/7xk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:45:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XmQcEGOEMHd+XAibC9FKY6A7C2lY0AosyEVdtlU/7xk="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan3.uw42r9mfi5.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XmQcEGOEMHd+XAibC9FKY6A7C2lY0AosyEVdtlU/7xk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:45:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uw42r9mfi5"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/conan3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XmQcEGOEMHd+XAibC9FKY6A7C2lY0AosyEVdtlU/7xk="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan4.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158687"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n0cOnspIw47w9DqqZk1zaT5Dc5oGisIDZ/uKni5taPE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:46:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n0cOnspIw47w9DqqZk1zaT5Dc5oGisIDZ/uKni5taPE="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan4.txymybzj3l.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158687"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n0cOnspIw47w9DqqZk1zaT5Dc5oGisIDZ/uKni5taPE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:46:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "txymybzj3l"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/conan4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n0cOnspIw47w9DqqZk1zaT5Dc5oGisIDZ/uKni5taPE="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan5.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "196610"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cO8Q14tmFnsgwTQ4gjLTggkDAk7o313zNW6RcaalNw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:51:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cO8Q14tmFnsgwTQ4gjLTggkDAk7o313zNW6RcaalNw="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/conan5.rpgucoasl0.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "196610"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cO8Q14tmFnsgwTQ4gjLTggkDAk7o313zNW6RcaalNw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 03:51:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rpgucoasl0"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/conan5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cO8Q14tmFnsgwTQ4gjLTggkDAk7o313zNW6RcaalNw="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon1.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "249260"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oBheKVUa7InHynq4RzbAK2AwJLqEtU7ejj5ygr448P4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Oct 2025 13:40:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oBheKVUa7InHynq4RzbAK2AwJLqEtU7ejj5ygr448P4="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon1.s594c1fjoy.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "249260"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oBheKVUa7InHynq4RzbAK2AwJLqEtU7ejj5ygr448P4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Oct 2025 13:40:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s594c1fjoy"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/doraemon1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oBheKVUa7InHynq4RzbAK2AwJLqEtU7ejj5ygr448P4="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon2.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "156873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DNzgo++qBeuAAoWp6MR+gfCzPYchRXY/Qr3wL3xI1Dg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Oct 2025 16:15:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DNzgo++qBeuAAoWp6MR+gfCzPYchRXY/Qr3wL3xI1Dg="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon2.ofcci6j8lx.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "156873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DNzgo++qBeuAAoWp6MR+gfCzPYchRXY/Qr3wL3xI1Dg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Oct 2025 16:15:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ofcci6j8lx"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/doraemon2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DNzgo++qBeuAAoWp6MR+gfCzPYchRXY/Qr3wL3xI1Dg="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon3.ifi9fiw6vb.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192639"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csP2qQ3Qwm/X5go2HDby3kRjZqibH6cdbcr/EW5FmG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Oct 2025 16:17:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifi9fiw6vb"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/doraemon3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-csP2qQ3Qwm/X5go2HDby3kRjZqibH6cdbcr/EW5FmG8="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon3.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192639"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csP2qQ3Qwm/X5go2HDby3kRjZqibH6cdbcr/EW5FmG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Oct 2025 16:17:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-csP2qQ3Qwm/X5go2HDby3kRjZqibH6cdbcr/EW5FmG8="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon4.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zzVOKgZvfS9rwKNq0NMkR2aZQ4Z5noBhoQJ5r40U/qE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 04:23:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zzVOKgZvfS9rwKNq0NMkR2aZQ4Z5noBhoQJ5r40U/qE="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon4.zjgsradnkn.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zzVOKgZvfS9rwKNq0NMkR2aZQ4Z5noBhoQJ5r40U/qE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 04:23:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjgsradnkn"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/doraemon4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zzVOKgZvfS9rwKNq0NMkR2aZQ4Z5noBhoQJ5r40U/qE="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon5.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178631"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UbJtlK5J899tYqZYo6P3vDlkie0DSa5L5z2HYv8gIgA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 04:24:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UbJtlK5J899tYqZYo6P3vDlkie0DSa5L5z2HYv8gIgA="
+        }
+      ]
+    },
+    {
+      "Route": "img/sach/doraemon5.l3hvmpbrn7.jpg",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178631"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UbJtlK5J899tYqZYo6P3vDlkie0DSa5L5z2HYv8gIgA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 04:24:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l3hvmpbrn7"
+        },
+        {
+          "Name": "label",
+          "Value": "img/sach/doraemon5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UbJtlK5J899tYqZYo6P3vDlkie0DSa5L5z2HYv8gIgA="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.ihtywg1yha.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\0dqc9zea82-ihtywg1yha.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001077586207"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "927"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:27:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ihtywg1yha"
+        },
+        {
+          "Name": "label",
+          "Value": "js/index.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.ihtywg1yha.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2822"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:27:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ihtywg1yha"
+        },
+        {
+          "Name": "label",
+          "Value": "js/index.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.ihtywg1yha.js.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\0dqc9zea82-ihtywg1yha.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:27:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ihtywg1yha"
+        },
+        {
+          "Name": "label",
+          "Value": "js/index.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\0dqc9zea82-ihtywg1yha.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001077586207"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "927"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:27:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2822"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:27:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xrkjbG7BOc9Q56IuheSamP+WXeI2KcGPQ8gZ5EVns4Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/index.js.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\0dqc9zea82-ihtywg1yha.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 07:27:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zt8zKeP/IE6ExGj3l8sep/h/5+7+rp2fAu6lO4y4iTY="
         }
       ]
     },
@@ -4756,13 +7260,13 @@
       ]
     },
     {
-      "Route": "js/site.js",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tahfr54h0m.gz",
+      "Route": "js/register.6uzqmz7q5k.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\1vqkyc30s8-6uzqmz7q5k.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000838222967"
+          "Quality": "0.000847457627"
         }
       ],
       "ResponseHeaders": [
@@ -4772,15 +7276,176 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1192"
+          "Value": "1179"
         },
         {
           "Name": "ETag",
-          "Value": "\"42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc=\""
+          "Value": "\"X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 16:35:17 GMT"
+          "Value": "Thu, 16 Oct 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6uzqmz7q5k"
+        },
+        {
+          "Name": "label",
+          "Value": "js/register.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.6uzqmz7q5k.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6uzqmz7q5k"
+        },
+        {
+          "Name": "label",
+          "Value": "js/register.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.6uzqmz7q5k.js.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\1vqkyc30s8-6uzqmz7q5k.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1179"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6uzqmz7q5k"
+        },
+        {
+          "Name": "label",
+          "Value": "js/register.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\1vqkyc30s8-6uzqmz7q5k.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000847457627"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1179"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:35:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4800,13 +7465,150 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M=\""
+          "Value": "W/\"7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M="
+          "Value": "sha256-7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7mnMZmNeOUp9EBHHvWbyAfJtDcmTbRzwqUKh6EK1GXk="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.js.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\1vqkyc30s8-6uzqmz7q5k.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1179"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Oct 2025 09:35:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X5JdN5VDE94h6hR6JDlT8Ho++lB3zUm3LKMsMisirhc="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tzbwm91860.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000513874615"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1945"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 08:49:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE="
         }
       ]
     },
@@ -4821,7 +7623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3425"
+          "Value": "7477"
         },
         {
           "Name": "Content-Type",
@@ -4829,11 +7631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M=\""
+          "Value": "\"ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 16:35:17 GMT"
+          "Value": "Sun, 19 Oct 2025 08:49:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4843,13 +7645,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M="
+          "Value": "sha256-ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE="
         }
       ]
     },
     {
       "Route": "js/site.js.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tahfr54h0m.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tzbwm91860.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4858,7 +7660,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1192"
+          "Value": "1945"
         },
         {
           "Name": "Content-Type",
@@ -4866,11 +7668,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc=\""
+          "Value": "\"tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 16:35:17 GMT"
+          "Value": "Sun, 19 Oct 2025 08:49:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4888,18 +7690,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc="
+          "Value": "sha256-tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ="
         }
       ]
     },
     {
-      "Route": "js/site.tahfr54h0m.js",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tahfr54h0m.gz",
+      "Route": "js/site.tzbwm91860.js",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tzbwm91860.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000838222967"
+          "Quality": "0.000513874615"
         }
       ],
       "ResponseHeaders": [
@@ -4909,15 +7711,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1192"
+          "Value": "1945"
         },
         {
           "Name": "ETag",
-          "Value": "\"42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc=\""
+          "Value": "\"tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 16:35:17 GMT"
+          "Value": "Sun, 19 Oct 2025 08:49:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4937,13 +7739,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M=\""
+          "Value": "W/\"ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tahfr54h0m"
+          "Value": "tzbwm91860"
         },
         {
           "Name": "label",
@@ -4951,12 +7753,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M="
+          "Value": "sha256-ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE="
         }
       ]
     },
     {
-      "Route": "js/site.tahfr54h0m.js",
+      "Route": "js/site.tzbwm91860.js",
       "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4966,7 +7768,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3425"
+          "Value": "7477"
         },
         {
           "Name": "Content-Type",
@@ -4974,11 +7776,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M=\""
+          "Value": "\"ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 16:35:17 GMT"
+          "Value": "Sun, 19 Oct 2025 08:49:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4988,7 +7790,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tahfr54h0m"
+          "Value": "tzbwm91860"
         },
         {
           "Name": "label",
@@ -4996,13 +7798,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-q0t1h6NID6+x9SmnVRGkJzto8fCrGk13MGirFCNrk1M="
+          "Value": "sha256-ua4R6sMIGXsuCSsLWfAawW2Cs08r0QrnxqyNrTmUthE="
         }
       ]
     },
     {
-      "Route": "js/site.tahfr54h0m.js.gz",
-      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tahfr54h0m.gz",
+      "Route": "js/site.tzbwm91860.js.gz",
+      "AssetFile": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\obj\\Debug\\net9.0\\compressed\\vafft29i51-tzbwm91860.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5011,7 +7813,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1192"
+          "Value": "1945"
         },
         {
           "Name": "Content-Type",
@@ -5019,11 +7821,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc=\""
+          "Value": "\"tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Oct 2025 16:35:17 GMT"
+          "Value": "Sun, 19 Oct 2025 08:49:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5041,7 +7843,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tahfr54h0m"
+          "Value": "tzbwm91860"
         },
         {
           "Name": "label",
@@ -5049,7 +7851,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-42XCmOH85zdVrY2ksskWHRTJjoJycYW6fno65YcSHTc="
+          "Value": "sha256-tUYyiybz/96MeWCL/F5khnYlDabTjy3Q6N3zkYwAkpQ="
         }
       ]
     },

@@ -84,26 +84,125 @@
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new MeteorEffect());
+document.addEventListener("DOMContentLoaded", function () {
+    // ==== HIỆU ỨNG SAO BĂNG ====
+    new MeteorEffect();
 
-// Tự động đổi logo mỗi 3 giây
-document.addEventListener("DOMContentLoaded", () => {
+    // ==== ĐỔI LOGO TỰ ĐỘNG ====
     const logo = document.getElementById("logoImage");
-    if (!logo) return;
+    if (logo) {
+        const logos = ["/images/logo1.png", "/images/logo2.png"];
+        let index = 0;
+        setInterval(() => {
+            logo.style.opacity = 0;
+            setTimeout(() => {
+                index = (index + 1) % logos.length;
+                logo.src = logos[index];
+                logo.style.opacity = 1;
+            }, 500);
+        }, 3000);
+    }
 
-    const logos = [
-        "/images/logo1.png",
-        "/images/logo2.png"
-    ];
-    let index = 0;
+    // ==== MENU PC ====
+    const categoryMenu = document.getElementById("categoryMenu");
+    const categoryToggle = document.getElementById("categoryToggle");
+    const categoryDropdown = document.querySelector("#categoryMenu > ul, #categoryMenu > div, #categoryMenu > *:not(button)");
+    const arrowIcon = document.getElementById("arrowIcon");
 
-    setInterval(() => {
-        logo.style.opacity = 0; // hiệu ứng mờ dần
+    if (categoryToggle && categoryDropdown && categoryMenu) {
+        categoryDropdown.classList.add("hidden");
 
-        setTimeout(() => {
-            index = (index + 1) % logos.length;
-            logo.src = logos[index];
-            logo.style.opacity = 1; // hiện dần lại
-        }, 500); // delay nhỏ cho hiệu ứng
-    }, 3000); // đổi sau mỗi 3 giây
+        categoryToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isHidden = categoryDropdown.classList.contains("hidden");
+            categoryDropdown.classList.toggle("hidden", !isHidden);
+            categoryDropdown.classList.toggle("block", isHidden);
+            arrowIcon.classList.toggle("rotate-180");
+        });
+
+    }
+
+    // ==== MENU MOBILE ====
+    const mobileToggle = document.getElementById("mobileCategoryToggle");
+    const mobileDropdown = document.getElementById("mobileCategoryDropdown");
+    const mobileArrow = document.getElementById("mobileArrowIcon");
+
+    if (mobileToggle && mobileDropdown) {
+        mobileToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isHidden = mobileDropdown.classList.contains("hidden");
+            mobileDropdown.classList.toggle("hidden", !isHidden);
+            mobileDropdown.classList.toggle("block", isHidden);
+            mobileArrow.classList.toggle("rotate-180");
+        });
+    }
+
+    // ==== MENU MOBILE CHÍNH (3 GẠCH) ====
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (mobileMenuToggle && mobileNav) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileNav.classList.toggle("hidden");
+        });
+    }
+
+    // ==== HÀM CLICK NGOÀI====
+    document.addEventListener("click", (e) => {
+        // Logic click ngoài cho PC
+        if (categoryToggle && categoryDropdown && categoryMenu) {
+            if (categoryDropdown.classList.contains("block") && !categoryMenu.contains(e.target)) {
+                categoryDropdown.classList.add("hidden");
+                categoryDropdown.classList.remove("block");
+                if (arrowIcon) arrowIcon.classList.remove("rotate-180");
+            }
+        }
+
+        // Logic click ngoài cho Mobile Category Dropdown
+        if (mobileToggle && mobileDropdown) {
+            const mobileParentLi = mobileToggle.parentElement; // Lấy thẻ <li> cha
+            if (mobileDropdown.classList.contains("block") && !mobileParentLi.contains(e.target)) {
+                mobileDropdown.classList.add("hidden");
+                mobileDropdown.classList.remove("block");
+                if (mobileArrow) mobileArrow.classList.remove("rotate-180");
+            }
+        }
+    });
+
+    // ==== NÚT BACK TO TOP ====
+    const backToTopButton = document.getElementById("backToTop");
+    if (backToTopButton) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+    // ==== MOBILE AVATAR MENU ====
+    const avatarBtn = document.getElementById("mobileAvatarBtn");
+    const avatarMenu = document.getElementById("mobileAvatarMenu");
+
+    if (avatarBtn && avatarMenu) {
+        avatarBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            avatarMenu.classList.toggle("hidden");
+        });
+
+        // Bấm ra ngoài thì ẩn menu
+        document.addEventListener("click", (e) => {
+            if (!avatarMenu.classList.contains("hidden") && !avatarBtn.contains(e.target)) {
+                avatarMenu.classList.add("hidden");
+            }
+        });
+    }
+
 });

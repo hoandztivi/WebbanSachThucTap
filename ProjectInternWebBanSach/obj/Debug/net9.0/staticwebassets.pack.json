@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\theotheloai.css",
+      "PackagePath": "staticwebassets\\css\\theotheloai.css"
     },
     {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\favicon.ico",
@@ -29,6 +37,10 @@
       "PackagePath": "staticwebassets\\images\\bo-cong-thuong.png"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\cursor.png",
+      "PackagePath": "staticwebassets\\images\\cursor.png"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\images\\logo1.png",
       "PackagePath": "staticwebassets\\images\\logo1.png"
     },
@@ -37,8 +49,68 @@
       "PackagePath": "staticwebassets\\images\\logo2.png"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\anhdaidien\\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png",
+      "PackagePath": "staticwebassets\\img\\anhdaidien\\ce170bdc-258c-48ca-bcbf-628b8fff5a23.png"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner1.png",
+      "PackagePath": "staticwebassets\\img\\banner\\banner1.png"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\banner\\banner2.png",
+      "PackagePath": "staticwebassets\\img\\banner\\banner2.png"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan1.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\conan1.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan2.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\conan2.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan3.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\conan3.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan4.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\conan4.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan5.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\conan5.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon1.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\doraemon1.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon2.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\doraemon2.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon3.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\doraemon3.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon4.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\doraemon4.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\doraemon5.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\doraemon5.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\login.js",
       "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js",
+      "PackagePath": "staticwebassets\\js\\register.js"
     },
     {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\site.js",

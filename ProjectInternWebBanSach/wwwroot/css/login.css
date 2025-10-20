@@ -1,4 +1,5 @@
-﻿/* Login Page Styles */
+﻿
+/* Login Page Styles */
 
 .login-container {
     min-height: calc(100vh - 200px);
@@ -249,43 +250,82 @@
 
 /* Social Login */
 .social-login {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.divider {
+    position: relative;
+    text-align: center;
     margin-bottom: 1.5rem;
 }
 
-.btn-social {
+    .divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e5e7eb;
+    }
+
+.divider-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    background: white;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #d1d5db;
     border-radius: 8px;
-    background-color: white;
+    background: white;
+    color: #374151;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-    .btn-social:hover {
-        background-color: #f9fafb;
-        border-color: #d1d5db;
+    .social-btn:hover {
+        background: #f9fafb;
+        border-color: #9ca3af;
         transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .btn-social:active {
-        transform: translateY(0);
-    }
-
-.btn-google {
-    color: #1f2937;
+.social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
-.btn-facebook {
-    color: #1877f2;
+.social-btn.facebook:hover {
+    background: #1877f2;
+    color: white;
+    border-color: #1877f2;
+}
+
+.social-btn.google:hover {
+    border-color: #ea4335;
 }
 
 /* Register Link */

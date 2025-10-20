@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ProjectInternWebBanSach.Models.TheLoaiSach>
+
+@if (Model != null && Model.Any())
+{
+    <ul id="categoryDropdown"
+        class="absolute left-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg w-64 hidden z-50 divide-y divide-gray-100">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@Url.Action("TheoTheLoai", "Products", new { id = item.MaTheLoai })"
+                   class="block px-4 py-2 text-gray-700 hover:bg-amber-100 hover:text-amber-700 transition">
+                    @item.TenTheLoai
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p class="absolute left-0 top-full mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-lg p-3 text-sm text-gray-500 z-50">
+        Không có thể loại nào
+    </p>
+}

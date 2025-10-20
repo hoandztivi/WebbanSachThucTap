@@ -1,0 +1,129 @@
+﻿    /* theo-the-loai.css */
+
+    /* Product Card */
+    .product-card {
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+        .product-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-4px);
+        }
+
+    /* Discount Badge */
+    .discount-badge {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 10;
+        background-color: #dc2626;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (min-width: 768px) {
+        .discount-badge {
+            font-size: 0.875rem;
+        }
+    }
+
+    /* Product Title */
+    .product-card .title {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #1f2937;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .product-card .title {
+            font-size: 1rem;
+            min-height: 3rem;
+        }
+    }
+
+    /* Price Styling */
+    .product-card .price {
+        color: #dc2626;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .product-card .price {
+            font-size: 1.125rem;
+        }
+    }
+
+    .product-card .old-price {
+        color: #9ca3af;
+        font-size: 0.75rem;
+        text-decoration: line-through;
+    }
+
+    @media (min-width: 768px) {
+        .product-card .old-price {
+            font-size: 0.875rem;
+        }
+    }
+
+    /* Aspect Ratio */
+    .aspect-\[3\/4\] {
+        aspect-ratio: 3 / 4;
+    }
+
+    /* Fallback for older browsers */
+    @supports not (aspect-ratio: 3 / 4) {
+        .aspect-\[3\/4\] {
+            position: relative;
+            padding-bottom: 133.33%;
+        }
+
+            .aspect-\[3\/4\] img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    }
+
+    /* Focus Accessibility */
+    .product-card a:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+        border-radius: 0.5rem;
+    }
+
+    /* Tap Highlight */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Print Styles */
+    @media print {
+        .product-card {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+            .product-card:hover {
+                transform: none;
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            }
+    }
