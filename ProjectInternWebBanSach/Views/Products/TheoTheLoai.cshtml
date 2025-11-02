@@ -40,7 +40,7 @@
                             @if (product.GiamGia > 0 && product.GiamGia < product.Gia)
                             {
                                 <span class="old-price text-gray-400 text-xs md:text-sm line-through">
-                                    @product.GiamGia?.ToString("N0")đ
+                                    @string.Format("{0:N0}đ", (product.Gia ?? 0) + (product.GiamGia ?? 0))
                                 </span>
                             }
                         </div>
@@ -49,12 +49,45 @@
             </div>
         }
     </div>
+@*==Phân Trang==*@
+    @{
+        var pg = ViewBag.Pagination;
+        int id = (int)ViewBag.CategoryId;
+        int current = (int)pg.Current;
+        int total = (int)pg.TotalPages;
+        bool hasPrev = (bool)pg.HasPrev;
+        bool hasNext = (bool)pg.HasNext;
+    }
 
-    <!-- View More Button -->
-    <div class="text-center mt-8">
-        <a href="@Url.Action("LoadMore", "Category")"
-           class="inline-block text-red-600 hover:text-red-700 font-medium text-sm md:text-base transition-colors">
-            Xem thêm >>
-        </a>
-    </div>
+    @if (total > 1)
+    {
+        <div class="mt-8 flex items-center justify-center gap-2 select-none">
+
+            <a class="px-3 py-2 rounded border text-sm transition
+           @(hasPrev ? "hover:bg-gray-50 border-gray-300 text-gray-700" : "opacity-40 cursor-not-allowed border-gray-200 text-gray-400")"
+               href="@(hasPrev ? Url.Action("TheoTheLoai", "Products", new { id = id, page = current - 1 }) : "#")">
+                ‹ Trang trước
+            </a>
+
+            @{
+                var start = Math.Max(1, current - 2);
+                var end = Math.Min(total, current + 2);
+                for (int i = start; i <= end; i++)
+                {
+                    <a class="px-3 py-2 rounded border text-sm transition
+                        @(i == current ? "bg-red-600 text-white border-red-600" : "hover:bg-gray-50 border-gray-300 text-gray-700")"
+                       href="@Url.Action("TheoTheLoai", "Products", new { id = id, page = i })">
+                        @i
+                    </a>
+                }
+            }
+
+            <a class="px-3 py-2 rounded border text-sm transition
+           @(hasNext ? "hover:bg-gray-50 border-gray-300 text-gray-700" : "opacity-40 cursor-not-allowed border-gray-200 text-gray-400")"
+               href="@(hasNext ? Url.Action("TheoTheLoai", "Products", new { id = id, page = current + 1 }) : "#")">
+                Trang sau ›
+            </a>
+        </div>
+    }
+
 </div>

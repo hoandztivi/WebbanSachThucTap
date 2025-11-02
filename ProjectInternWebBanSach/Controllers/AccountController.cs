@@ -5,6 +5,8 @@ using ProjectInternWebBanSach.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using ProjectInternWebBanSach.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectInternWebBanSach.Controllers
 {
@@ -23,33 +25,37 @@ namespace ProjectInternWebBanSach.Controllers
 
         // --------------------- LOGIN ---------------------
         [HttpGet]
+        [Microsoft.AspNetCore.Authorization.AllowAnonymous]
         public IActionResult Login()
         {
-            string savedEmail = Request.Cookies["UserEmail"];
-            string savedPassword = Request.Cookies["UserPassword"];
-
-            ViewBag.SavedEmail = savedEmail;
-            ViewBag.SavedPassword = savedPassword;
-
+            // Chỉ nhớ email để prefill (KHÔNG nhớ mật khẩu)
+            ViewBag.SavedEmail = Request.Cookies["UserEmail"];
             return View();
         }
 
         [HttpPost]
-        public IActionResult Login(string email, string matkhau, bool RememberMe)
+        [ValidateAntiForgeryToken]
+        [Microsoft.AspNetCore.Authorization.AllowAnonymous]
+        public IActionResult Login(
+            [FromForm(Name = "Email")] string email,
+            [FromForm(Name = "MatKhau")] string matkhau,
+            bool RememberMe)
         {
+            // Xoá các cookie cũ (nếu có)
             Response.Cookies.Delete("UserEmail");
             Response.Cookies.Delete("UserPassword");
 
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(matkhau))
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(matkhau))
             {
                 ViewBag.Error = "Vui lòng nhập đầy đủ thông tin.";
                 return View();
             }
 
+            var emailNorm = email.Trim().ToLowerInvariant();
             string hashed = GetSHA256(matkhau);
 
             var user = _context.NguoiDungs
-                .FirstOrDefault(u => u.Email == email && u.MatKhau == hashed && u.TrangThai == true);
+                .FirstOrDefault(u => u.Email == emailNorm && u.MatKhau == hashed && u.TrangThai == true);
 
             if (user == null)
             {
@@ -57,50 +63,60 @@ namespace ProjectInternWebBanSach.Controllers
                 return View();
             }
 
-            // ---------- Lưu session ----------
+            // ---------------------- Lưu session----------------------
             HttpContext.Session.SetInt32("MaNguoiDung", user.MaNguoiDung);
             HttpContext.Session.SetString("HoTen", user.HoTen ?? "");
             HttpContext.Session.SetString("Email", user.Email ?? "");
             HttpContext.Session.SetString("VaiTro", user.MaVaiTroNavigation?.TenVaiTro ?? "user");
             HttpContext.Session.SetString("AnhDaiDien", user.AnhDaiDien ?? "default.png");
-            HttpContext.Session.SetString("SoDu", user.SoDu?.ToString("N0") ?? "0");
+            HttpContext.Session.SetString("SoDu", user.SoDu?.ToString() ?? "0");
 
-            // ---------- Sinh JWT Token ----------
+            HttpContext.Session.SetString("SoDienThoai", user.SoDienThoai ?? "");
+            HttpContext.Session.SetString("NgayTao", (user.NgayTao ?? DateTime.Now).ToString("dd/MM/yyyy HH:mm"));
+
+            // ---------- Sinh JWT Token & LƯU VÀO COOKIE HTTPONLY ----------
             string token = GenerateJwtToken(user);
 
-            // ---------- Nếu RememberMe thì lưu cookie ----------
+            var tokenCookie = new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddDays(7),
+                HttpOnly = true,
+                Secure = true,                 // yêu cầu HTTPS
+                SameSite = SameSiteMode.Lax,
+                Path = "/"
+            };
+            Response.Cookies.Append("AccessToken", token, tokenCookie);
+
+            // ---------- Nếu RememberMe thì chỉ lưu email không lưu password----------
             if (RememberMe)
             {
-                CookieOptions option = new CookieOptions
+                var emailCookie = new CookieOptions
                 {
-                    Expires = DateTime.Now.AddDays(7),
-                    HttpOnly = true
+                    Expires = DateTime.UtcNow.AddDays(7),
+                    HttpOnly = true,
+                    Secure = true, //nếu domain là http thì để false
+                    SameSite = SameSiteMode.Lax,
+                    Path = "/"
                 };
-                Response.Cookies.Append("UserEmail", email, option);
-                Response.Cookies.Append("UserPassword", matkhau, option);
+                Response.Cookies.Append("UserEmail", emailNorm, emailCookie);
             }
-                return RedirectToAction("Index", "Home");
-            //Cho API hoặc test Postman: trả token ra JSON
-            /* return Json(new
-             {
-                 success = true,
-                 message = "Đăng nhập thành công!",
-                 token = token
-             }); */
+
+            return RedirectToAction("Index", "Home");
         }
 
         // --------------------- LOGOUT ---------------------
-        [HttpGet]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             Response.Cookies.Delete("UserEmail");
-            Response.Cookies.Delete("UserPassword");
+            Response.Cookies.Delete("AccessToken"); // xoá JWT
             return RedirectToAction("Index", "Home");
         }
-
         // --------------------- REGISTER ---------------------
         [HttpGet]
+        [Microsoft.AspNetCore.Authorization.AllowAnonymous]
         public IActionResult Register()
         {
             return View();
@@ -108,11 +124,12 @@ namespace ProjectInternWebBanSach.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Microsoft.AspNetCore.Authorization.AllowAnonymous]
         public IActionResult Register(NguoiDung model, IFormFile? AnhDaiDien)
         {
-            if (string.IsNullOrEmpty(model.Email) ||
-                string.IsNullOrEmpty(model.MatKhau) ||
-                string.IsNullOrEmpty(model.ConfirmPassword))
+            if (string.IsNullOrWhiteSpace(model.Email) ||
+                string.IsNullOrWhiteSpace(model.MatKhau) ||
+                string.IsNullOrWhiteSpace(model.ConfirmPassword))
             {
                 ViewBag.Error = "Vui lòng nhập đầy đủ thông tin.";
                 return View(model);
@@ -124,7 +141,8 @@ namespace ProjectInternWebBanSach.Controllers
                 return View(model);
             }
 
-            var existing = _context.NguoiDungs.FirstOrDefault(x => x.Email == model.Email);
+            var emailNorm = model.Email.Trim().ToLowerInvariant();
+            var existing = _context.NguoiDungs.FirstOrDefault(x => x.Email == emailNorm);
             if (existing != null)
             {
                 ViewBag.Error = "Email đã được đăng ký.";
@@ -142,24 +160,22 @@ namespace ProjectInternWebBanSach.Controllers
                 fileName = Guid.NewGuid().ToString() + Path.GetExtension(AnhDaiDien.FileName);
                 string filePath = Path.Combine(uploadFolder, fileName);
 
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    AnhDaiDien.CopyTo(stream);
-                }
+                using var stream = new FileStream(filePath, FileMode.Create);
+                AnhDaiDien.CopyTo(stream);
             }
 
             // ---------- Mã hóa mật khẩu ----------
             var newUser = new NguoiDung
             {
                 HoTen = model.HoTen,
-                Email = model.Email,
+                Email = emailNorm,
                 MatKhau = GetSHA256(model.MatKhau),
                 AnhDaiDien = fileName,
                 SoDienThoai = model.SoDienThoai,
                 DiaChi = model.DiaChi,
                 NgayTao = DateTime.Now,
                 TrangThai = true,
-                MaVaiTro = 2,// auto là user
+                MaVaiTro = 2, // user
                 SoDu = 0
             };
 
@@ -173,12 +189,10 @@ namespace ProjectInternWebBanSach.Controllers
         // --------------------- HÀM MÃ HÓA SHA256 ---------------------
         private string GetSHA256(string input)
         {
-            using (var sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(input);
-                byte[] hash = sha256.ComputeHash(bytes);
-                return Convert.ToHexString(hash).ToLower();
-            }
+            using var sha256 = System.Security.Cryptography.SHA256.Create();
+            byte[] bytes = Encoding.UTF8.GetBytes(input);
+            byte[] hash = sha256.ComputeHash(bytes);
+            return Convert.ToHexString(hash).ToLower();
         }
 
         // --------------------- HÀM SINH JWT TOKEN ---------------------
@@ -190,9 +204,10 @@ namespace ProjectInternWebBanSach.Controllers
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Email),
-                new Claim("UserId", user.MaNguoiDung.ToString()),
-                new Claim("Role", user.MaVaiTroNavigation?.TenVaiTro ?? "user"),
+                new Claim(ClaimTypes.NameIdentifier, user.MaNguoiDung.ToString()),
+                new Claim(ClaimTypes.Name, user.HoTen ?? user.Email),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.MaVaiTroNavigation?.TenVaiTro ?? "user"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
@@ -200,16 +215,61 @@ namespace ProjectInternWebBanSach.Controllers
                 issuer: jwtSettings["Issuer"],
                 audience: jwtSettings["Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings["ExpireMinutes"])),
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(jwtSettings["ExpireMinutes"])),
                 signingCredentials: creds
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
         //-----------------------HỒ SƠ----------------------
+        [Microsoft.AspNetCore.Authorization.Authorize]
         public IActionResult Profile()
         {
+            if (Request.Cookies.TryGetValue("AccessToken", out var token))
+                ViewBag.AccessToken = token;// đưa token ra ViewBag
+            else
+                ViewBag.AccessToken = null;
+
             return View();
+        }
+        //---------------CHANEGE PASSWORD----------------
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult ChangePassword([FromForm] ChangePasswordDto dto)
+        {
+            if (string.IsNullOrWhiteSpace(dto.CurrentPassword) ||
+                string.IsNullOrWhiteSpace(dto.NewPassword) ||
+                string.IsNullOrWhiteSpace(dto.ConfirmPassword))
+                return BadRequest("Vui lòng nhập đầy đủ thông tin.");
+
+            if (dto.NewPassword.Length < 6)
+                return BadRequest("Mật khẩu mới phải có ít nhất 6 ký tự.");
+
+            if (dto.NewPassword != dto.ConfirmPassword)
+                return BadRequest("Mật khẩu mới và xác nhận không khớp.");
+
+            var userId = HttpContext.Session.GetInt32("MaNguoiDung");
+            if (userId == null) return Unauthorized("Phiên đăng nhập đã hết. Vui lòng đăng nhập lại.");
+
+            var user = _context.NguoiDungs.FirstOrDefault(x => x.MaNguoiDung == userId && x.TrangThai == true);
+            if (user == null) return BadRequest("Không tìm thấy người dùng.");
+
+            if (!string.Equals(user.MatKhau, GetSHA256(dto.CurrentPassword), StringComparison.OrdinalIgnoreCase))
+                return BadRequest("Mật khẩu hiện tại không chính xác.");
+
+            if (string.Equals(user.MatKhau, GetSHA256(dto.NewPassword), StringComparison.OrdinalIgnoreCase))
+                return BadRequest("Mật khẩu mới không được trùng mật khẩu hiện tại.");
+
+            user.MatKhau = GetSHA256(dto.NewPassword);
+            _context.SaveChanges();
+
+            // Đăng xuất
+            HttpContext.Session.Clear();
+            Response.Cookies.Delete("AccessToken");
+
+            return Ok("Đổi mật khẩu thành công. Vui lòng đăng nhập lại.");
         }
     }
 }

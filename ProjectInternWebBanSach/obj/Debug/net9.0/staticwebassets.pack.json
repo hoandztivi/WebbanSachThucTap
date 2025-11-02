@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\ProjectInternWebBanSach.ud6wck7f7s.bundle.scp.css"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\details.css",
+      "PackagePath": "staticwebassets\\css\\details.css"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\introduction.css",
+      "PackagePath": "staticwebassets\\css\\introduction.css"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
     },
     {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\register.css",
@@ -61,6 +73,34 @@
       "PackagePath": "staticwebassets\\img\\banner\\banner2.png"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz1.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz1.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz2.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz2.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz3.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz3.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz4.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz4.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz5.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz5.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz6.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz6.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\Zookiz7.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\Zookiz7.jpg"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\conan1.jpg",
       "PackagePath": "staticwebassets\\img\\sach\\conan1.jpg"
     },
@@ -101,12 +141,40 @@
       "PackagePath": "staticwebassets\\img\\sach\\doraemon5.jpg"
     },
     {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\pokemon1.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\pokemon1.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\pokemon2.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\pokemon2.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\pokemon3.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\pokemon3.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\pokemon4.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\pokemon4.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\img\\sach\\pokemon5.jpg",
+      "PackagePath": "staticwebassets\\img\\sach\\pokemon5.jpg"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\details.js",
+      "PackagePath": "staticwebassets\\js\\details.js"
+    },
+    {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\index.js",
       "PackagePath": "staticwebassets\\js\\index.js"
     },
     {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\login.js",
       "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\profile.js",
+      "PackagePath": "staticwebassets\\js\\profile.js"
     },
     {
       "Id": "D:\\.Thực Tập Chuyên Ngành\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\register.js",

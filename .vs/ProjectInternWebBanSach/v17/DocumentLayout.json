@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\wwwroot\\css\\details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\wwwroot\\css\\details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\wwwroot\\js\\details.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\wwwroot\\js\\details.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "ProjectInternWebBanSach\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-19T15:53:46.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ProjectInternWebBanSach\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAkwJ0AAAAvAAAAAAAAAA==",
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAcwD8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T15:43:28.357Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ProjectInternWebBanSach\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-19T15:41:34.264Z"
+              "WhenOpened": "2025-11-02T06:16:32.832Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ProjectInternWebBanSach\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAmwD0AAAAUAAAAAAAAAA==",
+              "Title": "details.js",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\details.js",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\wwwroot\\js\\details.js",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\details.js",
+              "RelativeToolTip": "ProjectInternWebBanSach\\wwwroot\\js\\details.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-02T06:16:08.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "details.css",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\details.css",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\wwwroot\\css\\details.css",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\css\\details.css",
+              "RelativeToolTip": "ProjectInternWebBanSach\\wwwroot\\css\\details.css",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-02T06:14:52.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Views\\Products\\Details.cshtml",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Views\\Products\\Details.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-19T08:42:20.42Z"
+              "WhenOpened": "2025-11-02T06:13:31.211Z",
+              "EditorCaption": ""
             }
           ]
         }

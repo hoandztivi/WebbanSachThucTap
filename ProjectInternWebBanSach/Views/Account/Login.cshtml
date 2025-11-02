@@ -17,7 +17,10 @@
             <h1 class="login-title">Đăng nhập</h1>
             <p class="login-subtitle">Chào mừng bạn quay trở lại</p>
         </div>
-
+        @if (ViewBag.Error != null)
+        {
+            <p class="text-red-500 text-center mt-2">@ViewBag.Error</p>
+        }
         <!-- Form -->
         <form asp-controller="Account" asp-action="Login" method="post" class="login-form" id="loginForm">
             @Html.AntiForgeryToken()
@@ -32,12 +35,10 @@
                     <span>Email</span>
                 </label>
                 <input type="email"
-                       id="email"
-                       name="Email"
                        class="form-input"
                        placeholder="example@email.com"
                        required
-                       autocomplete="email"
+                       autocomplete="username"
                        value="@ViewBag.SavedEmail"
                        asp-for="Email" />
                 <span asp-validation-for="Email" class="validation-message"></span>
@@ -53,13 +54,10 @@
                 </label>
                 <div class="password-wrapper">
                     <input type="password"
-                           id="password"
-                           name="MatKhau"
                            class="form-input"
                            placeholder="••••••••"
                            required
                            autocomplete="current-password"
-                           value="@ViewBag.SavedPassword"
                            asp-for="MatKhau" />
                     <button type="button" class="password-toggle" id="togglePassword" aria-label="Hiện/ẩn mật khẩu">
                         <svg class="eye-icon" id="eyeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,10 +89,6 @@
                 </svg>
             </button>
         </form>
-        @if (ViewBag.Error != null)
-        {
-            <p class="text-red-500 text-center mt-2">@ViewBag.Error</p>
-        }
         <!-- Divider -->
         <div class="divider">
             <span class="divider-text">Hoặc</span>

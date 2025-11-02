@@ -12,15 +12,19 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\profile.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\introduction.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\jquery\dist\jquery.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\js\profile.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\theotheloai.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\details.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
@@ -52,6 +56,7 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\site.css
+D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\js\details.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\js\site.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\css\login.css
@@ -67,8 +72,11 @@ D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBan
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 D:\.Thực Tập Chuyên Ngành\CODE\ProjectInternWebBanSach\ProjectInternWebBanSach\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\css\details.css
 wwwroot\css\index.css
+wwwroot\css\introduction.css
 wwwroot\css\login.css
+wwwroot\css\profile.css
 wwwroot\css\register.css
 wwwroot\css\site.css
 wwwroot\css\theotheloai.css
@@ -91,8 +99,22 @@ wwwroot\img\sach\doraemon2.jpg
 wwwroot\img\sach\doraemon3.jpg
 wwwroot\img\sach\doraemon4.jpg
 wwwroot\img\sach\doraemon5.jpg
+wwwroot\img\sach\pokemon1.jpg
+wwwroot\img\sach\pokemon2.jpg
+wwwroot\img\sach\pokemon3.jpg
+wwwroot\img\sach\pokemon4.jpg
+wwwroot\img\sach\pokemon5.jpg
+wwwroot\img\sach\Zookiz1.jpg
+wwwroot\img\sach\Zookiz2.jpg
+wwwroot\img\sach\Zookiz3.jpg
+wwwroot\img\sach\Zookiz4.jpg
+wwwroot\img\sach\Zookiz5.jpg
+wwwroot\img\sach\Zookiz6.jpg
+wwwroot\img\sach\Zookiz7.jpg
+wwwroot\js\details.js
 wwwroot\js\index.js
 wwwroot\js\login.js
+wwwroot\js\profile.js
 wwwroot\js\register.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

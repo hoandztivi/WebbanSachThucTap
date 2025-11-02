@@ -1,0 +1,286 @@
+﻿@model ProjectInternWebBanSach.Models.Sach
+@{
+    ViewData["Title"] = Model?.TieuDe ?? "Chi tiết sản phẩm";
+
+    string categoryName = ViewBag.CategoryName ?? "Thể loại";
+    int categoryId = ViewBag.CategoryId ?? 0;
+
+    var mainImage = string.IsNullOrWhiteSpace(Model?.HinhAnh) ? "/img/placeholder.png" : Model.HinhAnh;
+
+    decimal price = ViewBag.Price ?? 0m;
+    decimal original = ViewBag.OriginalPrice ?? 0m;
+    decimal saved = ViewBag.SavedAmount ?? 0m;
+    int discountPercent = ViewBag.DiscountPercent ?? 0;
+
+    int reviewCount = ViewBag.ReviewCount ?? 0;
+    double rating = ViewBag.Rating ?? 0d;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/details.css" asp-append-version="true" />
+}
+
+<div class="details-container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/">Trang chủ</a>
+        <span> / </span>
+        <a href="@Url.Action("TheoTheLoai", "Products", new { id = categoryId })">@categoryName</a>
+        <span> / </span>
+        <span>@Model?.TieuDe</span>
+    </div>
+
+    <!-- Product Details Section -->
+    <div class="product-details-section">
+        <div class="product-images">
+            @if (discountPercent > 0)
+            {
+                <div class="discount-badge">-@discountPercent%</div>
+            }
+            <div class="thumbnail-image">
+                <img src="@mainImage" alt="@Model?.TieuDe" />
+            </div>
+            <div class="main-image">
+                <img src="@mainImage" alt="@Model?.TieuDe" />
+            </div>
+        </div>
+
+        <div class="product-info">
+            <div class="product-header">
+                <h1 class="product-title">@Model?.TieuDe</h1>
+                <button class="wishlist-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="rating-info">
+                <div class="rating-stars">
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        bool solid = i < Math.Round(rating);
+                        <svg class="star @(solid ? "star-filled" : "star-empty")" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    }
+                </div>
+                <span class="review-count">@reviewCount đánh giá | Còn Lại: @(Model?.SoLuong ?? 0)</span>
+            </div>
+
+            <div class="price-section">
+                <div class="price-main">
+                    <span class="current-price">@price.ToString("N0")₫</span>
+                    @if (original > price)
+                    {
+                        <span class="original-price">@original.ToString("N0")₫</span>
+                    }
+                </div>
+                @if (saved > 0)
+                {
+                    <p class="saved-amount">(Bạn đã tiết kiệm được @saved.ToString("N0")₫)</p>
+                }
+            </div>
+
+            <div class="product-specs">
+                <ul class="specs-list">
+                    @if (!string.IsNullOrWhiteSpace(Model?.TacGia))
+                    {
+                        <li><strong>Tác giả:</strong> @Model.TacGia</li>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(Model?.NhaXuatBan))
+                    {
+                        <li><strong>Nhà xuất bản:</strong> @Model.NhaXuatBan</li>
+                    }
+                    @if (Model?.MaTheLoaiNavigation != null)
+                    {
+                        <li><strong>Thể loại:</strong> @Model.MaTheLoaiNavigation.TenTheLoai</li>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(Model?.MoTa))
+                    {
+                        <li><strong>Mô tả:</strong> <span style="max-width: 500px; display: inline-block;">@Model.MoTa</span></li>
+                    }
+                </ul>
+            </div>
+
+            <div class="quantity-section">
+                <label>Số lượng</label>
+                <div class="quantity-input">
+                    <button type="button" class="qty-btn" onclick="decrementQuantity()">−</button>
+                    <input type="number" id="quantity" value="1" min="1" />
+                    <button type="button" class="qty-btn" onclick="incrementQuantity()">+</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+                <button class="btn-buy-now">MUA NGAY</button>
+            </div>
+
+            <div class="social-buttons">
+                <button class="btn-like">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.334a2 2 0 001.336 1.923l1.383.442a2 2 0 002.562-1.715l.453-3.024a2 2 0 00-1.064-2.125L9.5 12.5a.5.5 0 01.5-.5h4.91a2 2 0 001.953-1.293l1.11-2.91A1.5 1.5 0 0014.977 6H12a2 2 0 00-2 2v.333L6 10.333z"></path>
+                    </svg>
+                    Thích 0
+                </button>
+                <button class="btn-share">Chia sẻ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review & Question Section -->
+    <div class="review-section">
+        <div class="review-header">
+            <div class="review-header-left">
+                <h2 class="review-title">Đánh giá sản phẩm</h2>
+                <div class="review-rating-display">
+                    <div class="rating-stars">
+                        @for (int i = 0; i < 5; i++)
+                        {
+                            bool solid = i < Math.Round(rating);
+                            <svg class="star @(solid ? "star-filled" : "star-empty")" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        }
+                    </div>
+                    <span class="review-count-text">Dựa trên @reviewCount đánh giá</span>
+                </div>
+            </div>
+            <div class="review-header-buttons">
+                <button id="btnWriteReview" class="btn-review-action">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                    </svg>
+                    Viết đánh giá
+                </button>
+                <button id="btnAskQuestion" class="btn-review-action">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                    </svg>
+                    Đặt câu hỏi
+                </button>
+            </div>
+        </div>
+
+        <!-- Review Form -->
+        <div id="reviewForm" class="review-form hidden">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Tên</label>
+                    <input type="text" id="reviewName" placeholder="Nhập tên của bạn" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="reviewEmail" placeholder="hi@example.com" />
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="tel" id="reviewPhone" placeholder="Nhập số điện thoại của bạn" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Đánh giá</label>
+                <div class="rating-input">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5" class="star-label">★</label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" class="star-label">★</label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" class="star-label">★</label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" class="star-label">★</label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" class="star-label">★</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tiêu đề đánh giá</label>
+                <input type="text" id="reviewTitle" placeholder="Nhập tiêu đề đánh giá của bạn" />
+            </div>
+
+            <div class="form-group">
+                <label>Nội dung</label>
+                <textarea id="reviewContent" rows="5" placeholder="Viết nội dung đánh giá của bạn"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Link video (không bắt buộc)</label>
+                <input type="url" id="reviewVideo" placeholder="Nhập link youtube video của bạn" />
+            </div>
+
+            <div class="form-group">
+                <label>Hình ảnh (không bắt buộc)</label>
+                <button type="button" class="btn-choose-image" onclick="document.getElementById('reviewImages').click()">
+                    Chọn hình
+                </button>
+                <input type="file" id="reviewImages" multiple accept="image/*" style="display: none;" />
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-submit-review" onclick="submitReview()">Gửi đánh giá</button>
+            </div>
+        </div>
+
+        <!-- Question Form -->
+        <div id="questionForm" class="review-form hidden">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Tên</label>
+                    <input type="text" id="questionName" placeholder="Nhập tên của bạn" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="questionEmail" placeholder="hi@example.com" />
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="tel" id="questionPhone" placeholder="Nhập số điện thoại của bạn" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Nội dung</label>
+                <textarea id="questionContent" rows="5" placeholder="Viết câu hỏi của bạn"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-submit-question" onclick="submitQuestion()">Gửi câu hỏi</button>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="review-tabs">
+            <button class="tab-item active" data-tab="reviews">
+                Đánh giá @reviewCount
+            </button>
+            <button class="tab-item" data-tab="questions">
+                Câu hỏi & trả lời 0
+            </button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/details.js" asp-append-version="true"></script>
+    <script>
+        function incrementQuantity() {
+            const qty = document.getElementById('quantity');
+            qty.value = parseInt(qty.value || 1) + 1;
+        }
+        function decrementQuantity() {
+            const qty = document.getElementById('quantity');
+            qty.value = Math.max(1, (parseInt(qty.value || 1) - 1));
+        }
+        function submitReview() {
+            // TODO: Implement review submission
+            alert('Chức năng đang được phát triển');
+        }
+        function submitQuestion() {
+            // TODO: Implement question submission
+            alert('Chức năng đang được phát triển');
+        }
+    </script>
+}

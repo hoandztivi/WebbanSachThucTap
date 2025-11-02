@@ -9,11 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 // ---------------------- Add services ----------------------
 builder.Services.AddControllersWithViews();
 
-// Thêm DbContext (Entity Framework)
+// EF Core
 builder.Services.AddDbContext<QuanLyBanSachContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Thêm Session
+// Session
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -32,8 +32,9 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    options.RequireHttpsMetadata = true; // bật HTTPS bắt buộc
-    options.SaveToken = true; // lưu token trong HttpContext
+    options.RequireHttpsMetadata = false; // dev môi trường
+    options.SaveToken = true;
+
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -43,7 +44,20 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(key),
-        ClockSkew = TimeSpan.Zero // không cho phép trễ thời gian token
+        ClockSkew = TimeSpan.Zero
+    };
+
+    //Lấy JWT từ cookie AccessToken
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = ctx =>
+        {
+            if (ctx.Request.Cookies.TryGetValue("AccessToken", out var token))
+            {
+                ctx.Token = token;
+            }
+            return Task.CompletedTask;
+        }
     };
 });
 
@@ -63,13 +77,17 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Bật session
+// Session
 app.UseSession();
 
-// Bật JWT Auth
+//Bật Authentication + Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Map API controller (để dùng JWT API)
+app.MapControllers();
+
+// Map MVC routes
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
