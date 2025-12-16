@@ -1,0 +1,93 @@
+﻿@model IEnumerable<ProjectInternWebBanSach.Models.Sach>
+
+@{
+    ViewData["Title"] = ViewBag.CategoryName;
+}
+<link rel="stylesheet" href="~/css/theotheloai.css" asp-append-version="true">
+
+<div class="container mx-auto px-4 py-8 max-w-7xl">
+    <!-- Header -->
+    <div class="text-center mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800 uppercase inline-block border-b-4 border-red-500 pb-1">
+            @ViewData["Title"]
+        </h1>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+                <a href="@Url.Action("Details", "Products", new { id = product.MaSach })" class="block">
+                    <div class="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+                        @if (product.GiamGia > 0)
+                        {
+                            <div class="discount-badge">
+                                -@product.GiamGia?.ToString("N0")đ
+                            </div>
+                        }
+                        <img src="@product.HinhAnh"
+                             alt="@product.TieuDe"
+                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                             loading="lazy" />
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="title">@product.TieuDe</h3>
+                        <div class="flex items-center gap-2 flex-wrap mt-1">
+                            <span class="price text-red-600 font-bold text-base md:text-lg">
+                                @product.Gia?.ToString("N0")đ
+                            </span>
+                            @if (product.GiamGia > 0 && product.GiamGia < product.Gia)
+                            {
+                                <span class="old-price text-gray-400 text-xs md:text-sm line-through">
+                                    @string.Format("{0:N0}đ", (product.Gia ?? 0) + (product.GiamGia ?? 0))
+                                </span>
+                            }
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+@*==Phân Trang==*@
+    @{
+        var pg = ViewBag.Pagination;
+        int id = (int)ViewBag.CategoryId;
+        int current = (int)pg.Current;
+        int total = (int)pg.TotalPages;
+        bool hasPrev = (bool)pg.HasPrev;
+        bool hasNext = (bool)pg.HasNext;
+    }
+
+    @if (total > 1)
+    {
+        <div class="mt-8 flex items-center justify-center gap-2 select-none">
+
+            <a class="px-3 py-2 rounded border text-sm transition
+           @(hasPrev ? "hover:bg-gray-50 border-gray-300 text-gray-700" : "opacity-40 cursor-not-allowed border-gray-200 text-gray-400")"
+               href="@(hasPrev ? Url.Action("TheoTheLoai", "Products", new { id = id, page = current - 1 }) : "#")">
+                ‹ Trang trước
+            </a>
+
+            @{
+                var start = Math.Max(1, current - 2);
+                var end = Math.Min(total, current + 2);
+                for (int i = start; i <= end; i++)
+                {
+                    <a class="px-3 py-2 rounded border text-sm transition
+                        @(i == current ? "bg-red-600 text-white border-red-600" : "hover:bg-gray-50 border-gray-300 text-gray-700")"
+                       href="@Url.Action("TheoTheLoai", "Products", new { id = id, page = i })">
+                        @i
+                    </a>
+                }
+            }
+
+            <a class="px-3 py-2 rounded border text-sm transition
+           @(hasNext ? "hover:bg-gray-50 border-gray-300 text-gray-700" : "opacity-40 cursor-not-allowed border-gray-200 text-gray-400")"
+               href="@(hasNext ? Url.Action("TheoTheLoai", "Products", new { id = id, page = current + 1 }) : "#")">
+                Trang sau ›
+            </a>
+        </div>
+    }
+
+</div>

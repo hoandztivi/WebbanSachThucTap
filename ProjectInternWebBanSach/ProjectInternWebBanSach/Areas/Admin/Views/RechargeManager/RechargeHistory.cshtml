@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Lịch sử nạp tiền";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/rechargehistory.css" asp-append-version="true" />
+}
+
+<div class="recharge-page">
+    <!-- HEADER -->
+    <div class="recharge-header">
+        <div>
+            <h1 class="recharge-title">Lịch sử nạp tiền</h1>
+            <p class="recharge-subtitle">
+                Theo dõi các giao dịch nạp tiền vào ví của người dùng.
+            </p>
+        </div>
+        <span class="recharge-badge">
+            Admin · Recharge History
+        </span>
+    </div>
+
+    <!-- BỘ LỌC + BẢNG -->
+    <div class="card">
+        <div class="recharge-toolbar">
+            <div>
+                <h2 class="card-title">Danh sách giao dịch</h2>
+            </div>
+            <div class="recharge-toolbar-right">
+                <select id="statusFilter" class="recharge-select cursor-pointer">
+                    <option value="all">Tất cả trạng thái</option>
+                    <option value="Chờ thanh toán">Chờ thanh toán</option>
+                    <option value="Hoàn thành">Hoàn thành</option>
+                    <option value="Hoàn tiền hủy đơn">Hoàn tiền hủy đơn</option>
+                </select>
+                <div class="recharge-meta">
+                    Tổng: <span id="totalRecharges">0</span> giao dịch
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="recharge-table">
+                <thead>
+                    <tr>
+                        <th style="width:80px;">Mã nạp</th>
+                        <th style="min-width:140px;">Người dùng</th>
+                        <th style="min-width:120px;">Số điện thoại</th>
+                        <th style="min-width:170px;">Email</th>
+                        <th style="width:120px;">Số tiền</th>
+                        <th style="min-width:160px;">Nội dung</th>
+                        <th style="min-width:160px;">Mã giao dịch</th>
+                        <th style="width:120px;">Ngày tạo</th>
+                        <th style="width:130px;">Trạng thái</th>
+                        <th style="width:170px; text-align:center;">Chuyển trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody id="tblRechargeBody">
+                    <!-- JS render -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="rechargeEmpty" class="empty-state" style="display:none;">
+            Không có giao dịch nạp tiền nào.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/rechargehistory.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,140 @@
+﻿@using ProjectInternWebBanSach.Models
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+
+    var roles = ViewBag.Roles as List<VaiTro> ?? new List<VaiTro>();
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/listofuser.css" asp-append-version="true" />
+}
+
+<div class="user-page">
+    <!-- HEADER -->
+    <div class="user-header">
+        <div>
+            <h1 class="user-title">Quản lý người dùng</h1>
+            <p class="user-subtitle">
+                Xem, thêm mới và quản lý tài khoản người dùng trong hệ thống.
+            </p>
+        </div>
+        <span class="user-badge">
+            Admin · User Management
+        </span>
+    </div>
+
+    <!-- FORM THÊM NGƯỜI DÙNG -->
+    <div class="card">
+        <h2 class="card-title">Thêm người dùng mới</h2>
+
+        <div class="user-form-grid">
+            <div class="user-form-group">
+                <label class="user-label">Họ tên</label>
+                <input id="txtHoTen" type="text" class="user-input" placeholder="Nhập họ tên người dùng...">
+            </div>
+
+            <div class="user-form-group">
+                <label class="user-label">Email <span class="text-red-500">*</span></label>
+                <input id="txtEmail" type="email" class="user-input" placeholder="user@example.com">
+            </div>
+
+            <div class="user-form-group">
+                <label class="user-label">Mật khẩu <span class="text-red-500">*</span></label>
+                <input id="txtPassword" type="password" class="user-input" placeholder="Mật khẩu đăng nhập...">
+            </div>
+
+            <div class="user-form-group">
+                <label class="user-label">Số điện thoại</label>
+                <input id="txtPhone" type="text" class="user-input" placeholder="Số điện thoại...">
+            </div>
+
+            <div class="user-form-group">
+                <label class="user-label">Địa chỉ</label>
+                <input id="txtAddress" type="text" class="user-input" placeholder="Địa chỉ liên hệ...">
+            </div>
+
+            <div class="user-form-group">
+                <label class="user-label">Vai trò</label>
+                <select id="ddlRole" class="user-input">
+                    <option value="">-- Chọn vai trò --</option>
+                    @foreach (var r in roles)
+                    {
+                        <option value="@r.MaVaiTro">@r.TenVaiTro</option>
+                    }
+                </select>
+            </div>
+
+            <div class="user-form-group">
+                <label class="user-label">Số dư ban đầu (VND)</label>
+                <input id="txtBalance" type="number" min="0" step="1000" class="user-input" placeholder="0">
+            </div>
+
+            <!-- ẢNH ĐẠI DIỆN -->
+            <div class="user-form-group">
+                <label class="user-label">Ảnh đại diện</label>
+                <input id="fileAvatar" type="file" accept="image/*" class="user-input" />
+                <input id="txtAvatarPath" type="text" class="user-input user-input-path"
+                       placeholder="Đường dẫn ảnh sau khi upload" readonly />
+                <img id="imgAvatarPreview" src="" alt="Preview" class="user-avatar-preview" style="display:none;" />
+            </div>
+        </div>
+
+        <div class="user-btn-row">
+            <button id="btnUserReset" type="button" class="btn-secondary">
+                Làm mới
+            </button>
+            <button id="btnUserCreate" type="button" class="btn-primary">
+                Thêm người dùng
+            </button>
+        </div>
+
+        <p id="userMessage" class="message-inline" style="display:none"></p>
+    </div>
+
+    <!-- DANH SÁCH NGƯỜI DÙNG -->
+    <div class="card">
+        <div class="user-toolbar">
+            <h2 class="card-title">Danh sách người dùng</h2>
+
+            <div class="user-toolbar-right">
+                <div class="user-search">
+                    <input id="txtSearchUser" type="text" class="user-input-search"
+                           placeholder="Tìm theo tên, email, SĐT...">
+                </div>
+                <div class="user-meta">
+                    Tổng: <span id="totalUsers">0</span> người dùng
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th style="width:60px;">Ảnh</th>
+                        <th style="width:70px;">Mã</th>
+                        <th style="min-width:160px;">Họ tên</th>
+                        <th style="min-width:170px;">Email</th>
+                        <th style="min-width:110px;">Vai trò</th>
+                        <th style="width:110px;">Số dư</th>
+                        <th style="width:90px;">Trạng thái</th>
+                        <th style="width:110px;">Ngày tạo</th>
+                        <th style="width:110px; text-align:right;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="tblUsersBody">
+                    <!-- JS render -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="userEmpty" class="empty-state" style="display:none;">
+            Chưa có người dùng nào.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/listofuser.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,98 @@
+﻿@model IEnumerable<ProjectInternWebBanSach.Models.SachYeuThich>
+@{
+    ViewData["Title"] = "Danh sách yêu thích";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/wishlist.css" asp-append-version="true" />
+}
+
+<div class="container mx-auto px-4 py-8">
+    <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+            ❤ Danh sách yêu thích (@Model.Count())
+        </h1>
+
+        @if (Model.Any())
+        {
+            <button id="clearWishlist"
+                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-semibold cursor-pointer">
+                Xoá tất cả
+            </button>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="bg-white shadow-md p-6 rounded-lg text-center">
+            <p class="text-gray-600 mb-4">Chưa có sản phẩm nào trong danh sách yêu thích.</p>
+            <a href="/" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-md">
+                🔎 Tiếp tục mua sắm
+            </a>
+        </div>
+        return;
+    }
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @foreach (var x in Model)
+        {
+            var s = x.MaSachNavigation;
+            <div class="wishlist-card bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden relative" data-id="@s.MaSach">
+
+                <img src="@s.HinhAnh" class="w-full h-52 object-cover" />
+
+                <div class="p-4">
+                    <h3 class="font-semibold line-clamp-2 h-12">@s.TieuDe</h3>
+
+                    <div class="mt-2 font-bold text-red-600">
+                        @s.Gia?.ToString("#,0")₫
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between">
+                        <a href="/Products/Details/@s.MaSach"
+                           class="px-3 py-2 bg-amber-600 text-white text-sm rounded hover:bg-amber-700">
+                            Xem chi tiết
+                        </a>
+
+                        <button class="remove-btn text-red-600 hover:text-red-700 text-sm font-medium cursor-pointer"
+                                data-id="@s.MaSach">
+                            Xoá
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Xoá từng sản phẩm
+        document.addEventListener("click", async (e) => {
+          const btn = e.target.closest(".remove-btn");
+          if (!btn) return;
+
+          const id = btn.dataset.id;
+          const res = await fetch(`/Wishlist/Remove?id=${encodeURIComponent(id)}`, { method:"POST" });
+          const data = await res.json();
+
+          if (data.login === false) return location.href = "/Account/Login";
+
+          if (data.success) {   
+            document.querySelector(`[data-id="${id}"]`)?.remove();
+            const badge = document.getElementById("wishlistCount");
+            if (badge) badge.textContent = data.count ?? 0;
+            if (typeof showToast === 'function') showToast("Đã xoá khỏi yêu thích");
+            if ((data.count ?? 0) === 0) location.reload();
+          }
+        });
+
+        // Xoá tất cả
+        document.getElementById("clearWishlist")?.addEventListener("click", async () => {
+          if (!confirm("Xoá toàn bộ danh sách yêu thích?")) return;
+          await fetch(`/Wishlist/Clear`, { method:"POST" });
+          const badge = document.getElementById("wishlistCount");
+          if (badge) badge.textContent = "0";
+          location.reload();
+        });
+    </script>
+}

@@ -1,0 +1,321 @@
+﻿@using System.Security.Claims
+@model IEnumerable<ProjectInternWebBanSach.Models.ChiTietGioHang>
+
+@{
+    var isEdit = ViewBag.IsEdit as bool? ?? false;
+    var orderId = ViewBag.OrderId as int? ?? 0;
+
+    ViewData["Title"] = isEdit ? "Sửa đơn hàng" : "Thanh toán";
+
+    var items = Model?.ToList() ?? new List<ProjectInternWebBanSach.Models.ChiTietGioHang>();
+    var isEmpty = !items.Any();
+
+    decimal subtotal = items.Sum(i => (i.DonGia ?? 0m) * (i.SoLuong ?? 0));
+    int itemCount = items.Sum(i => i.SoLuong ?? 0);
+
+    var identity = User.Identity as ClaimsIdentity;
+
+    var hoTen =
+        identity?.FindFirst(ClaimTypes.Name)?.Value
+        ?? identity?.FindFirst("HoTen")?.Value
+        ?? "";
+
+    var soDienThoai =
+        identity?.FindFirst(ClaimTypes.MobilePhone)?.Value
+        ?? identity?.FindFirst("SoDienThoai")?.Value
+        ?? "";
+
+    var diaChi =
+        identity?.FindFirst(ClaimTypes.StreetAddress)?.Value
+        ?? identity?.FindFirst("DiaChi")?.Value
+        ?? "";
+
+    decimal soDu = 0;
+
+    if (ViewBag.SoDu != null)
+    {
+        decimal.TryParse(ViewBag.SoDu.ToString(), out soDu);
+    }
+    else
+    {
+        var soDuClaim = identity?.FindFirst("SoDu")?.Value;
+        if (!string.IsNullOrEmpty(soDuClaim))
+        {
+            decimal.TryParse(soDuClaim, out soDu);
+        }
+    }
+
+    decimal defaultShipping = 30000;
+    decimal defaultTotal = subtotal + defaultShipping;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/buy.css" asp-append-version="true" />
+}
+
+@if (isEmpty)
+{
+    <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+        <h3 class="text-xl font-semibold text-gray-700 mb-2">
+            @(isEdit ? "Không có sản phẩm trong đơn để sửa" : "Giỏ hàng trống")
+        </h3>
+        <p class="text-gray-500 mb-6">
+            @(isEdit ? "Đơn hàng này hiện không có sản phẩm." : "Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán")
+        </p>
+        <a href="/"
+           class="inline-block px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors">
+            Tiếp tục mua sắm
+        </a>
+    </div>
+}
+else
+{
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        @if (TempData["Error"] != null)
+        {
+            <div class="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
+                @TempData["Error"]
+            </div>
+        }
+        @if (TempData["Success"] != null)
+        {
+            <div class="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-lg text-sm">
+                @TempData["Success"]
+            </div>
+        }
+
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+            @(isEdit ? "Sửa đơn hàng" : "Thanh toán đơn hàng")
+        </h1>
+
+        <form asp-controller="Checkout"
+              asp-action="Process"
+              method="post"
+              class="grid grid-cols-1 lg:grid-cols-3 gap-8"
+              id="checkoutForm">
+            @Html.AntiForgeryToken()
+
+            <!-- ẨN: IsEdit + OrderId -->
+            <input type="hidden" name="IsEdit" value="@(isEdit.ToString().ToLower())" />
+            @if (isEdit)
+            {
+                <input type="hidden" name="OrderId" value="@orderId" />
+            }
+
+            <!-- Cột trái -->
+            <div class="lg:col-span-2 space-y-6">
+
+                <!-- Thông tin liên hệ -->
+                <div class="checkout-card">
+                    <h2 class="section-title">Thông tin liên hệ</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <label class="form-label" for="hoTen">
+                                Họ và tên <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text"
+                                   id="hoTen"
+                                   name="HoTen"
+                                   value="@hoTen"
+                                   class="form-input"
+                                   required />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="soDienThoai">
+                                Số điện thoại <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel"
+                                   id="soDienThoai"
+                                   name="SoDienThoai"
+                                   value="@soDienThoai"
+                                   class="form-input"
+                                   pattern="[0-9]{10,11}"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Địa chỉ giao hàng -->
+                <div class="checkout-card">
+                    <h2 class="section-title">Địa chỉ giao hàng</h2>
+
+                    <div class="form-group">
+                        <label class="form-label" for="diaChiDayDu">
+                            Địa chỉ đầy đủ <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="diaChiDayDu"
+                                  name="DiaChiDayDu"
+                                  rows="3"
+                                  class="form-input"
+                                  placeholder="Ví dụ: Số 1 Phố X, Phường Y, Quận Z, Hà Nội"
+                                  required>@diaChi</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="ghiChu">
+                            Ghi chú đơn hàng (Tùy chọn)
+                        </label>
+                        <textarea id="ghiChu"
+                                  name="GhiChu"
+                                  rows="3"
+                                  class="form-input"
+                                  placeholder="Ghi chú chung cho đơn hàng, ví dụ: giao giờ hành chính..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Phương thức vận chuyển -->
+                <div class="checkout-card">
+                    <h2 class="section-title">Phương thức vận chuyển</h2>
+
+                    <div class="space-y-3">
+                        <label class="shipping-option">
+                            <input type="radio"
+                                   name="ShippingMethod"
+                                   value="standard"
+                                   class="shipping-radio"
+                                   data-fee="30000"
+                                   checked />
+                            <div class="shipping-info">
+                                <div class="font-semibold text-gray-900">Giao hàng tiêu chuẩn</div>
+                                <div class="text-sm text-gray-500">Giao trong 3-5 ngày</div>
+                            </div>
+                            <div class="shipping-price">30.000₫</div>
+                        </label>
+
+                        <label class="shipping-option opacity-50 cursor-not-allowed">
+                            <input type="radio"
+                                   name="ShippingMethod"
+                                   value="express"
+                                   class="shipping-radio pointer-events-none"
+                                   data-fee="50000"
+                                   disabled />
+                            <div class="shipping-info">
+                                <div class="font-semibold text-gray-900">Giao hàng nhanh</div>
+                                <div class="text-sm text-gray-500">Giao trong 1-2 ngày</div>
+                            </div>
+                            <div class="shipping-price">50.000₫</div>
+                        </label>
+                </div>
+                </div>
+                <!-- Phương thức thanh toán -->
+                <div class="checkout-card">
+                    <h2 class="section-title">Phương thức thanh toán</h2>
+
+                    <div class="space-y-3">
+                        <label class="payment-option">
+                            <input type="radio"
+                                   name="PaymentMethod"
+                                   value="wallet"
+                                   class="payment-radio"
+                                   checked />
+                            <div class="payment-info">
+                                <div class="font-semibold text-gray-900">Ví Bookstore</div>
+                                <div class="text-sm text-gray-500">
+                                    Thanh toán ngay bằng số dư tài khoản 
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio"
+                                   name="PaymentMethod"
+                                   value="cod"
+                                   class="payment-radio" />
+                            <div class="payment-info">
+                                <div class="font-semibold text-gray-900">Thanh toán khi nhận hàng (COD)</div>
+                                <div class="text-sm text-gray-500">Thanh toán bằng tiền mặt khi nhận hàng</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột phải: Tóm tắt đơn hàng -->
+            <div class="lg:col-span-1">
+                <div class="checkout-summary">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Đơn hàng của bạn</h2>
+
+                    <div class="order-items">
+                        @foreach (var item in items)
+                        {
+                            var sach = item.MaSachNavigation;
+                            string tenSach = sach?.TieuDe ?? "Sản phẩm";
+                            string hinhAnh = sach?.HinhAnh ?? "/img/placeholder.png";
+                            int soLuong = item.SoLuong ?? 0;
+                            decimal donGia = item.DonGia ?? 0m;
+                            decimal lineTotal = donGia * soLuong;
+
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    <img src="@hinhAnh" alt="@tenSach" />
+                                    <span class="order-item-qty">@soLuong</span>
+                                </div>
+                                <div class="order-item-info">
+                                    <div class="order-item-name">@tenSach</div>
+                                    <div class="order-item-price">@lineTotal.ToString("N0")₫</div>
+
+                                    <div class="mt-2">
+                                        <label class="text-xs text-gray-500">Ghi chú sản phẩm</label>
+                                        <textarea name="GhiChuChiTiet[@item.MaChiTiet]"
+                                                  rows="2"
+                                                  class="mt-1 w-full border border-gray-200 rounded-md px-2 py-1 text-xs focus:ring-amber-500 focus:border-amber-500"
+                                                  placeholder="VD: Gói bọc cẩn thận, ghi 'quà tặng', giao buổi sáng..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <input type="hidden" id="subtotalAmount" value="@subtotal" />
+
+                    <div class="order-summary">
+                        <div class="summary-row mb-3 flex items-center gap-2">
+                            <input id="couponCodeInput"
+                                   type="text"
+                                   placeholder="Nhập mã giảm giá"
+                                   class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500" />
+
+                            <button type="button"
+                                    id="applyCouponBtn"
+                                    class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors">
+                                Áp dụng
+                            </button>
+                        </div>
+                        <input type="hidden" id="appliedCouponCode" name="CouponCode" />
+                        <div class="summary-row text-red-600 hidden" id="couponDiscountRow">
+                            <span>Giảm giá</span>
+                            <span id="couponDiscount">-0₫</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Tạm tính (@itemCount sản phẩm)</span>
+                            <span id="subtotalDisplay">@subtotal.ToString("N0")₫</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Phí vận chuyển</span>
+                            <span id="shippingFee">@defaultShipping.ToString("N0")₫</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-total">
+                            <span>Tổng cộng</span>
+                            <span id="totalAmount">@defaultTotal.ToString("N0")₫</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-checkout">
+                        @(isEdit ? "Cập nhật đơn hàng" : "Đặt hàng")
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/js/buy.js" asp-append-version="true"></script>
+}

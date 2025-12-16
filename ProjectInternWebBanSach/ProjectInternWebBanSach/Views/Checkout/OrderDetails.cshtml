@@ -1,0 +1,125 @@
+﻿@model ProjectInternWebBanSach.Models.DonHang
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+
+    var items = Model.ChiTietDonHangs?.ToList() ?? new List<ProjectInternWebBanSach.Models.ChiTietDonHang>();
+
+    decimal subtotal = ViewBag.Subtotal ?? 0m;
+    decimal shipping = ViewBag.Shipping ?? 0m;
+    decimal total = ViewBag.Total ?? subtotal;
+    decimal discount = ViewBag.Discount ?? 0m;
+    int itemCount = ViewBag.ItemCount ?? 0;
+}
+
+<link rel="stylesheet" href="~/css/buy.css" asp-append-version="true" />
+
+<div class="max-w-5xl mx-auto px-4 py-8">
+    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+        Chi tiết đơn hàng #@Model.MaDonHang
+    </h1>
+
+    <!-- THÔNG TIN ĐƠN -->
+    <div class="checkout-card mb-6">
+        <h2 class="section-title">Thông tin đơn hàng</h2>
+
+        <div class="text-sm text-gray-700 leading-6">
+            <p><strong>Ngày đặt:</strong> @Model.NgayDat?.ToString("dd/MM/yyyy HH:mm")</p>
+            <p>
+                <strong>Trạng thái:</strong>
+                <span class="status-badge @(Model.TrangThai == "Hoàn thành" ? "status-completed" :
+                                            Model.TrangThai == "Đang giao" ? "status-shipping" :
+                                            Model.TrangThai == "Đang xử lý" ? "status-processing" :
+                                            Model.TrangThai == "Đã hủy" ? "status-cancelled" : "status-pending")">
+                    @Model.TrangThai
+                </span>
+            </p>
+            <p><strong>Địa chỉ giao hàng:</strong> @Model.DiaChiGiao</p>
+        </div>
+    </div>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <div class="checkout-card mb-6">
+        <h2 class="section-title">Sản phẩm trong đơn hàng</h2>
+
+        @foreach (var item in items)
+        {
+            var sach = item.MaSachNavigation;
+            string tenSach = sach?.TieuDe ?? "Sản phẩm";
+            string hinhAnh = sach?.HinhAnh ?? "/img/placeholder.png";
+            int soLuong = item.SoLuong ?? 0;
+            decimal lineTotal = (item.DonGia ?? 0m) * soLuong;
+
+            <div class="order-item">
+                <div class="order-item-image">
+                    <img src="@hinhAnh" alt="@tenSach" />
+                    <span class="order-item-qty">@soLuong</span>
+                </div>
+
+                <div class="order-item-info">
+                    <div class="order-item-name">@tenSach</div>
+                    <div class="order-item-price">@lineTotal.ToString("N0")₫</div>
+
+                    @if (!string.IsNullOrWhiteSpace(item.GhiChu))
+                    {
+                        <p class="text-xs text-gray-500 mt-1">
+                            <strong>Ghi chú:</strong> @item.GhiChu
+                        </p>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- TỔNG KẾT -->
+    <div class="checkout-summary mb-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Tổng kết đơn hàng</h2>
+
+        <div class="summary-row">
+            <span>Tạm tính (@itemCount sản phẩm)</span>
+            <span>@subtotal.ToString("N0")₫</span>
+        </div>
+
+        @if (discount > 0)
+        {
+            <div class="summary-row text-red-600">
+                <span>Giảm giá</span>
+                <span>-@discount.ToString("N0")₫</span>
+            </div>
+        }
+
+        <div class="summary-row">
+            <span>Phí vận chuyển</span>
+            <span>@shipping.ToString("N0")₫</span>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total">
+            <span>Tổng cộng</span>
+            <span>@total.ToString("N0")₫</span>
+        </div>
+    </div>
+
+    <!-- NÚT HÀNH ĐỘNG -->
+    <div class="flex gap-3">
+        <a href="@Url.Action("Manage", "Manage", new { tab = "history" })"
+           class="btn-outline">
+            Quay lại lịch sử đơn hàng
+        </a>
+
+        @if (Model.TrangThai == "Hoàn thành")
+        {
+            <a href="#" class="btn-primary">
+                Đánh giá sản phẩm
+            </a>
+        }
+        else if (Model.TrangThai == "Đang xử lý" || Model.TrangThai == "Chờ xác nhận")
+        {
+            <a href="@Url.Action("EditOrder", "Checkout", new { id = Model.MaDonHang })"
+               class="btn-primary">
+                Sửa đơn
+            </a>
+        }
+    </div>
+</div>

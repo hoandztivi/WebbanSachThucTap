@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+
+</head>
+<body class="bg-gray-50">
+    @using System.Security.Claims
+    @{
+        // Lấy thông tin admin từ Claims
+        var identity = User.Identity as ClaimsIdentity;
+
+        var adminName = identity?.FindFirst(ClaimTypes.Name)?.Value ?? "Admin";
+        var adminEmail = identity?.FindFirst(ClaimTypes.Email)?.Value ?? "admin@example.com";
+
+        var avatarFile = identity?.FindFirst("Avatar")?.Value ?? "default.png";
+        var avatarUrl = Url.Content("~/img/anhdaidien/" + avatarFile);
+    }
+
+    <canvas id="starsCanvas"></canvas>
+    <div id="toast" class="toast"></div>
+
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar"
+               class="w-64 bg-slate-900 text-white transition-transform duration-300 ease-in-out
+              lg:translate-x-0 -translate-x-full fixed lg:static inset-y-0 left-0 z-50
+              flex flex-col">
+            <div class="flex items-center justify-between p-4 border-b border-slate-700">
+                <h1 class="text-xl font-bold text-orange-400">Admin Panel</h1>
+                <button id="closeSidebar" class="lg:hidden text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex-1 overflow-y-auto p-4">
+                <ul class="space-y-2">
+                    <!-- Dashboard -->
+                    <li>
+                        <a href="~/Admin/Dashboard/Index"
+                           class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- Quản lý Sách -->
+                    <li>
+                        <button class="menu-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                                <span>Quản lý Sách</span>
+                            </div>
+                            <svg class="w-4 h-4 transition-transform menu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <ul class="submenu hidden ml-8 mt-2 space-y-2">
+                            <li><a href="~/Admin/BookManagement/CategoryBooks" class="block p-2 rounded-lg hover:bg-slate-800">Thể loại sách</a></li>
+                            <li><a href="~/Admin/BookManagement/ListofBooks" class="block p-2 rounded-lg hover:bg-slate-800">Danh sách sách</a></li>
+                            <li><a href="~/Admin/BookManagement/BookReviews" class="block p-2 rounded-lg hover:bg-slate-800">Đánh giá sách</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Quản lý Người dùng -->
+                    <li>
+                        <button class="menu-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Quản lý Người dùng</span>
+                            </div>
+                            <svg class="w-4 h-4 transition-transform menu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <ul class="submenu hidden ml-8 mt-2 space-y-2">
+                            <li><a href="~/Admin/UserManagement/ListofUsers" class="block p-2 rounded-lg hover:bg-slate-800">Danh sách người dùng</a></li>
+                            <li><a href="~/Admin/UserManagement/Role" class="block p-2 rounded-lg hover:bg-slate-800">Vai trò</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Quản lý Đơn hàng -->
+                    <li>
+                        <a href="~/Admin/OrderManagement/Order"
+                           class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                            <span>Quản lý Đơn hàng</span>
+                        </a>
+                    </li>
+
+                    <!-- Quản lý Nạp tiền -->
+                    <li>
+                        <button class="menu-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Quản lý Nạp tiền</span>
+                            </div>
+                            <svg class="w-4 h-4 transition-transform menu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <ul class="submenu hidden ml-8 mt-2 space-y-2">
+                            <li><a href="~/Admin/RechargeManager/RechargeHistory" class="block p-2 rounded-lg hover:bg-slate-800">Lịch sử nạp tiền</a></li>
+                            <li><a href="~/Admin/RechargeManager/LoginHistory" class="block p-2 rounded-lg hover:bg-slate-800">Lịch sử đăng nhập</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Quản lý Blog-->
+                    <li>
+                        <a href="/Admin/Blog"
+                           class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 20h9M4 4h16v12H4zM4 8h16" />
+                            </svg>
+                            <span>Quản lý Blog</span>
+                        </a>
+                    </li>
+
+                    <!-- Mã giảm giá -->
+                    <li>
+                        <a href="~/Admin/DiscountcodeManager/Discountcode"
+                           class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
+                            </svg>
+                            <span>Mã giảm giá</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="relative p-4 border-t border-slate-700 bg-slate-900">
+                <button id="adminAvatarBtn"
+                        class="w-full flex items-center justify-between gap-3 focus:outline-none">
+                    <div class="flex items-center gap-3">
+                        <img src="@avatarUrl"
+                             alt="Avatar"
+                             class="w-10 h-10 rounded-full border-2 border-orange-400 object-cover cursor-pointer">
+
+                        <div class="hidden md:block text-left">
+                            <p class="text-sm font-medium text-white">@adminName</p>
+                            <p class="text-xs text-slate-300">@adminEmail</p>
+                        </div>
+                    </div>
+
+                    <svg class="w-4 h-4 text-slate-300 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- DROPDOWN MENU -->
+                <div id="adminDropdown"
+                     class="absolute right-4 bottom-14 w-48 bg-white rounded-md shadow-lg border border-gray-200 hidden z-50">
+
+                    <a href="~/Admin/Dashboard/Profile"
+                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Hồ sơ cá nhân
+                    </a>
+
+                    <form method="post"
+                          action="/Admin/Auth/Logout"
+                          class="border-t border-gray-200">
+                        @Html.AntiForgeryToken()
+                        <button type="submit"
+                                class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100">
+                            Đăng xuất
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </aside>
+            <!-- Page Content -->
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 p-6">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
+
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

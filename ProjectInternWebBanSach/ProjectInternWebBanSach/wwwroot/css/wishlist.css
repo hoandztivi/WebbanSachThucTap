@@ -1,0 +1,32 @@
+﻿/* Hover scale animation for product card */
+.wishlist-card {
+    transition: transform .2s, box-shadow .2s;
+}
+
+    .wishlist-card:hover {
+        transform: translateY(-3px);
+    }
+
+/* Only if line-clamp plugin not active */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* Nút xóa */
+.remove-btn {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: #ef4444;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+    .remove-btn:hover {
+        background: #fee2e2;
+        color: #dc2626;
+    }

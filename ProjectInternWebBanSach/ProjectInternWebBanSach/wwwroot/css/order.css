@@ -1,0 +1,217 @@
+﻿/* ===== LAYOUT CHUNG ===== */
+.order-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.order-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.order-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.order-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #020617;
+    color: #fff;
+}
+
+/* ===== CARD / TOOLBAR ===== */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.order-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.order-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-meta {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.order-select {
+    border-radius: 999px;
+    border: 1px solid #cbd5f5;
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    outline: none;
+    background: #ffffff;
+}
+
+    .order-select:focus {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a10;
+    }
+
+/* ===== TABLE ===== */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+    .order-table thead {
+        background: #f8fafc;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: #64748b;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .order-table tbody tr {
+        border-top: 1px solid #e2e8f0;
+    }
+
+        .order-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+.order-total {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ===== SELECT TRẠNG THÁI TRONG BẢNG ===== */
+.order-status-select {
+    min-width: 180px;
+    width: fit-content;
+    height: 36px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    background: #ffffff;
+    white-space: nowrap;
+}
+
+    .order-status-select:focus {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a10;
+    }
+
+/* ===== CHI TIẾT SÁCH ===== */
+.order-items-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.order-item-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+}
+
+.order-item-title {
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.order-item-meta {
+    color: #64748b;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 16px 0;
+}
+
+.btn-save-status {
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+    .btn-save-status:hover {
+        background: #e2e8f0;
+    }
+
+.btn-delete-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: 6px;
+}
+
+    .btn-delete-order:hover {
+        background: #fee2e2;
+        border-color: #fecaca;
+        color: #991b1b;
+    }
+
+/* căn giữa hai cột thao tác */
+.order-table td:nth-last-child(2),
+.order-table td:last-child {
+    text-align: center;
+}

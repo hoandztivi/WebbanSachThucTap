@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "Giới Thiệu";
+}
+<link rel="stylesheet" href="@Url.Content("~/css/about.css")">
+
+<div class="about-page">
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+                <img src="~/images/avtv2.jpg" alt="Profile Avatar" class="profile-avatar mx-auto mb-6">
+                <div class="avatar-glow"></div>
+            </div>
+
+            <!-- Name & Verification -->
+            <h1 class="name inline-flex items-center justify-center text-xl">
+                Lê Quí Hoàn
+                <img src="~/images/tichxanh.jpg" alt="Verified" class="verified-check ml-1">
+            </h1>
+
+            <!-- Social Media Buttons -->
+            <div class="social-buttons">
+                <a href="#" class="social-btn facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="social-btn zalo" title="Zalo">
+                    <i class="fas fa-comments"></i>
+                    <span>Zalo</span>
+                </a>
+                <a href="#" class="social-btn instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-btn telegram" title="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="#" class="social-btn github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="content-container">
+            <div class="intro-card">
+                <div class="card-header">
+                    <h2>Giới thiệu bản thân</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="card-content">
+                    <div class="intro-text">
+                        <p class="greeting">
+                            Xin chào! Tôi là <strong>Lê Quí Hoàn</strong>, một developer đầy đam mê với công nghệ và cuộc sống.
+                        </p>
+
+                        <p>
+                            Tôi tạo ra website này với mong muốn chia sẻ những kiến thức, kinh nghiệm và suy nghĩ của bản thân
+                            về các chủ đề mà tôi yêu thích. Từ công nghệ, lập trình đến những câu chuyện đời thường,
+                            tôi hy vọng sẽ mang đến cho bạn những nội dung bổ ích và thú vị.
+                        </p>
+
+                        <div class="highlight-box">
+                            <h3>🎯 Mục tiêu của tôi</h3>
+                            <ul>
+                                <li>Chia sẻ kiến thức và kinh nghiệm thực tế</li>
+                                <li>Kết nối với cộng đồng những người cùng đam mê</li>
+                                <li>Học hỏi và phát triển bản thân mỗi ngày</li>
+                                <li>Tạo ra nội dung chất lượng và có giá trị</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            Nếu bạn có bất kỳ câu hỏi nào hoặc muốn trao đổi về các chủ đề tôi viết,
+                            đừng ngần ngại liên hệ với tôi qua các kênh social media ở trên nhé!
+                        </p>
+
+                        <div class="quote-section">
+                            <blockquote>
+                                "Học hỏi không bao giờ là đủ, chia sẻ mới là cách để kiến thức trở nên vô hạn."
+                            </blockquote>
+                            <cite>- Hoàn Lê</cite>
+                        </div>
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">50</div>
+                            <div class="stat-label">Bài viết</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1000">1000</div>
+                            <div class="stat-label">Lượt xem</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">100</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="content-container">
+            <h2 class="section-title">Kỹ năng & Sở thích</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Lập trình</h3>
+                    <p>Web Development, Unity, Winform App</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Viết lách</h3>
+                    <p>Blog, Content Marketing</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Nhiếp ảnh</h3>
+                    <p>Landscape, Portrait</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Âm nhạc</h3>
+                    <p>Guitar, Piano</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Music Player mini -->
+    <div class="music-controls-wrapper">
+        <div class="music-controls">
+            <button id="musicToggleBtn" type="button" class="mc-btn">
+                🔊 Đang bật
+            </button>
+
+            <button id="volDownBtn" type="button" class="mc-btn">
+                🔉 -
+            </button>
+
+            <button id="volUpBtn" type="button" class="mc-btn">
+                🔊 +
+            </button>
+
+            <span id="volLabel" class="mc-label">40%</span>
+        </div>
+    </div>
+
+    <audio id="bgMusic"></audio>
+</div>
+</div>
+
+<script src="~/js/about.js"></script>

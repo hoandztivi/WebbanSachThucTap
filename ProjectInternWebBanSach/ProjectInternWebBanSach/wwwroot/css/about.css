@@ -1,0 +1,450 @@
+﻿/* ABOUT PAGE – NỀN TRẮNG, PROFILE SECTION GIỮ MÀU CŨ */
+
+/* Có thể giữ đoạn chống xung đột header nếu bạn muốn */
+.about-page ~ * .header,
+.about-page ~ * .navbar,
+.about-page ~ * .logo {
+    all: revert !important;
+}
+
+.about-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 0 3rem;
+    color: #111827;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+    /* ================= PROFILE SECTION================= */
+
+    .about-page .profile-section {
+        text-align: center;
+        padding: 3.5rem 0 2.5rem;
+    }
+
+    .about-page .profile-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .about-page .avatar-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+    }
+
+    /* Avatar */
+    .about-page .profile-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid #00d4ff;
+        object-fit: cover;
+        animation: float 3s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-page .avatar-glow {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #00d4ff, #ff6b9d);
+        filter: blur(20px);
+        opacity: 0.3;
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .about-page .name {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #60a5fa, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+    }
+
+    .about-page .verified-check {
+        width: 24px;
+        height: 24px;
+        filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+    }
+
+    /* Social buttons (giữ màu) */
+    .about-page .social-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2.5rem 0;
+        flex-wrap: wrap;
+    }
+
+    .about-page .social-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        min-width: 120px;
+        justify-content: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+        .about-page .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .about-page .social-btn:hover::before {
+            left: 100%;
+        }
+
+        .about-page .social-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* màu từng nút giữ như cũ */
+        .about-page .social-btn.facebook {
+            background: linear-gradient(45deg, #1877f2, #42a5f5);
+        }
+
+        .about-page .social-btn.zalo {
+            background: linear-gradient(45deg, #0068ff, #42a5f5);
+        }
+
+        .about-page .social-btn.instagram {
+            background: linear-gradient(45deg, #e1306c, #f56040, #ffdc80);
+        }
+
+        .about-page .social-btn.telegram {
+            background: linear-gradient(45deg, #229ed9, #42a5f5);
+        }
+
+        .about-page .social-btn.github {
+            background: linear-gradient(45deg, #333, #666);
+        }
+
+    /* ================= ABOUT CONTENT================= */
+
+    .about-page .about-content {
+        padding: 2rem 0 3rem;
+    }
+
+    .about-page .content-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Card chính */
+    .about-page .intro-card {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 2.5rem 2.5rem 2rem;
+        margin-bottom: 3rem;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .about-page .card-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+        .about-page .card-header h2 {
+            font-size: 2rem;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+    .about-page .header-line {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(45deg, #2563eb, #ec4899);
+        margin: 0 auto;
+        border-radius: 999px;
+    }
+
+    /* Nội dung text */
+    .about-page .intro-text {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
+    }
+
+        .about-page .intro-text p {
+            margin-bottom: 1.5rem;
+        }
+
+    .about-page .greeting {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1.75rem;
+    }
+
+    /* Box mục tiêu */
+    .about-page .highlight-box {
+        background: #e0f2fe;
+        border-left: 4px solid #3b82f6;
+        padding: 1.75rem 1.75rem 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 16px 16px 0;
+    }
+
+        .about-page .highlight-box h3 {
+            color: #1d4ed8;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-page .highlight-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .about-page .highlight-box li {
+            padding: 0.4rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            color: #1f2937;
+        }
+
+            .about-page .highlight-box li::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                color: #2563eb;
+                font-size: 1.2rem;
+            }
+
+    /* Quote */
+    .about-page .quote-section {
+        text-align: center;
+        margin: 2.5rem 0 1rem;
+        padding: 1.8rem 1.5rem;
+        background: #fff7fb;
+        border-radius: 15px;
+        border: 1px solid #f9a8d4;
+    }
+
+        .about-page .quote-section blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #db2777;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-page .quote-section cite {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+    /* Stats */
+    .about-page .stats-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        padding: 1.75rem;
+        background: #f9fafb;
+        border-radius: 15px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .about-page .stat-item {
+        text-align: center;
+    }
+
+    .about-page .stat-number {
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: #2563eb;
+        margin-bottom: 0.4rem;
+    }
+
+    .about-page .stat-label {
+        color: #6b7280;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* ================= SKILLS SECTION ================= */
+
+    .about-page .skills-section {
+        padding: 0 0 3rem;
+    }
+
+    .about-page .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #111827;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-page .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.75rem;
+    }
+
+    .about-page .skill-card {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 1.75rem 1.5rem;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+        transition: all 0.25s ease;
+    }
+
+        .about-page .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+            border-color: #3b82f6;
+        }
+
+        .about-page .skill-card i {
+            font-size: 2.4rem;
+            color: #ec4899;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-page .skill-card h3 {
+            color: #111827;
+            margin-bottom: 0.3rem;
+        }
+
+        .about-page .skill-card p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+/* Animations giữ nguyên */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page .social-buttons {
+        gap: 0.5rem;
+    }
+
+    .about-page .social-btn {
+        min-width: 100px;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .about-page .intro-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-page .stats-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-page .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page .profile-avatar {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-page .social-btn {
+        width: 200px;
+    }
+
+    .about-page .content-container {
+        padding: 0 1rem;
+    }
+}
+.music-controls-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.music-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.mc-btn {
+    border: none;
+    outline: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .mc-btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+    }
+
+.mc-label {
+    font-size: 0.85rem;
+    color: #4b5563;
+    min-width: 40px;
+    text-align: right;
+}

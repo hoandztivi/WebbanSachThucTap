@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Quản lý thể loại sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/categorybooks.css" asp-append-version="true" />
+}
+
+<div class="category-page">
+    <!-- HEADER -->
+    <div class="category-header">
+        <div>
+            <h1 class="category-title">Quản lý thể loại sách</h1>
+            <p class="category-subtitle">
+                Thêm, xoá và xem danh sách thể loại sách trong hệ thống.
+            </p>
+        </div>
+        <span class="category-badge">
+            Admin · Book Management
+        </span>
+    </div>
+
+    <!-- FORM THÊM MỚI -->
+    <div class="card">
+        <h2 class="card-title">Thêm thể loại mới</h2>
+
+        <div class="form-grid">
+            <div>
+                <label class="form-label">
+                    Tên thể loại <span class="text-red-500">*</span>
+                </label>
+                <input id="txtTenTheLoai"
+                       type="text"
+                       class="form-input"
+                       placeholder="Ví dụ: Tiểu thuyết, Sách thiếu nhi..." />
+            </div>
+            <div>
+                <label class="form-label">
+                    Mô tả (tuỳ chọn)
+                </label>
+                <input id="txtMoTa"
+                       type="text"
+                       class="form-input"
+                       placeholder="Mô tả ngắn về thể loại..." />
+            </div>
+        </div>
+
+        <div class="btn-row">
+            <button id="btnReset" type="button" class="btn-secondary">
+                Làm mới
+            </button>
+            <button id="btnCreate" type="button" class="btn-primary">
+                Thêm thể loại
+            </button>
+        </div>
+
+        <p id="messageBox" class="message-inline" style="display:none"></p>
+    </div>
+
+    <!-- DANH SÁCH THỂ LOẠI -->
+    <div class="card">
+        <div class="flex items-center justify-between mb-2">
+            <h2 class="card-title">Danh sách thể loại</h2>
+            <div class="text-xs text-slate-500">
+                Tổng: <span id="totalCount">0</span> thể loại
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="category-table">
+                <thead>
+                    <tr>
+                        <th style="width:80px">Mã</th>
+                        <th>Tên thể loại</th>
+                        <th>Mô tả</th>
+                        <th style="width:120px; text-align:right">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="tblBody">
+                    <!-- JS render -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="emptyState" class="empty-state" style="display:none">
+            Chưa có thể loại nào. Hãy thêm mới ở phía trên.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/categorybooks.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Hồ Sơ Người Dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+
+    var hoTen = ViewBag.FullName as string ?? "Chưa có tên";
+    var email = ViewBag.Email as string ?? "Chưa có email";
+    decimal soDu = ViewBag.SoDu is decimal d ? d : 0m;
+    var soDienThoai = ViewBag.Phone as string ?? "Chưa có số điện thoại";
+    var ngayTao = ViewBag.NgayTao as string ?? "Chưa có thông tin";
+    var accessToken = ViewBag.AccessToken as string ?? "***";
+    var anh = ViewBag.Avatar as string ?? "default.png";
+}
+
+<link rel="stylesheet" href="~/css/profile.css" />
+
+<div class="profile-card">
+    <div class="profile-header">
+        <div class="flex items-center gap-6">
+            <img src="~/img/anhdaidien/@anh" class="profile-avatar" />
+            <div>
+                <h1 class="text-3xl font-bold text-shadow">@hoTen</h1>
+                <p>@email</p>
+            </div>
+        </div>
+
+        <button id="openModal" class="btn-change-password">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Đổi mật khẩu
+        </button>
+    </div>
+
+    <div class="profile-body">
+        <div class="info-grid">
+            <div class="info-item">
+                <label>Họ và tên</label>
+                <input value="@hoTen" readonly />
+            </div>
+
+            <div class="info-item">
+                <label>Email</label>
+                <input value="@email" readonly />
+            </div>
+
+            <div class="info-item">
+                <label>Số điện thoại</label>
+                <input value="@soDienThoai" readonly />
+            </div>
+
+            <div class="info-item highlight">
+                <label>Số dư tài khoản</label>
+                <input value="@soDu.ToString("N0") ₫" readonly />
+            </div>
+
+            <div class="info-item">
+                <label>Ngày tạo tài khoản</label>
+                <input value="@ngayTao" readonly />
+            </div>
+
+            <div class="info-item">
+                <label>Trạng thái</label>
+                <input value="Hoạt động" readonly />
+            </div>
+
+            <div class="info-item token-wrapper">
+                <label>Access Token</label>
+                <textarea id="accessToken" rows="3" readonly>@accessToken</textarea>
+                <button class="btn-copy-token">Sao chép</button>
+            </div>
+        </div>
+
+        <button class="btn-update">Cập nhật thông tin</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Đổi mật khẩu</h2>
+        <button id="closeModal" class="btn-close">×</button>
+
+        <form id="pwdForm" asp-controller="Account" asp-action="ChangePassword" method="post" novalidate>
+            @Html.AntiForgeryToken()
+
+            <div class="form-row">
+                <label>Mật khẩu hiện tại</label>
+                <input type="password" id="CurrentPassword" name="CurrentPassword" required />
+            </div>
+
+            <div class="form-row">
+                <label>Mật khẩu mới</label>
+                <input type="password" id="NewPassword" name="NewPassword" required />
+            </div>
+
+            <div class="form-row">
+                <label>Xác nhận mật khẩu</label>
+                <input type="password" id="ConfirmPassword" name="ConfirmPassword" required />
+            </div>
+
+            <div id="pwdError" class="form-error" style="display:none;"></div>
+
+            <button type="submit" class="btn-submit">Xác nhận đổi mật khẩu</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/profile.js"></script>
+}

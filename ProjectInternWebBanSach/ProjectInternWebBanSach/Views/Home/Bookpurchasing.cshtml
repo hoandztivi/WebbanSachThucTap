@@ -1,0 +1,192 @@
+﻿@{
+    ViewData["Title"] = "Thu mua sách cũ";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/bookpurchasing.css" asp-append-version="true" />
+}
+
+<div class="py-10">
+    <main class="content-container">
+        <h1 class="text-3xl mb-4 text-center font-bold">
+            THU MUA SÁCH CŨ GIÁ CAO
+        </h1>
+
+        <!-- Intro -->
+        <section>
+            <p>
+                Bạn đang sở hữu nhiều sách cũ không còn dùng đến? Kệ sách của bạn quá
+                tải, nhưng lại tiếc khi nghĩ đến việc bán ve chai?
+            </p>
+            <p>
+                Đừng lo. Hãy để <strong>Nhà Sách Storiverse</strong> giúp bạn
+                <strong>"tái sinh" những cuốn sách cũ</strong>, biến chúng thành những
+                giá trị mới —
+                <strong>cho bạn, cho người khác, và cho cả môi trường</strong>.
+            </p>
+            <div class="flex justify-center">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=700&fit=crop"
+                     alt="Thu mua sách cũ"
+                     class="hero-image w-full max-w-2xl" />
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Benefits -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">
+                🌟 Vì sao nên thanh lý sách cũ tại Storiverse?
+            </h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>
+                    <strong>Giá tốt:</strong> Trả giá cao hơn so với bán đồng nát. Có
+                    bảng giá minh bạch.
+                </li>
+                <li>
+                    <strong>Nhận sách tận nơi:</strong> Áp dụng cho đơn từ 100 cuốn trở
+                    lên. Nhanh gọn!
+                </li>
+                <li>
+                    <strong>Đa dạng thể loại:</strong> Thu mua: sách giáo khoa, văn học,
+                    kỹ năng, truyện tranh...
+                </li>
+                <li>
+                    <strong>Hạn chế rác thải:</strong> Góp phần tái sử dụng sách, giảm
+                    thiểu tác động môi trường.
+                </li>
+                <li>
+                    <strong>Có quà tặng:</strong> Tặng voucher hoặc điểm tích lũy khi
+                    thanh lý số lượng lớn.
+                </li>
+                <li>
+                    <strong>Giá trị lan tỏa:</strong> Sách sẽ được góp vào tủ sách từ
+                    thiện cho vùng sâu vùng xa.
+                </li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Process -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">🧭 Quy trình thu mua</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>
+                    <strong>Liên hệ và gửi hình ảnh sách:</strong> Gọi Hotline hoặc
+                    Zalo, Facebook (ảnh chụp bìa sách &amp; thể loại).
+                </li>
+                <li>
+                    <strong>Chúng tôi định giá:</strong> Dựa trên thể loại, số lượng, độ
+                    hiếm, tình trạng sách.
+                </li>
+                <li>
+                    <strong>Thỏa thuận giá và hẹn lịch:</strong> Nếu đạt yêu cầu, sẽ hẹn
+                    lịch nhận sách tại cửa hàng hoặc tận nơi.
+                </li>
+                <li>
+                    <strong>Nhận sách – thanh toán:</strong> Thanh toán bằng tiền mặt
+                    hoặc chuyển khoản ngay tại chỗ.
+                </li>
+                <li>
+                    <strong>Bạn nhận ưu đãi:</strong> Tặng kèm voucher, điểm tích lũy
+                    hoặc phiếu giảm giá.
+                </li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Pricing -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">
+                💰 Bảng giá thu mua tham khảo
+            </h2>
+            <div class="overflow-x-auto rounded-xl ring-1 ring-slate-200">
+                <table class="min-w-full bg-white text-sm">
+                    <thead class="bg-slate-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left font-semibold text-slate-700">
+                                Thể loại sách
+                            </th>
+                            <th class="px-6 py-3 text-left font-semibold text-slate-700">
+                                Giá thu mua (VNĐ/cuốn)
+                            </th>
+                            <th class="px-6 py-3 text-left font-semibold text-slate-700">
+                                Ghi chú
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr>
+                            <td class="px-6 py-4">Truyện tranh (manga)</td>
+                            <td class="px-6 py-4">3.000 – 25.000</td>
+                            <td class="px-6 py-4">Bộ trọn bộ, bản hiếm giá cao hơn</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Tiểu thuyết – văn học</td>
+                            <td class="px-6 py-4">10.000 – 50.000</td>
+                            <td class="px-6 py-4">Bản đầy đủ, không thiếu trang</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Sách kỹ năng, kinh tế</td>
+                            <td class="px-6 py-4">5.000 – 40.000</td>
+                            <td class="px-6 py-4">Best-seller giá cao hơn</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Artbook, sách ảnh</td>
+                            <td class="px-6 py-4">20.000 – 200.000</td>
+                            <td class="px-6 py-4">Có thể thương lượng theo độ hiếm</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Sách ngoại văn</td>
+                            <td class="px-6 py-4">10.000 – 50.000</td>
+                            <td class="px-6 py-4">Ưu tiên tiếng Anh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Map -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">
+                📍 Địa điểm thu mua và tiếp nhận sách cũ
+            </h2>
+            <p class="mb-4">
+                Ghé thăm chúng tôi hoặc liên hệ để được tư vấn và định giá sách ngay!
+            </p>
+
+            <div class="relative rounded-xl overflow-hidden shadow aspect-video">
+                <iframe class="absolute inset-0 w-full h-full border-0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6901694445824!2d105.92918937503076!3d21.005053280638325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a94c1f882977%3A0x6d016e6656923f46!2zSOG7jWMgdmnhu4duIE7DtG5nIE5naGnhu4dwIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1762265801907!5m2!1svi!2s"
+                        allowfullscreen=""
+                        loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- FAQ -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">❓ Câu hỏi thường gặp</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>
+                    <strong>Có cần số lượng lớn mới được thu mua?</strong><br />Không.
+                    Bạn có thể bán từ vài chục cuốn. Thu gom tận nơi chỉ áp dụng từ 100
+                    cuốn.
+                </li>
+                <li>
+                    <strong>Có nhận sách bị rách nhẹ, mực gạch không?</strong><br />Có.
+                    Miễn sách không mốc nặng, không mục nát, không thiếu trang.
+                </li>
+                <li>
+                    <strong>Có nhận truyện tranh cũ xuất bản từ lâu?</strong><br />Rất
+                    hoan nghênh! Các bộ như Doraemon, Conan, Dragon Ball... vẫn được
+                    nhiều người tìm mua.
+                </li>
+            </ul>
+        </section>
+    </main>
+</div>

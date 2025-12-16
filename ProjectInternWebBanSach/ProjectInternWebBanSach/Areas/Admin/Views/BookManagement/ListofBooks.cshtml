@@ -1,0 +1,148 @@
+﻿@using ProjectInternWebBanSach.Models
+@{
+    ViewData["Title"] = "Quản lý danh sách sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+
+    var categories = ViewBag.Categories as List<TheLoaiSach> ?? new List<TheLoaiSach>();
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/listofbooks.css" asp-append-version="true" />
+}
+
+<div class="books-page">
+    <!-- HEADER -->
+    <div class="books-header">
+        <div>
+            <h1 class="books-title">Quản lý danh sách sách</h1>
+            <p class="books-subtitle">
+                Xem và quản lý các đầu sách hiện có trong hệ thống.
+            </p>
+        </div>
+        <span class="books-badge">
+            Admin · Book Management
+        </span>
+    </div>
+
+    <!-- FORM THÊM SÁCH MỚI -->
+    <div class="books-card">
+        <h2 class="books-card-title">Thêm sách mới</h2>
+
+        <div class="book-form-grid">
+            <div class="book-form-group">
+                <label class="book-label">Tiêu đề <span class="text-red-500">*</span></label>
+                <input id="txtTitle" type="text" class="book-input" placeholder="Nhập tên sách...">
+            </div>
+
+            <div class="book-form-group">
+                <label class="book-label">Tác giả</label>
+                <input id="txtAuthor" type="text" class="book-input" placeholder="Tên tác giả...">
+            </div>
+
+            <div class="book-form-group">
+                <label class="book-label">Nhà xuất bản</label>
+                <input id="txtPublisher" type="text" class="book-input" placeholder="Tên NXB...">
+            </div>
+
+            <div class="book-form-group">
+                <label class="book-label">Thể loại <span class="text-red-500">*</span></label>
+                <select id="ddlCategory" class="book-input">
+                    <option value="">-- Chọn thể loại --</option>
+                    @foreach (var c in categories)
+                    {
+                        <option value="@c.MaTheLoai">@c.TenTheLoai</option>
+                    }
+                </select>
+            </div>
+
+            <div class="book-form-group">
+                <label class="book-label">Giá (VND) <span class="text-red-500">*</span></label>
+                <input id="txtPrice" type="number" min="0" step="1000" class="book-input" placeholder="Ví dụ: 350000">
+            </div>
+
+            <div class="book-form-group">
+                <label class="book-label">Giảm giá (VND)</label>
+                <input id="txtDiscount" type="number" min="0" step="1000" class="book-input" placeholder="Ví dụ: 30000">
+            </div>
+
+            <div class="book-form-group">
+                <label class="book-label">Số lượng</label>
+                <input id="txtQuantity" type="number" min="0" step="1" class="book-input" value="0">
+            </div>
+
+            <!-- ẢNH BÌA: chọn file + path readonly -->
+            <div class="book-form-group">
+                <label class="book-label">Ảnh bìa (tuỳ chọn)</label>
+                <input id="fileImage" type="file" accept="image/*" class="book-input" />
+                <input id="txtImage" type="text" class="book-input book-input-path"
+                       placeholder="Đường dẫn ảnh sau khi upload" readonly />
+                <img id="imgPreview" src="" alt="Preview" class="book-thumb-preview" style="display:none;" />
+            </div>
+
+            <div class="book-form-group" style="grid-column: 1 / -1;">
+                <label class="book-label">Mô tả (tuỳ chọn)</label>
+                <textarea id="txtDescription" rows="2" class="book-input" placeholder="Mô tả ngắn về nội dung sách..."></textarea>
+            </div>
+        </div>
+
+        <div class="book-btn-row">
+            <button id="btnResetBook" type="button" class="btn-secondary">
+                Làm mới
+            </button>
+            <button id="btnCreateBook" type="button" class="btn-primary">
+                Thêm sách
+            </button>
+        </div>
+
+        <p id="bookMessage" class="message-inline" style="display:none"></p>
+    </div>
+
+    <!-- DANH SÁCH SÁCH -->
+    <div class="books-card">
+        <div class="books-toolbar">
+            <h2 class="books-card-title">Danh sách sách</h2>
+
+            <div class="flex items-center gap-4">
+                <div class="books-search">
+                    <input id="txtSearch"
+                           type="text"
+                           class="books-input"
+                           placeholder="Tìm theo tên sách, tác giả..." />
+                </div>
+                <div class="books-meta">
+                    Tổng: <span id="totalBooks">0</span> sách
+                </div>
+            </div>
+        </div>
+
+        <div class="books-table-wrapper">
+            <table class="books-table">
+                <thead>
+                    <tr>
+                        <th style="width:60px;">Ảnh</th>
+                        <th style="width:70px;">Mã</th>
+                        <th style="min-width:180px;">Tên sách</th>
+                        <th style="min-width:120px;">Thể loại</th>
+                        <th style="min-width:120px;">Tác giả</th>
+                        <th style="min-width:120px;">NXB</th>
+                        <th style="width:120px;">Giá</th>
+                        <th style="width:90px;">SL</th>
+                        <th style="width:110px;">Ngày tạo</th>
+                        <th style="width:120px; text-align:right;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="tblBooksBody">
+                    <!-- render bằng JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="booksEmpty" class="empty-state" style="display:none;">
+            Chưa có sách nào trong hệ thống.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/listofbooks.js" asp-append-version="true"></script>
+}

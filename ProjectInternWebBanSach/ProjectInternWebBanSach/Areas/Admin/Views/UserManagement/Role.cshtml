@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Quản lý vai trò";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/role.css" asp-append-version="true" />
+}
+
+<div class="role-page">
+    <!-- HEADER -->
+    <div class="role-header">
+        <div>
+            <h1 class="role-title">Quản lý vai trò</h1>
+            <p class="role-subtitle">
+                Thêm, xoá và xem danh sách vai trò (Role) trong hệ thống.
+            </p>
+        </div>
+        <span class="role-badge">
+            Admin · User Management
+        </span>
+    </div>
+
+    <!-- FORM THÊM VAI TRÒ -->
+    <div class="card">
+        <h2 class="card-title">Thêm vai trò mới</h2>
+
+        <div class="form-grid">
+            <div>
+                <label class="form-label">
+                    Tên vai trò <span class="text-red-500">*</span>
+                </label>
+                <input id="txtTenVaiTro"
+                       type="text"
+                       class="form-input"
+                       placeholder="Ví dụ: Admin, Nhân viên, Khách hàng..." />
+            </div>
+            <div>
+                <label class="form-label">
+                    Mô tả (tuỳ chọn)
+                </label>
+                <input id="txtMoTa"
+                       type="text"
+                       class="form-input"
+                       placeholder="Mô tả ngắn về quyền hạn của vai trò..." />
+            </div>
+        </div>
+
+        <div class="btn-row">
+            <button id="btnRoleReset" type="button" class="btn-secondary">
+                Làm mới
+            </button>
+            <button id="btnRoleCreate" type="button" class="btn-primary">
+                Thêm vai trò
+            </button>
+        </div>
+
+        <p id="roleMessage" class="message-inline" style="display:none"></p>
+    </div>
+
+    <!-- DANH SÁCH VAI TRÒ -->
+    <div class="card">
+        <div class="card-header-row">
+            <h2 class="card-title">Danh sách vai trò</h2>
+            <div class="card-meta">
+                Tổng: <span id="totalRoles">0</span> vai trò
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="role-table">
+                <thead>
+                    <tr>
+                        <th style="width:80px">Mã</th>
+                        <th style="min-width:160px;">Tên vai trò</th>
+                        <th>Mô tả</th>
+                        <th style="width:120px; text-align:right;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="tblRolesBody">
+                    <!-- JS render -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="roleEmpty" class="empty-state" style="display:none">
+            Chưa có vai trò nào. Hãy thêm mới ở phía trên.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/role.js" asp-append-version="true"></script>
+}

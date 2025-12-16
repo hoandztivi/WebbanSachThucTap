@@ -1,0 +1,141 @@
+﻿@model ProjectInternWebBanSach.Models.NguoiDung
+@{
+    ViewData["Title"] = "Đăng nhập";
+    var turnstileSiteKey = ViewBag.TurnstileSiteKey as string;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+}
+
+<div class="login-container">
+    <div class="login-card">
+        <!-- Header -->
+        <div class="login-header">
+            <div class="login-logo">
+                <img src="~/images/avtv2.jpg" alt="Logo">
+            </div>
+            <h1 class="login-title">Đăng nhập</h1>
+            <p class="login-subtitle">Chào mừng bạn quay trở lại</p>
+        </div>
+        @if (ViewBag.Error != null)
+        {
+            <p class="text-red-500 text-center mt-2">@ViewBag.Error</p>
+        }
+        <!-- Form -->
+        <form asp-controller="Account" asp-action="Login" method="post" class="login-form" id="loginForm">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email" class="form-label">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                    </svg>
+                    <span>Email</span>
+                </label>
+                <input type="email"
+                       class="form-input"
+                       placeholder="example@email.com"
+                       required
+                       autocomplete="username"
+                       value="@ViewBag.SavedEmail"
+                       asp-for="Email" />
+                <span asp-validation-for="Email" class="validation-message"></span>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password" class="form-label">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    <span>Mật khẩu</span>
+                </label>
+                <div class="password-wrapper">
+                    <input type="password"
+                           class="form-input"
+                           placeholder="••••••••"
+                           required
+                           autocomplete="current-password"
+                           asp-for="MatKhau"
+                           id="password" />
+                    <button type="button" class="password-toggle" id="togglePassword" aria-label="Hiện/ẩn mật khẩu">
+                        <svg class="eye-icon" id="eyeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                        <svg class="eye-icon hidden" id="eyeSlashIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
+                        </svg>
+                    </button>
+                </div>
+                <span asp-validation-for="MatKhau" class="validation-message"></span>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="form-options">
+                <label class="remember-checkbox">
+                    <input type="checkbox" id="rememberMe" name="RememberMe" asp-for="RememberMe" />
+                    <span class="checkbox-label">Ghi nhớ đăng nhập</span>
+                </label>
+                <a href="/account/forgot-password" class="forgot-link">Quên mật khẩu?</a>
+            </div>
+            <!-- Turnstile -->
+            <div class="form-group mt-4">
+                <div class="cf-turnstile"
+                     data-sitekey="@turnstileSiteKey">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">
+                <span>Đăng nhập</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </button>
+        </form>
+        <!-- Divider -->
+        <div class="divider">
+            <span class="divider-text">Hoặc</span>
+        </div>
+
+        <!-- Social Login -->
+        <div class="social-login">
+            <div class="divider">
+                <span class="divider-text">Hoặc đăng ký với</span>
+            </div>
+            <div class="social-buttons">
+                <button type="button" class="social-btn facebook">
+                    <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                    Facebook
+                </button>
+                <button type="button" class="social-btn google">
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path fill="#EA4335" d="M5.26620003,9.76452941 C6.19878754,6.93863203 8.85444915,4.90909091 12,4.90909091 C13.6909091,4.90909091 15.2181818,5.50909091 16.4181818,6.49090909 L19.9090909,3 C17.7818182,1.14545455 15.0545455,0 12,0 C7.27006974,0 3.1977497,2.69829785 1.23999023,6.65002441 L5.26620003,9.76452941 Z" />
+                        <path fill="#34A853" d="M16.0407269,18.0125889 C14.9509167,18.7163016 13.5660892,19.0909091 12,19.0909091 C8.86648613,19.0909091 6.21911939,17.076871 5.27698177,14.2678769 L1.23746264,17.3349879 C3.19279051,21.2936293 7.26500293,24 12,24 C14.9328362,24 17.7353462,22.9573905 19.834192,20.9995801 L16.0407269,18.0125889 Z" />
+                        <path fill="#4A90E2" d="M19.834192,20.9995801 C22.0291676,18.9520994 23.4545455,15.903663 23.4545455,12 C23.4545455,11.2909091 23.3454545,10.5272727 23.1818182,9.81818182 L12,9.81818182 L12,14.4545455 L18.4363636,14.4545455 C18.1187732,16.013626 17.2662994,17.2212117 16.0407269,18.0125889 L19.834192,20.9995801 Z" />
+                        <path fill="#FBBC05" d="M5.27698177,14.2678769 C5.03832634,13.556323 4.90909091,12.7937589 4.90909091,12 C4.90909091,11.2182781 5.03443647,10.4668121 5.26620003,9.76452941 L1.23999023,6.65002441 C0.43658717,8.26043162 0,10.0753848 0,12 C0,13.9195484 0.444780743,15.7301709 1.23746264,17.3349879 L5.27698177,14.2678769 Z" />
+                    </svg>
+                    Google
+                </button>
+            </div>
+        </div>
+
+        <!-- Register Link -->
+        <div class="register-link">
+            <span>Chưa có tài khoản?</span>
+            <a href="~/Account/Register">Đăng ký ngay</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="~/js/login.js" asp-append-version="true"></script>
+}

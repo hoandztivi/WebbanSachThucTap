@@ -1,0 +1,31 @@
+﻿.divider {
+    width: 90%;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 25px auto;
+}
+
+.content-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-image {
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 25px 0;
+    transition: transform 0.3s ease;
+}
+
+    .hero-image:hover {
+        transform: scale(1.02);
+    }
+
+.gallery img {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+    .gallery img:hover {
+        transform: scale(1.03);
+    }

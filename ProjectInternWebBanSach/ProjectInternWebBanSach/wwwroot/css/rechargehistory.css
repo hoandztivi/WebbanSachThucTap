@@ -1,0 +1,197 @@
+﻿/* ===== LAYOUT CHUNG ===== */
+.recharge-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.recharge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.recharge-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.recharge-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.recharge-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #020617;
+    color: #fff;
+}
+
+/* ===== CARD / TOOLBAR ===== */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.recharge-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.recharge-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recharge-meta {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.recharge-select {
+    border-radius: 999px;
+    border: 1px solid #cbd5f5;
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    outline: none;
+    background: #ffffff;
+}
+
+    .recharge-select:focus {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a10;
+    }
+
+/* ===== TABLE ===== */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.recharge-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+    .recharge-table thead {
+        background: #f8fafc;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: #64748b;
+    }
+
+    .recharge-table th,
+    .recharge-table td {
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .recharge-table tbody tr {
+        border-top: 1px solid #e2e8f0;
+    }
+
+        .recharge-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+/* ===== EMPTY ===== */
+.empty-state {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 16px 0;
+}
+
+/* ===== TRẠNG THÁI===== */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fefce8;
+    color: #854d0e;
+    border: 1px solid #facc15;
+}
+
+.status-success {
+    background: #ecfdf5;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.status-refund {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+/* ===== NÚT CHUYỂN TRẠNG THÁI ===== */
+
+.btn-status-row {
+    display: inline-flex;
+    gap: 6px;
+}
+
+.btn-set-pending {
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+    .btn-set-pending:hover {
+        background: #e2e8f0;
+    }
+
+.btn-set-success {
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+    .btn-set-success:hover {
+        background: #bbf7d0;
+    }
+
+/* căn giữa cột nút */
+.recharge-table td:last-child {
+    text-align: center;
+}

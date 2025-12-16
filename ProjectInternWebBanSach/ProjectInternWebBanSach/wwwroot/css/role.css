@@ -1,0 +1,209 @@
+﻿.role-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.role-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.role-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.role-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #020617;
+    color: #fff;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-meta {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+    gap: 12px;
+}
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.form-input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+    padding: 8px 10px;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+    .form-input:focus {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a10;
+    }
+
+.btn-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn-primary {
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: #020617;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background: #020617ee;
+    }
+
+.btn-secondary {
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    cursor: pointer;
+}
+
+    .btn-secondary:hover {
+        background: #e2e8f0;
+    }
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.role-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+    .role-table thead {
+        background: #f8fafc;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: #64748b;
+    }
+
+    .role-table th,
+    .role-table td {
+        padding: 8px 10px;
+        text-align: left;
+    }
+
+    .role-table tbody tr {
+        border-top: 1px solid #e2e8f0;
+    }
+
+        .role-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+.cell-actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Nút xoá bo tròn đỏ giống Category/ListofBooks */
+.link-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    cursor: pointer;
+}
+
+    .link-danger:hover {
+        background: #fee2e2;
+        border-color: #fecaca;
+        color: #991b1b;
+    }
+
+.empty-state {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 16px 0;
+}
+
+.message-inline {
+    font-size: 0.8125rem;
+    margin-top: 6px;
+}
+
+    .message-inline.success {
+        color: #16a34a;
+    }
+
+    .message-inline.error {
+        color: #dc2626;
+    }

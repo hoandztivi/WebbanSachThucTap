@@ -1,0 +1,126 @@
+﻿/* Cart Item */
+.cart-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb; /* gray-200 */
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+    .cart-item:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        transform: translateY(-1px);
+    }
+
+/* Image */
+.cart-item-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background: #f3f4f6; /* gray-100 */
+}
+
+/* Title – giới hạn 2 dòng */
+.cart-item-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: #111827; /* gray-900 */
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+/* Giá */
+.cart-item-price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #dc2626; /* red-600 */
+}
+
+/* Nút xóa */
+.remove-btn {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: #ef4444; /* red-500 */
+    background: #fef2f2; /* red-50 */
+    border: 1px solid #fecaca; /* red-200 */
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+    .remove-btn:hover {
+        background: #fee2e2; /* red-100 */
+        color: #dc2626; /* red-600 */
+    }
+
+/* Animation khi item mới render */
+.slide-in {
+    animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Empty cart icon animation */
+#emptyCart svg {
+    animation: floatEmptyCart 3s ease-in-out infinite;
+}
+
+@keyframes floatEmptyCart {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Responsive cho layout item nhỏ hơn */
+@media (max-width: 640px) {
+    .cart-item {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 0.75rem;
+    }
+
+    .cart-item-image {
+        width: 100px;
+        height: 133px;
+    }
+
+    .cart-item-title {
+        font-size: 0.875rem;
+    }
+
+    .cart-item-price {
+        font-size: 0.95rem;
+    }
+}
+
+/* In hóa đơn – ẩn nút, form khi in */
+@media print {
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+
+    .cart-item {
+        box-shadow: none !important;
+        transform: none !important;
+    }
+}

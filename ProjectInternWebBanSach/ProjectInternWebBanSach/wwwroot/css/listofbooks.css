@@ -1,0 +1,295 @@
+﻿.books-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.books-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.books-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.books-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #020617;
+    color: #fff;
+}
+
+.books-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+
+.books-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+/* ===== Form thêm sách ===== */
+.book-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .book-form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .book-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.book-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.book-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.book-input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+    padding: 6px 10px;
+    font-size: 0.875rem;
+    outline: none;
+    background-color: #ffffff;
+}
+
+    .book-input:focus {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a10;
+    }
+
+.book-btn-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* ===== Buttons dùng chung ===== */
+.btn-primary {
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: #020617;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background: #020617ee;
+    }
+
+.btn-secondary {
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    cursor: pointer;
+}
+
+    .btn-secondary:hover {
+        background: #e2e8f0;
+    }
+
+/* ===== Bảng sách ===== */
+.books-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.books-search {
+    max-width: 260px;
+    width: 100%;
+}
+
+.books-input {
+    width: 100%;
+    border-radius: 999px;
+    border: 1px solid #cbd5f5;
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+    .books-input:focus {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a10;
+    }
+
+.books-meta {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.books-table-wrapper {
+    overflow-x: auto;
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+    .books-table thead {
+        background: #f8fafc;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: #64748b;
+    }
+
+    .books-table th,
+    .books-table td {
+        padding: 8px 10px;
+        text-align: left;
+    }
+
+    .books-table tbody tr {
+        border-top: 1px solid #e2e8f0;
+    }
+
+        .books-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+.cell-actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Thumbnail ảnh sách */
+.book-thumb {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Nút Xoá – pill đỏ */
+.link-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+    .link-danger:hover {
+        background: #fee2e2;
+        border-color: #fecaca;
+        color: #991b1b;
+    }
+
+/* Tag thể loại */
+.tag-category {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.empty-state {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 16px 0;
+}
+
+.price {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.price-discount {
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-left: 4px;
+}
+
+.message-inline {
+    font-size: 0.8125rem;
+    margin-top: 6px;
+}
+
+    .message-inline.success {
+        color: #16a34a;
+    }
+
+    .message-inline.error {
+        color: #dc2626;
+    }
+.book-thumb {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.book-thumb-preview {
+    margin-top: 6px;
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.book-input-path {
+    margin-top: 6px;
+}

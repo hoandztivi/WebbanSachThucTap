@@ -1,0 +1,227 @@
+﻿@{
+    ViewData["Title"] = "Tổng quan";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/index2.css" asp-append-version="true" />
+}
+
+<div class="dashboard-page">
+
+    <!-- Tiêu đề + chào admin -->
+    <div class="dashboard-header">
+        <div class="dashboard-header-left">
+            <h1 class="dashboard-title">Tổng quan hệ thống</h1>
+            <p class="dashboard-subtitle">
+                Chào mừng bạn quay lại trang quản trị Bookstore. Dưới đây là thống kê nhanh hôm nay.
+            </p>
+        </div>
+
+        <div class="dashboard-status-box">
+            <div class="status-icon">
+                <svg class="status-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <div class="status-text">
+                <p class="status-label">Trạng thái hệ thống</p>
+                <p class="status-value">Hoạt động ổn định</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4 thẻ thống kê nhanh -->
+    <div class="stats-grid">
+        <!-- Doanh thu hôm nay -->
+        <div class="stat-card stat-card--revenue">
+            <div class="stat-card-header">
+                <div>
+                    <p class="stat-label">Doanh thu hôm nay</p>
+                    <p class="stat-value">
+                        @String.Format("{0:N0} đ", ViewBag.TodayRevenue ?? 0m)
+                    </p>
+                </div>
+                <div class="stat-icon-wrapper stat-icon-wrapper--orange">
+                    <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V4m0 12v2m8-8a8 8 0 11-16 0 8 8 0 0116 0z" />
+                    </svg>
+                </div>
+            </div>
+            <p class="stat-note stat-note--positive">
+                <span class="dot-online"></span>
+                Tăng @(ViewBag.TodayRevenuePercent ?? 0)% so với hôm qua
+            </p>
+        </div>
+
+        <!-- Đơn hàng mới -->
+        <div class="stat-card stat-card--orders">
+            <div class="stat-card-header">
+                <div>
+                    <p class="stat-label">Đơn hàng mới</p>
+                    <p class="stat-value">
+                        @(ViewBag.TodayOrders ?? 0)
+                    </p>
+                </div>
+                <div class="stat-icon-wrapper stat-icon-wrapper--blue">
+                    <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 6h14M10 17h.01M14 17h.01" />
+                    </svg>
+                </div>
+            </div>
+            <p class="stat-note">
+                Đơn đang chờ xử lý:
+                <span class="text-bold">
+                    @(ViewBag.PendingOrders ?? 0)
+                </span>
+            </p>
+        </div>
+
+        <!-- Người dùng mới -->
+        <div class="stat-card stat-card--users">
+            <div class="stat-card-header">
+                <div>
+                    <p class="stat-label">Người dùng mới</p>
+                    <p class="stat-value">
+                        @(ViewBag.TodayUsers ?? 0)
+                    </p>
+                </div>
+                <div class="stat-icon-wrapper stat-icon-wrapper--green">
+                    <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M5.121 17.804A4 4 0 019 15h6a4 4 0 013.879 2.804M15 11a3 3 0 10-6 0 3 3 0 006 0z" />
+                    </svg>
+                </div>
+            </div>
+            <p class="stat-note">
+                Tổng người dùng:
+                <span class="text-bold">
+                    @(ViewBag.TotalUsers ?? 0)
+                </span>
+            </p>
+        </div>
+
+        <!-- Sách đang bán -->
+        <div class="stat-card stat-card--books">
+            <div class="stat-card-header">
+                <div>
+                    <p class="stat-label">Sách đang bán</p>
+                    <p class="stat-value">
+                        @(ViewBag.TotalBooks ?? 0)
+                    </p>
+                </div>
+                <div class="stat-icon-wrapper stat-icon-wrapper--purple">
+                    <svg class="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+            </div>
+            <p class="stat-note">
+                Hết hàng:
+                <span class="text-bold text-danger">
+                    @(ViewBag.OutOfStockBooks ?? 0)
+                </span> đầu sách
+            </p>
+        </div>
+    </div>
+
+    <!-- 2 cột dưới: đơn gần đây + sách bán chạy -->
+    <div class="bottom-grid">
+        <!-- Đơn hàng gần đây -->
+        <div class="card card--wide">
+            <div class="card-header">
+                <h2 class="card-title">Đơn hàng gần đây</h2>
+                <a href="/Admin/DonHang" class="card-link">Xem tất cả</a>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn</th>
+                            <th>Khách hàng</th>
+                            <th>Ngày tạo</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (ViewBag.RecentOrders != null && ((System.Collections.IEnumerable)ViewBag.RecentOrders).Cast<object>().Any())
+                        {
+                            foreach (var o in ViewBag.RecentOrders)
+                            {
+                                <tr>
+                                    <td>@o.MaDon</td>
+                                    <td>@o.TenKhachHang</td>
+                                    <td>@o.NgayTao.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@String.Format("{0:N0} đ", o.TongTien)</td>
+                                    <td>
+                                        <span class="status-badge
+                                            @(o.TrangThai == "Hoàn thành"
+                                                ? "status-badge--success"
+                                                : o.TrangThai == "Đang xử lý"
+                                                    ? "status-badge--warning"
+                                                    : "status-badge--info")">
+                                            @o.TrangThai
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5" class="table-empty">
+                                    Chưa có dữ liệu đơn hàng gần đây.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sách bán chạy -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Sách bán chạy</h2>
+                <a href="/Admin/Sach" class="card-link">Quản lý sách</a>
+            </div>
+
+            <div class="topbook-list">
+                @if (ViewBag.TopBooks != null && ((System.Collections.IEnumerable)ViewBag.TopBooks).Cast<object>().Any())
+                {
+                    var index = 1;
+                    foreach (var b in ViewBag.TopBooks)
+                    {
+                        <div class="topbook-item">
+                            <div class="topbook-left">
+                                <span class="topbook-rank">@index</span>
+                                <div class="topbook-text">
+                                    <p class="topbook-title">@b.TenSach</p>
+                                    <p class="topbook-sub">
+                                        Đã bán: <span class="text-bold">@b.SoLuongDaBan</span> quyển
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="topbook-price">
+                                @String.Format("{0:N0} đ", b.GiaBan)
+                            </p>
+                        </div>
+                        index++;
+                    }
+                }
+                else
+                {
+                    <p class="table-empty">
+                        Chưa có dữ liệu sách bán chạy.
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

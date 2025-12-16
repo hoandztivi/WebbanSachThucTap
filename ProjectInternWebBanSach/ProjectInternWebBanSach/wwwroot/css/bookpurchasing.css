@@ -1,0 +1,40 @@
+﻿.content-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 40px 16px; /* chỉ giữ khoảng cách, KHÔNG nền, KHÔNG shadow */
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Đường kẻ chia section */
+.divider {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 24px 0;
+}
+
+/* Ảnh hero */
+.hero-image {
+    border-radius: 14px;
+    box-shadow: none; /* bỏ shadow nếu muốn sạch hẳn */
+    margin: 25px 0;
+    transition: transform 0.3s ease;
+}
+
+    .hero-image:hover {
+        transform: scale(1.01);
+    }
+
+/* Bảng */
+table th,
+table td {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Mobile nhỏ hơn thì giảm padding một chút */
+@media (max-width: 640px) {
+    .content-container {
+        padding: 24px 12px;
+    }
+}

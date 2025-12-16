@@ -1,0 +1,235 @@
+﻿/* ================== CARD CƠ BẢN ================== */
+.contact-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    animation: slideInUp 0.5s ease;
+}
+
+    .contact-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transform: translateY(-1px);
+    }
+
+/* ================== SOCIAL LINK ================== */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+    .social-link svg {
+        flex-shrink: 0;
+    }
+
+    .social-link.facebook {
+        background: #1877f2;
+        color: #ffffff;
+    }
+
+        .social-link.facebook:hover {
+            background: #0e63d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+        }
+
+    .social-link.zalo {
+        background: #0068ff;
+        color: #ffffff;
+    }
+
+        .social-link.zalo:hover {
+            background: #0056d6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 104, 255, 0.4);
+        }
+
+    .social-link.youtube {
+        background: #ff0000;
+        color: #ffffff;
+    }
+
+        .social-link.youtube:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+        }
+
+    .social-link.instagram {
+        background: linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100% );
+        color: #ffffff;
+    }
+
+        .social-link.instagram:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(188, 24, 136, 0.4);
+        }
+
+/* ================== FAQ ================== */
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+    .faq-item:hover {
+        border-color: #d97706;
+        box-shadow: 0 2px 8px rgba(217, 119, 6, 0.1);
+    }
+
+    .faq-item[open] {
+        border-color: #d97706;
+    }
+
+.faq-question {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    list-style: none;
+}
+
+    .faq-question::-webkit-details-marker {
+        display: none;
+    }
+
+    .faq-question::after {
+        content: '+';
+        font-size: 1.5rem;
+        color: #d97706;
+        transition: transform 0.2s ease;
+    }
+
+.faq-item[open] .faq-question::after {
+    transform: rotate(45deg);
+}
+
+.faq-question:hover {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.faq-answer {
+    padding: 0 1.25rem 1rem 1.25rem;
+    color: #6b7280;
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease;
+}
+/* Social Icons Container */
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Icon style */
+.social-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+    /* Hover */
+    .social-icon:hover {
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+
+/* Colors */
+.facebook {
+    background: #1877f2;
+}
+
+.twitter {
+    background: #1da1f2;
+}
+
+.instagram {
+    background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+.linkedin {
+    background: #0077b5;
+}
+
+.youtube {
+    background: #ff0000;
+}
+
+.telegram {
+    background: #0088cc;
+}
+
+/* ================== ANIMATION ================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 640px) {
+    .contact-card {
+        padding: 1rem;
+    }
+
+    .social-link {
+        font-size: 0.8125rem;
+        padding: 0.625rem 0.75rem;
+    }
+
+    .faq-question {
+        padding: 0.875rem 1rem;
+        font-size: 0.9375rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem 0.875rem 1rem;
+        font-size: 0.875rem;
+    }
+}

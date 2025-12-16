@@ -1,0 +1,161 @@
+﻿@model IEnumerable<ProjectInternWebBanSach.Models.Sach>
+
+@{
+    ViewData["Title"] = "Kết quả tìm kiếm";
+
+    var keyword = ViewBag.Keyword as string ?? "";
+    int page = ViewBag.Page ?? 1;
+    int totalPages = ViewBag.TotalPages ?? 1;
+    int totalItems = ViewBag.TotalItems ?? 0;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <style>
+        .book-card:hover img {
+            transform: translateY(-4px);
+        }
+    </style>
+}
+
+<div class="container mx-auto px-4 py-10 max-w-7xl">
+
+    <!-- Tiêu đề -->
+    <div class="flex items-center justify-between mb-4">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+            Kết quả tìm kiếm
+        </h1>
+
+        @if (!string.IsNullOrWhiteSpace(keyword))
+        {
+            <span class="text-sm text-gray-500">
+                Từ khóa: <span class="font-semibold text-amber-700">@keyword</span>
+                – Tìm thấy <span class="font-semibold">@totalItems</span> sản phẩm
+            </span>
+        }
+    </div>
+
+    <!-- Ô search -->
+    <form asp-controller="Home" asp-action="Search" method="get" class="flex mb-6 max-w-lg">
+        <input type="text"
+               name="q"
+               value="@keyword"
+               placeholder="Tìm kiếm sản phẩm"
+               class="flex-1 px-4 py-2.5 border border-r-0 border-gray-300 rounded-l-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent" />
+        <button type="submit"
+                class="px-6 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-r-lg transition-colors duration-200">
+            Tìm kiếm
+        </button>
+    </form>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="bg-white border border-gray-200 rounded-xl p-8 text-center">
+            <p class="text-gray-600 mb-3">
+                Không tìm thấy sản phẩm nào phù hợp với từ khóa
+                <span class="font-semibold text-amber-700">"@keyword"</span>.
+            </p>
+            <a asp-controller="Home" asp-action="Index"
+               class="inline-flex items-center gap-2 mt-2 px-4 py-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium transition">
+                Quay lại trang chủ
+            </a>
+        </div>
+    }
+    else
+    {
+        <!-- GRID SÁCH: dùng đúng UI product-card như Index -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+            @foreach (var book in Model)
+            {
+                decimal gia = (decimal)(book.Gia ?? 0m);
+                decimal giam = (decimal)(book.GiamGia ?? 0m);
+                var currentPrice = Math.Max(0m, gia - giam);
+                var showOld = giam > 0m && currentPrice < gia;
+
+                var img = !string.IsNullOrEmpty(book.HinhAnh)
+                ? book.HinhAnh          // đã là /img/sach/xxx.jpg
+                : Url.Content("~/img/sach/no-image.png");
+
+                <div class="product-card">
+                    <a href="@Url.Action("Details", "Products", new { id = book.MaSach })" class="block">
+                        <div class="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+                            @if (giam > 0)
+                            {
+                                <div class="discount-badge">
+                                    @string.Format("-{0:N0}đ", giam)
+                                </div>
+                            }
+                            <img src="@img"
+                                 alt="@book.TieuDe"
+                                 class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                 loading="lazy" />
+                        </div>
+                        <div class="p-3 md:p-4">
+                            <h3 class="title">@book.TieuDe</h3>
+                            <div class="flex items-center gap-2 flex-wrap mt-1">
+                                <span class="price text-red-600 font-bold text-base md:text-lg">
+                                    @string.Format("{0:N0}đ", currentPrice)
+                                </span>
+                                @if (showOld)
+                                {
+                                    <span class="old-price text-gray-400 text-xs md:text-sm line-through">
+                                        @string.Format("{0:N0}đ", gia)
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- PHÂN TRANG -->
+        @if (totalPages > 1)
+        {
+            bool prevDisabled = page <= 1;
+            bool nextDisabled = page >= totalPages;
+
+            string prevClass =
+            "px-3 py-2 rounded border text-sm transition " +
+            (prevDisabled ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
+            : "hover:bg-gray-50 border-gray-300 text-gray-700");
+
+            string nextClass =
+            "px-3 py-2 rounded border text-sm transition " +
+            (nextDisabled ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
+            : "hover:bg-gray-50 border-gray-300 text-gray-700");
+
+            <div class="mt-8 flex items-center justify-center gap-2 select-none">
+
+                <a class="@prevClass"
+                   href="@(prevDisabled ? "#" : Url.Action("Search", "Home", new { q = keyword, page = page - 1 }))">
+                    ‹ Trang trước
+                </a>
+
+                @{
+                    var start = Math.Max(1, page - 2);
+                    var end = Math.Min(totalPages, page + 2);
+
+                    for (int i = start; i <= end; i++)
+                    {
+                        string pageClass =
+                        "px-3 py-2 rounded border text-sm transition " +
+                        (i == page
+                        ? "bg-red-600 text-white border-red-600"
+                        : "hover:bg-gray-50 border-gray-300 text-gray-700");
+
+                        <a class="@pageClass"
+                           href="@(i == page ? "#" : Url.Action("Search", "Home", new { q = keyword, page = i }))">
+                            @i
+                        </a>
+                    }
+                }
+
+                <a class="@nextClass"
+                   href="@(nextDisabled ? "#" : Url.Action("Search", "Home", new { q = keyword, page = page + 1 }))">
+                    Trang sau ›
+                </a>
+            </div>
+        }
+    }
+</div>

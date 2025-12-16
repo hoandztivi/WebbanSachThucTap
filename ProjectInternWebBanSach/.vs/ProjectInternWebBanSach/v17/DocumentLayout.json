@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\areas\\admin\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\areas\\admin\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|d:\\.th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\code\\projectinternwebbansach\\projectinternwebbansach\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3BAA329D-8E95-441C-A97C-22EB2A2371C6}|ProjectInternWebBanSach\\ProjectInternWebBanSach.csproj|solutionrelative:projectinternwebbansach\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T15:01:29.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Areas\\Admin\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:58:28.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Controllers\\CheckoutController.cs",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAJkBAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:44:04.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login.js",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\login.js",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\wwwroot\\js\\login.js",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\wwwroot\\js\\login.js",
+              "RelativeToolTip": "ProjectInternWebBanSach\\wwwroot\\js\\login.js",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-09T13:38:13.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwEIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:30:47.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:28:34.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\Program.cs",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\Program.cs",
+              "RelativeToolTip": "ProjectInternWebBanSach\\Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAADQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:26:57.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjectInternWebBanSach\\appsettings.json",
+              "ToolTip": "D:\\.Th\u1EF1c T\u1EADp Chuy\u00EAn Ng\u00E0nh\\CODE\\ProjectInternWebBanSach\\ProjectInternWebBanSach\\appsettings.json",
+              "RelativeToolTip": "ProjectInternWebBanSach\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-08T23:56:42.453Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

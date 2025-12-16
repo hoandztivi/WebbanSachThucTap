@@ -1,0 +1,296 @@
+﻿@model ProjectInternWebBanSach.Models.Sach
+@{
+    ViewData["Title"] = Model?.TieuDe ?? "Chi tiết sản phẩm";
+
+    string categoryName = ViewBag.CategoryName ?? "Thể loại";
+    int categoryId = ViewBag.CategoryId ?? 0;
+
+    var mainImage = string.IsNullOrWhiteSpace(Model?.HinhAnh) ? "/img/placeholder.png" : Model.HinhAnh;
+
+    decimal price = ViewBag.Price ?? 0m;
+    decimal original = ViewBag.OriginalPrice ?? 0m;
+    decimal saved = ViewBag.SavedAmount ?? 0m;
+    int discountPercent = ViewBag.DiscountPercent ?? 0;
+
+    int reviewCount = ViewBag.ReviewCount ?? 0;
+    double rating = ViewBag.Rating ?? 0d;
+
+    int stock = Model?.SoLuong ?? 0;
+    bool isOutOfStock = stock <= 0;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/details.css" asp-append-version="true" />
+}
+
+<div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Product Details -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 border border-gray-100 rounded-2xl p-5 md:p-6 shadow-sm detail-card bg-white">
+        <!-- Images -->
+        <div class="relative space-y-3">
+            @if (discountPercent > 0)
+            {
+                <div class="ribbon">-@discountPercent%</div>
+            }
+
+            <div class="flex gap-3 mb-1">
+                <img src="@mainImage" alt="@Model?.TieuDe"
+                     class="thumb cursor-pointer hover:shadow-md smooth" />
+            </div>
+
+            <div class="w-full img-frame overflow-hidden bg-white">
+                <div class="aspect-[3/4] w-full">
+                    <img src="@mainImage" alt="@Model?.TieuDe"
+                         class="w-full h-full object-contain" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div class="flex flex-col gap-4">
+            <!-- Tiêu đề + wishlist -->
+            <div class="flex items-start justify-between gap-4">
+                <div class="space-y-2 flex-1">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                        @Model?.TieuDe
+                    </h2>
+                    <p class="text-xs uppercase tracking-wide text-amber-600 font-semibold">
+                        @categoryName
+                    </p>
+                </div>
+
+                <button class="wishlist-btn rounded-full p-2.5 border border-gray-200 text-gray-500 hover:text-red-500 hover:border-red-200 hover:bg-red-50 smooth"
+                        data-id="@Model?.MaSach" title="Thêm vào yêu thích">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Rating + tồn kho -->
+            <div class="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-1">
+                    <div class="flex">
+                        @for (int i = 0; i < 5; i++)
+                        {
+                            bool solid = i < Math.Round(rating);
+                            <svg class="star @(solid ? "text-yellow-400" : "text-gray-300")"
+                                 viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        }
+                    </div>
+                    <span class="font-semibold text-gray-800 ml-1">@rating.ToString("0.0")</span>
+                </div>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">@reviewCount đánh giá</span>
+                <span class="text-gray-400 hidden sm:inline">·</span>
+
+                @if (!isOutOfStock)
+                {
+                    <span class="text-gray-700">
+                        Còn lại:
+                        <span class="font-semibold text-emerald-600">@stock</span>
+                    </span>
+                }
+                else
+                {
+                    <span class="font-semibold text-red-600">
+                        Hết hàng
+                    </span>
+                }
+            </div>
+
+            <!-- Giá -->
+            <div class="price-box">
+                <div class="flex items-baseline gap-3 mb-1">
+                    <span class="current-price">@price.ToString("N0")₫</span>
+                    @if (original > price)
+                    {
+                        <span class="original-price">@original.ToString("N0")₫</span>
+                    }
+                    @if (discountPercent > 0)
+                    {
+                        <span class="discount-pill">-@discountPercent%</span>
+                    }
+                </div>
+                @if (saved > 0)
+                {
+                    <p class="text-xs md:text-sm text-emerald-700 font-medium">
+                        Bạn đã tiết kiệm được <strong>@saved.ToString("N0")₫</strong> so với giá bìa.
+                    </p>
+                }
+            </div>
+
+            <!-- Thông tin cơ bản -->
+            <ul class="flex flex-col gap-1.5 text-sm text-gray-700">
+                @if (!string.IsNullOrWhiteSpace(Model?.TacGia))
+                {
+                    <li><span class="info-label">Tác giả:</span> @Model.TacGia</li>
+                }
+                @if (!string.IsNullOrWhiteSpace(Model?.NhaXuatBan))
+                {
+                    <li><span class="info-label">Nhà xuất bản:</span> @Model.NhaXuatBan</li>
+                }
+                @if (Model?.MaTheLoaiNavigation != null)
+                {
+                    <li><span class="info-label">Thể loại:</span> @Model.MaTheLoaiNavigation.TenTheLoai</li>
+                }
+                @if (!string.IsNullOrWhiteSpace(Model?.MoTa))
+                {
+                    <li class="mt-1">
+                        <span class="info-label">Mô tả:</span>
+                        <span class="inline-block mt-0.5 max-w-prose align-middle text-gray-700 leading-relaxed">
+                            @Model.MoTa
+                        </span>
+                    </li>
+                }
+            </ul>
+
+            <!-- Số lượng -->
+            <div class="flex items-center gap-4 mt-2">
+                <label class="text-sm font-medium text-gray-700">Số lượng</label>
+
+                @if (!isOutOfStock)
+                {
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn"
+                                onclick="decrementQuantity()">
+                            −
+                        </button>
+                        <input type="number" id="quantity" value="1" min="1"
+                               class="qty-input" />
+                        <button type="button" class="qty-btn"
+                                onclick="incrementQuantity()">
+                            +
+                        </button>
+                    </div>
+                }
+                else
+                {
+                    <span class="text-sm text-red-500 italic">
+                        Sản phẩm tạm hết hàng, không thể đặt mua.
+                    </span>
+                }
+            </div>
+
+            <!-- Nút hành động -->
+            <div class="mt-4 space-y-3">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    @if (!isOutOfStock)
+                    {
+                        <!-- Mua ngay -->
+                        <form asp-controller="Checkout"
+                              asp-action="BuyNow"
+                              method="post"
+                              class="flex-1">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="productId" value="@Model.MaSach" />
+                            <input type="hidden" name="quantity" id="buyNowQtyHidden" value="1" />
+
+                            <button type="submit" class="btn-primary w-full">
+                                <span class="btn-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 3h2l.4 2M7 13h10l2-8H5.4M7 13L5.4 5M7 13l-2 7h14l-2-7M10 17h4" />
+                                    </svg>
+                                </span>
+                                <span>Mua ngay</span>
+                                <span class="btn-subtext">Giao nhanh, giữ hàng trong 24h</span>
+                            </button>
+                        </form>
+
+                        <!-- Thêm vào giỏ -->
+                        <button type="button"
+                                class="btn-outline flex-1 add-to-cart-btn"
+                                data-id="@Model.MaSach"
+                                data-qty="1">
+                            <span class="btn-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M3 3h2l.4 2M7 13h10l2-8H5.4M7 13L5.4 5M7 13l-2 7h14l-2-7M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z" />
+                                </svg>
+                            </span>
+                            <span>Thêm vào giỏ</span>
+                        </button>
+                    }
+                    else
+                    {
+                        <!-- Hết hàng: disable toàn bộ -->
+                        <button type="button"
+                                class="btn-primary w-full opacity-60 cursor-not-allowed"
+                                disabled>
+                            <span class="btn-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </span>
+                            <span>Hết hàng</span>
+                        </button>
+                    }
+                </div>
+
+                <!-- Thích / Chia sẻ -->
+                <div class="flex flex-wrap gap-3 text-sm">
+                    <button type="button" class="btn-ghost">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.334a2 2 0 001.336 1.923l1.383.442a2 2 0 002.562-1.715l.453-3.024a2 2 0 00-1.064-2.125L9.5 12.5a.5.5 0 01.5-.5h4.91a2 2 0 001.953-1.293l1.11-2.91A1.5 1.5 0 0014.977 6H12a2 2 0 00-2 2v.333L6 10.333z"></path>
+                        </svg>
+                        Thích 0
+                    </button>
+                    <button type="button" class="btn-ghost">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 12v.01M12 4v.01M20 12v.01M12 20v.01M7.76 7.76l.01.01M16.24 7.76l.01.01M16.24 16.24l.01.01M7.76 16.24l.01.01M8 12a4 4 0 118 0 4 4 0 01-8 0z" />
+                        </svg>
+                        Chia sẻ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review summary -->
+    <section class="mt-8 border border-gray-100 rounded-2xl p-5 md:p-6 shadow-sm bg-white">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div class="space-y-2">
+                <h2 class="text-lg md:text-xl font-bold text-gray-900">Đánh giá & nhận xét</h2>
+                <div class="flex items-center gap-3 text-sm text-gray-600">
+                    <div class="flex items-center gap-1">
+                        <span class="text-2xl font-bold text-amber-500">@rating.ToString("0.0")</span>
+                        <div class="flex">
+                            @for (int i = 0; i < 5; i++)
+                            {
+                                bool solid = i < Math.Round(rating);
+                                <svg class="star @(solid ? "text-yellow-400" : "text-gray-300")"
+                                     viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            }
+                        </div>
+                    </div>
+                    <span class="text-gray-400">·</span>
+                    <span class="text-gray-600">
+                        @reviewCount đánh giá từ khách hàng
+                    </span>
+                </div>
+                <p class="text-xs text-gray-400">
+                    Tính năng viết đánh giá và đặt câu hỏi đang được phát triển. Hiện tại bạn có thể xem thông tin tổng quan về sản phẩm ở trên.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600 max-w-sm">
+                <p class="font-medium text-gray-800 mb-1">Gợi ý</p>
+                <p>
+                    Khi mở tính năng đánh giá, bạn có thể chia sẻ trải nghiệm, hình ảnh thực tế và câu hỏi để giúp những người mua sau lựa chọn dễ dàng hơn.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script src="~/js/details.js" asp-append-version="true"></script>
+}

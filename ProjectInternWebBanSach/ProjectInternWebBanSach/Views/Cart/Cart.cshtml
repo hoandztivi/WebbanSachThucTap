@@ -1,0 +1,253 @@
+﻿@model IEnumerable<ProjectInternWebBanSach.Models.ChiTietGioHang>
+
+@{
+    ViewData["Title"] = "Giỏ hàng của bạn";
+
+    var items = Model?.ToList() ?? new List<ProjectInternWebBanSach.Models.ChiTietGioHang>();
+    var isEmpty = !items.Any();
+
+    // Tách sản phẩm còn hàng / hết hàng dựa vào tồn kho trong bảng Sach
+    var availableItems = items
+        .Where(i => (i.MaSachNavigation?.SoLuong ?? 0) > 0)
+        .ToList();
+
+    var outOfStockItems = items
+        .Where(i => (i.MaSachNavigation?.SoLuong ?? 0) <= 0)
+        .ToList();
+
+    bool hasOutOfStock = outOfStockItems.Any();
+
+    // CHỈ tính tiền cho sản phẩm còn hàng
+    decimal subtotal = availableItems.Sum(i => (i.DonGia ?? 0m) * (i.SoLuong ?? 0));
+    int itemCount = availableItems.Sum(i => i.SoLuong ?? 0);
+    decimal total = subtotal;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/cart.css" asp-append-version="true" />
+}
+
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+            Giỏ hàng của bạn
+        </h1>
+
+        @if (!isEmpty)
+        {
+            <button id="clearCartBtn"
+                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-semibold cursor-pointer">
+                Xóa tất cả
+            </button>
+
+        }
+    </div>
+
+    @if (isEmpty)
+    {
+        <!-- Empty Cart State -->
+        <div id="emptyCart" class="text-center py-16">
+            <svg class="w-24 h-24 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Giỏ hàng trống</h3>
+            <p class="text-gray-500 mb-6">Bạn chưa có sản phẩm nào trong giỏ hàng</p>
+            <a href="/"
+               class="inline-block px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors">
+                🔎 Tiếp tục mua sắm
+            </a>
+        </div>
+    }
+    else
+    {
+        <!-- Cart Content -->
+        <div id="cartContent" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Cart Items -->
+            <div class="lg:col-span-2 space-y-4" id="cartItems">
+                @foreach (var item in items)
+                {
+                    var sach = item.MaSachNavigation;
+                    string tenSach = sach?.TieuDe ?? "Sách mã #" + (item.MaSach?.ToString() ?? "");
+                    string hinhAnh = sach?.HinhAnh ?? "/img/placeholder.png";
+
+                    int soLuong = item.SoLuong ?? 0;
+                    decimal donGia = item.DonGia ?? 0m;
+                    decimal lineTotal = donGia * soLuong;
+                    int stock = sach?.SoLuong ?? 0;
+                    bool outOfStock = stock <= 0;
+
+                    <div class="cart-item slide-in">
+                        <div class="grid grid-cols-[100px_1fr] sm:grid-cols-[120px_1fr] gap-4">
+                            <!-- Image -->
+                            <a asp-controller="Products"
+                               asp-action="Details"
+                               asp-route-id="@item.MaSach"
+                               class="block">
+                                <img src="@hinhAnh"
+                                     alt="@tenSach"
+                                     class="cart-item-image" />
+                            </a>
+
+                            <!-- Info -->
+                            <div class="flex flex-col justify-between">
+                                <div>
+                                    <a asp-controller="Products"
+                                       asp-action="Details"
+                                       asp-route-id="@item.MaSach"
+                                       class="block mb-2">
+                                        <h3 class="cart-item-title hover:text-amber-600 transition-colors">
+                                            @tenSach
+                                        </h3>
+                                    </a>
+
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="cart-item-price">
+                                            @donGia.ToString("N0")₫
+                                        </span>
+
+                                        @if (outOfStock)
+                                        {
+                                            <span class="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-700">
+                                                Hết hàng
+                                            </span>
+                                        }
+                                    </div>
+
+                                    @if (!outOfStock)
+                                    {
+                                        <p class="text-xs text-gray-500">
+                                            Còn lại: <span class="font-semibold text-emerald-600">@stock</span>
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <p class="text-xs text-red-500">
+                                            Sản phẩm đã hết hàng, vui lòng xóa khỏi giỏ để tiếp tục thanh toán.
+                                        </p>
+                                    }
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mt-3">
+                                    <!-- Update quantity -->
+                                    @if (!outOfStock)
+                                    {
+                                        <form asp-controller="Cart"
+                                              asp-action="UpdateQuantity"
+                                              method="post"
+                                              class="flex items-center gap-2 no-print">
+                                            <input type="hidden" name="maChiTiet" value="@item.MaChiTiet" />
+                                            <label class="text-sm text-gray-600 hidden sm:block">
+                                                Số lượng:
+                                            </label>
+                                            <input type="number"
+                                                   name="soLuong"
+                                                   min="1"
+                                                   value="@soLuong"
+                                                   class="w-20 px-3 py-1.5 border border-gray-300 rounded-lg text-center text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent cursor-pointer" />
+                                            <button type="submit"
+                                                    class="px-3 py-1.5 text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 rounded-lg font-medium text-gray-700 cursor-pointer">
+                                                Cập nhật
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <!-- Hết hàng: khóa chỉnh số lượng -->
+                                        <div class="flex items-center gap-2 text-sm text-gray-400 no-print">
+                                            <span class="italic">Không thể cập nhật số lượng (đã hết hàng)</span>
+                                        </div>
+                                    }
+
+                                    <div class="flex items-center justify-between sm:ml-auto w-full sm:w-auto mt-2 sm:mt-0">
+                                        <span class="font-bold text-gray-900 text-base sm:text-lg">
+                                            @lineTotal.ToString("N0")₫
+                                        </span>
+                                        <button class="remove-btn remove-item ml-4"
+                                                data-id="@item.MaChiTiet">
+                                            Xóa
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg border border-gray-200 p-6 lg:sticky lg:top-4">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Tóm tắt đơn hàng</h2>
+
+                    @if (hasOutOfStock)
+                    {
+                        <div class="mb-4 p-3 rounded-lg bg-red-50 border border-red-100 text-sm text-red-700">
+                            Giỏ hàng của bạn đang có sản phẩm đã <strong>hết hàng</strong>.
+                            Vui lòng <span class="font-semibold">xóa các sản phẩm hết hàng</span> để tiếp tục thanh toán.
+                        </div>
+                    }
+
+                    <div class="space-y-3 mb-4 text-sm">
+                        <div class="flex justify-between text-gray-600">
+                            <span>Tạm tính (@itemCount sản phẩm còn hàng)</span>
+                            <span class="font-medium">@subtotal.ToString("N0")₫</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-4 mb-6">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">Tổng cộng</span>
+                            <span class="text-2xl font-bold text-red-600">
+                                @total.ToString("N0")₫
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <form asp-controller="Checkout"
+                          asp-action="Buy"
+                          method="get"
+                          class="mb-3 no-print">
+                        <button type="submit"
+                        @(hasOutOfStock ? "disabled" : "")
+                                class="w-full font-bold py-3 rounded-lg transition-colors cursor-pointer @(
+                                    hasOutOfStock
+                                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                        : "bg-amber-600 hover:bg-amber-700 text-white"
+                                )">
+                            @(hasOutOfStock ? "Không thể thanh toán (có sản phẩm hết hàng)" : "Tiến hành thanh toán")
+                        </button>
+                    </form>
+
+                    <a href="/"
+                       class="block text-center text-amber-600 hover:text-amber-700 font-medium text-sm no-print">
+                        ← Tiếp tục mua sắm
+                    </a>
+
+                    <!-- Trust Badges -->
+                    <div class="mt-6 pt-6 border-t border-gray-200 text-sm text-gray-600 space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            <span>Giao hàng toàn quốc</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            <span>Đổi trả trong 7 ngày</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            <span>Thanh toán an toàn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="~/js/cart.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,592 @@
+﻿@using Microsoft.EntityFrameworkCore
+@using System.Security.Claims
+@inject QuanLyBanSachContext Db
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Bookstore</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-900">
+
+    <canvas id="starsCanvas"></canvas>
+    <!-- Global Toast -->
+    <div id="toast" class="toast"></div>
+
+    <header class="relative z-20 bg-white border-b border-gray-200 shadow-sm">
+        @{
+            var isAuth = User?.Identity?.IsAuthenticated ?? false;
+
+            string avatar = "default.png";
+            string fullName = "Người dùng";
+            decimal soDu = 0;
+
+            if (isAuth)
+            {
+                var idStr = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (int.TryParse(idStr, out var userId))
+                {
+                    // dùng inject DbContext
+                    var u = Db.NguoiDungs
+                    .AsNoTracking()
+                    .FirstOrDefault(x => x.MaNguoiDung == userId);
+                    if (u != null)
+                    {
+                        avatar = string.IsNullOrEmpty(u.AnhDaiDien) ? "default.png" : u.AnhDaiDien;
+                        fullName = string.IsNullOrEmpty(u.HoTen) ? fullName : u.HoTen;
+                        soDu = u.SoDu ?? 0m;
+                    }
+                }
+            }
+        }
+        <div class="max-w-[1400px] mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between py-4 gap-4">
+
+                <!-- LOGO -->
+                <a href="~/Home/Index" class="flex items-center gap-3 group">
+                    <img id="logoImage"
+                         src="~/images/logo1.png"
+                         alt="Logo Sách Hay"
+                         class="w-12 h-12 object-contain transition-opacity duration-500" />
+                    <span class="text-2xl font-bold tracking-wider text-amber-800 group-hover:text-amber-600 transition-colors">
+                        Hoàn Lê
+                    </span>
+                </a>
+
+                <!-- SEARCH -->
+                <div class="w-full lg:flex-1 lg:max-w-md lg:mx-8">
+                    <div class="relative">
+                        <form asp-controller="Home" asp-action="Search" method="get" class="flex w-full">
+                            <input type="text"
+                                   name="q"
+                                   autocomplete="off"
+                                   id="searchInput"
+                                   placeholder="Tìm kiếm sản phẩm"
+                                   class="flex-1 px-4 py-2.5 border border-r-0 border-gray-300 rounded-l-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent" />
+                            <button type="submit"
+                                    class="px-6 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-r-lg transition-colors duration-200">
+                                Tìm kiếm
+                            </button>
+                        </form>
+
+                        <!-- DROPDOWN GỢI Ý -->
+                        <div id="searchSuggestions"
+                             class="hidden absolute left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-40 max-h-80 overflow-y-auto">
+                            <!-- JS sẽ đổ nội dung vào đây -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- USER + WISHLIST + CART + MOBILE MENU -->
+                <div class="flex items-center gap-4">
+
+                    @* ========== USER PC ========== *@
+                    @if (isAuth)
+                    {
+                        <!-- PC menu (CLICK) -->
+                        <div id="userMenuPc" class="relative hidden lg:flex items-center gap-3 text-sm transition-all">
+                            <!-- Nút bấm avatar + info -->
+                            <button id="userTogglePc"
+                                    type="button"
+                                    class="flex items-center gap-3 cursor-pointer focus:outline-none">
+                                <div class="relative">
+                                    <img src="@Url.Content("~/img/anhdaidien/" + avatar)"
+                                         alt="Avatar"
+                                         class="w-10 h-10 object-cover rounded-md border border-gray-300 shadow-sm transition-all duration-300" />
+                                </div>
+                                <div class="flex flex-col leading-tight">
+                                    <span class="font-semibold text-gray-800 text-[15px]">@fullName</span>
+                                    <span class="text-xs text-gray-500">
+                                        Số dư: @soDu.ToString("N0")₫
+                                    </span>
+                                </div>
+                            </button>
+
+                            <!-- Dropdown PC (click mở) -->
+                            <div id="userDropdownPc"
+                                 class="hidden absolute right-0 top-full mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 scale-95 pointer-events-none transition-all duration-300 origin-top-right z-50">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li><a href="~/Account/Profile" class="block px-4 py-2 hover:bg-amber-100 hover:text-amber-700">🧍 Tài khoản</a></li>
+                                    <li><a href="~/Recharge/Recharge" class="block px-4 py-2 hover:bg-amber-100 hover:text-amber-700">💰 Nạp tiền</a></li>
+                                    <li> <a asp-controller="Manage" asp-action="Manage" class="block px-4 py-2 hover:bg-amber-100 hover:text-amber-700 cursor-pointer"> 🛍️ Quản lý</a></li>
+                                    <li>
+                                        <form asp-controller="Account" asp-action="Logout" method="post" class="w-full">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit"
+                                                    class="w-full text-left block px-4 py-2 hover:bg-red-100 hover:text-red-600">
+                                                🚪 Đăng xuất
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        @* ========== USER MOBILE DROPDOWN ========== *@
+                        <div class="relative lg:hidden flex items-center">
+                            <button id="mobileAvatarBtn"
+                                    class="flex flex-col items-start gap-1 focus:outline-none cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <img src="@Url.Content("~/img/anhdaidien/" + avatar)"
+                                         alt="Avatar"
+                                         class="w-9 h-9 object-cover rounded-md border border-gray-300 shadow-sm" />
+                                    <span class="font-semibold text-gray-800 text-sm">@fullName</span>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-[46px]">
+                                    Số dư: @soDu.ToString("N0")₫
+                                </span>
+                            </button>
+
+                            <!-- Dropdown mobile -->
+                            <div id="mobileAvatarMenu"
+                                 class="hidden absolute right-0 top-full mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-50 origin-top-right">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li><a href="~/Account/Profile" class="block px-4 py-2 hover:bg-amber-100 hover:text-amber-700 cursor-pointer">🧍 Tài khoản</a></li>
+                                    <li><a href="~/Recharge/Recharge" class="block px-4 py-2 hover:bg-amber-100 hover:text-amber-700 cursor-pointer">💰 Nạp tiền</a></li>
+                                    <li> <a asp-controller="Manage" asp-action="Manage" class="block px-4 py-2 hover:bg-amber-100 hover:text-amber-700 cursor-pointer"> 🛍️ Quản lý</a></li>
+                                    <li>
+                                        <form asp-controller="Account" asp-action="Logout" method="post" class="w-full">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit"
+                                                    class="w-full text-left block px-4 py-2 hover:bg-red-100 hover:text-red-600 cursor-pointer">
+                                                🚪 Đăng xuất
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        @* CHỈ HIỆN Ở PC KHI CHƯA ĐĂNG NHẬP *@
+                        <div class="hidden lg:flex items-center gap-4 text-sm">
+                            <a href="~/Account/Login" class="flex items-center gap-2 text-gray-700 hover:text-amber-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+                                </svg>
+                                <span>Đăng nhập</span>
+                            </a>
+                            <span class="text-gray-300">|</span>
+                            <a href="~/Account/Register" class="flex items-center gap-2 text-gray-700 hover:text-amber-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                                </svg>
+                                <span>Đăng ký</span>
+                            </a>
+                        </div>
+                    }
+
+                    <!-- WISHLIST -->
+                    <a asp-controller="Wishlist" asp-action="Wishlist" class="relative p-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200">
+                        <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span id="wishlistCount"
+                              class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">0</span>
+                    </a>
+
+                    <!-- CART DESKTOP -->
+                    <a asp-controller="Cart" asp-action="Cart" class="hidden lg:flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                        <div class="relative">
+                            <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                            <span id="cartCountDesktop" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">0</span>
+                        </div>
+                        <div class="text-sm">
+                            <div class="font-semibold text-gray-800">GIỎ HÀNG CỦA BẠN</div>
+                            <div id="cartCount" class="text-gray-500 text-xs">Chưa có sản phẩm</div>
+                        </div>
+                    </a>
+
+                    <!-- CART MOBILE -->
+                    <a asp-controller="Cart" asp-action="Cart" class="lg:hidden relative p-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200">
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span id="cartCountMobile" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">0</span>
+                    </a>
+
+                    <!-- MOBILE MENU TOGGLE -->
+                    <button id="mobileMenuToggle" class="lg:hidden p-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200 cursor-pointer">
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bg-amber-600">
+            <div class="max-w-[1400px] mx-auto px-4">
+                <ul class="hidden lg:flex items-center justify-center text-white text-sm font-medium">
+                    <li id="categoryMenu" class="relative">
+                        <button id="categoryToggle"
+                                type="button"
+                                class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200 flex items-center gap-2 w-full text-left cursor-pointer">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            DANH MỤC SẢN PHẨM
+                            <svg id="arrowIcon" class="w-4 h-4 ml-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        @await Html.PartialAsync("_TheLoaiMenu",
+                                 Context.RequestServices
+                                 .GetService<ProjectInternWebBanSach.Models.QuanLyBanSachContext>()!
+                                 .TheLoaiSaches
+                                 .ToList())
+                    </li>
+                    <li><a asp-controller="Home" asp-action="Index" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">TRANG CHỦ</a></li>
+                    <li><a asp-controller="Home" asp-action="Introduction" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">GIỚI THIỆU</a></li>
+                    <li><a asp-controller="Home" asp-action="Bookpurchasing" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">THU MUA SÁCH CŨ</a></li>
+                    <li><a asp-controller="Home" asp-action="Buycomics" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">MUA TRUYỆN TRANH</a></li>
+                    <li><a asp-controller="Blog" asp-action="BaiViet" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">BLOG</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">LIÊN HỆ</a></li>
+                    <li><a asp-controller="Home" asp-action="Hoanle" class="px-5 py-4 block hover:bg-amber-700 transition-colors duration-200">NGƯỜI PHÁT TRIỂN</a></li>
+                </ul>
+
+                <!-- MOBILE NAV -->
+                <div id="mobileNav" class="lg:hidden hidden">
+                    <ul class="py-2 space-y-1">
+                        <li><a asp-controller="Home" asp-action="Index" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">TRANG CHỦ</a></li>
+
+                        <li class="border-t border-amber-700">
+                            <button id="mobileCategoryToggle"
+                                    type="button"
+                                    class="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-amber-700 transition-colors cursor-pointer">
+                                DANH MỤC SẢN PHẨM
+                                <svg id="mobileArrowIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div id="mobileCategoryDropdown" class="hidden bg-amber-700">
+                                @await Html.PartialAsync("_TheLoaiMenuMobile",
+                                         Context.RequestServices
+                                         .GetService<ProjectInternWebBanSach.Models.QuanLyBanSachContext>()!
+                                         .TheLoaiSaches
+                                         .ToList())
+                            </div>
+                        </li>
+
+                        <li><a asp-controller="Home" asp-action="Introduction" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">GIỚI THIỆU</a></li>
+                        <li><a asp-controller="Products" asp-action="UsedBooks" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">THU MUA SÁCH CŨ</a></li>
+                        <li><a asp-controller="Products" asp-action="Comics" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">MUA TRUYỆN TRANH</a></li>
+                        <li><a asp-controller="Blog" asp-action="Index" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">BLOG</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">LIÊN HỆ</a></li>
+                        <li><a asp-controller="Home" asp-action="Hoanle" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">NGƯỜI PHÁT TRIỂN</a></li>
+
+                        @if (!isAuth)
+                        {
+                            <li class="border-t border-amber-700 mt-2 pt-2">
+                                <a href="/account/login" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="/account/register" class="px-4 py-3 block text-white hover:bg-amber-700 transition-colors duration-200">Đăng ký</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative z-10 flex-1">
+        <div class="container mx-auto px-4 py-8">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="relative z-10 bg-white border-t border-gray-200 mt-auto">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">DỊCH VỤ</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Điều khoản sử dụng</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Hệ thống nhà sách</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Tra cứu đơn hàng</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">HỖ TRỢ</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Chính sách đổi trả - hoàn tiền</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Phương thức vận chuyển</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Phương thức thanh toán</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Chính sách khách hàng mua sỉ</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors">Chính sách khách hàng cho Thư viện - Trường học</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">NHÀ XUẤT BẢN HOÀN LÊ</h3>
+                    <div class="text-sm text-gray-600 space-y-2">
+                        <p><span class="font-semibold text-gray-800">Giám đốc:</span> Lê Quí Hoàn</p>
+                        <p><span class="font-semibold text-gray-800">Địa chỉ:</span> Số 149 Thị trấn Trâu Quỳ, Huyện Gia Lâm, Thành phố Hà Nội</p>
+                        <p><span class="font-semibold text-gray-800">Số điện thoại:</span> <a href="tel:+840325899425" class="hover:text-amber-600 transition-colors">(+84) 0325899425</a></p>
+                        <p><span class="font-semibold text-gray-800">Email:</span> <a href="mailto:hoandztv@gmail.com" class="hover:text-amber-600 transition-colors break-all">hoandztv@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900">KẾT NỐI MẠNG XÃ HỘI</h3>
+                    <div class="flex gap-3 mb-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white hover:bg-red-700 transition-colors" aria-label="YouTube">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-600 flex items-center justify-center text-white hover:opacity-90 transition-opacity" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-900 text-sm">ĐĂNG KÝ NHẬN TIN</h4>
+                        <p class="text-xs text-gray-600 mb-3">Nhập email để nhận tin tức mới nhất về sách và chương trình khuyến mãi.</p>
+                        <form asp-controller="Newsletter" asp-action="Subscribe" method="post" class="flex">
+                            <input type="email"
+                                   name="email"
+                                   placeholder="Nhập email của bạn..."
+                                   required
+                                   class="flex-1 px-3 py-2 text-sm border border-r-0 border-gray-300 rounded-l-lg bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                            <button type="submit"
+                                    class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-r-lg transition-colors duration-200">
+                                ĐĂNG KÝ
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-wrapper mt-8 pt-8 border-t border-gray-200">
+                <div class="footer-inner">
+                    <div class="footer-left">
+                        <img src="~/images/bo-cong-thuong.png" alt="Đã thông báo Bộ Công Thương" class="footer-logo" />
+                        <div class="footer-text">
+                            <p class="footer-title">GIẤY PHÉP THÀNH LẬP NHÀ XUẤT BẢN</p>
+                            <p class="footer-desc">Giấy phép số: 517/GP-BTTTT ngày 6/10/2015 của Bộ Thông tin và Truyền thông</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <p>COPYRIGHTS © 2025 Bản Quyền Bởi <strong>Lê Quí Hoàn</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+            class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center group"
+            aria-label="Back to top">
+        <svg class="w-6 h-6 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        function showToast(message, type = "success") {
+            const toast = document.getElementById("toast");
+            if (!toast) return;
+
+            toast.className = `toast toast--${type} show`;
+            toast.innerHTML = `
+                ${
+                    type === "success"
+                    ? '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>'
+                    : type === "error"
+                    ? '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>'
+                    : '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 110 20 10 10 0 010-20z"/></svg>'
+                }
+                <span>${message}</span>
+            `;
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+        // ====== WISHLIST BADGE ======
+
+        // Cập nhật badge khi vào site
+        fetch('/Wishlist/Count')
+          .then(r => r.json())
+          .then(d => { const el = document.getElementById('wishlistCount'); if (el) el.textContent = d.count || 0; });
+
+        // Click tim để Add
+        document.addEventListener("click", async e => {
+          const btn = e.target.closest(".wishlist-btn");
+          if (!btn) return;
+
+          const id = btn.dataset.id;
+          const res = await fetch(`/Wishlist/Add?id=${encodeURIComponent(id)}`, { method: "POST" });
+          const data = await res.json();
+
+          if (data.login === false) return location.href="/Account/Login";
+
+          const badge = document.getElementById("wishlistCount");
+          if (badge) badge.textContent = data.count ?? 0;
+          if (typeof showToast === 'function') showToast("Đã thêm vào yêu thích", "success");
+        });
+        // ====== CART BADGE ======
+        function updateCartBadge(count) {
+            const d = document.getElementById("cartCountDesktop");
+            const m = document.getElementById("cartCountMobile");
+            const c = document.getElementById("cartCount");
+            if (d) d.textContent = count;
+            if (m) d.textContent = count;
+            if (c) {
+                if (!count || count <= 0) {
+                    c.textContent = "Chưa có sản phẩm";
+                } else if (count === 1) {
+                    c.textContent = "Đang có 1 sản phẩm";
+                } else {
+                    c.textContent = `Đang có ${count} sản phẩm`;
+                }
+            }
+        }
+        // Cập nhật badge khi vào site
+        fetch('/Cart/Count')
+            .then(r => r.json())
+            .then(d => updateCartBadge(d.count || 0));
+
+        // Click nút thêm vào giỏ
+        document.addEventListener("click", async e => {
+            const btn = e.target.closest(".add-to-cart-btn");
+            if (!btn) return;
+
+            const id = btn.dataset.id;
+            const qty = btn.dataset.qty || 1;
+
+            const res = await fetch(`/Cart/Add?id=${encodeURIComponent(id)}&qty=${encodeURIComponent(qty)}`, {
+                method: "POST"
+            });
+            const data = await res.json();
+
+            if (data.login === false) {
+                return location.href = "/Account/Login";
+            }
+
+            updateCartBadge(data.count ?? 0);
+            if (typeof showToast === "function")
+                showToast("Đã thêm vào giỏ hàng", "success");
+        });
+                // ========== AUTOCOMPLETE SEARCH ==========
+        (function () {
+            const input = document.getElementById("searchInput");
+            const box = document.getElementById("searchSuggestions");
+            const form = input ? input.closest("form") : null;
+
+            if (!input || !box) return;
+
+            let timer = null;
+
+            function hideBox() {
+                box.classList.add("hidden");
+                box.innerHTML = "";
+            }
+
+            function showBox() {
+                if (!box.classList.contains("hidden")) return;
+                box.classList.remove("hidden");
+            }
+
+            async function loadSuggestions(query) {
+                if (!query || query.length < 2) {
+                    hideBox();
+                    return;
+                }
+
+                try {
+                    const res = await fetch(`/Home/SearchSuggest?q=${encodeURIComponent(query)}`);
+                    if (!res.ok) return hideBox();
+
+                    const data = await res.json();
+
+                    if (!data || data.length === 0) {
+                        box.innerHTML = `
+                            <div class="px-4 py-3 text-sm text-gray-500">
+                                Không tìm thấy kết quả phù hợp.
+                            </div>`;
+                        showBox();
+                        return;
+                    }
+
+                    box.innerHTML = data.map(item => `
+                        <a href="/Products/Details/${item.id}"
+                           class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-100 transition-colors cursor-pointer">
+                            <div class="w-10 h-14 flex-shrink-0 overflow-hidden rounded border border-gray-200 bg-gray-50">
+                                <img src="${item.image}"
+                                     alt="${item.name}"
+                                     class="w-full h-full object-cover" />
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-800 truncate">${item.name}</p>
+                                <p class="text-xs text-red-600 font-semibold mt-0.5">
+                                    ${item.price.toLocaleString("vi-VN")}₫
+                                </p>
+                            </div>
+                        </a>
+                    `).join("");
+
+                    showBox();
+                } catch (e) {
+                    console.error(e);
+                    hideBox();
+                }
+            }
+
+            // Debounce khi gõ
+            input.addEventListener("input", () => {
+                const value = input.value.trim();
+                clearTimeout(timer);
+                timer = setTimeout(() => loadSuggestions(value), 250);
+            });
+
+            // Enter vẫn submit form bình thường
+            input.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    hideBox();
+                }
+            });
+
+            // Click ngoài thì ẩn
+            document.addEventListener("click", (e) => {
+                const container = box.parentElement;
+                if (!container.contains(e.target)) {
+                    hideBox();
+                }
+            });
+
+            // Focus lại ô thì gọi gợi ý với text hiện tại
+            input.addEventListener("focus", () => {
+                if (input.value.trim().length >= 2) {
+                    loadSuggestions(input.value.trim());
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

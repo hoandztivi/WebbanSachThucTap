@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Quản lý mã giảm giá";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/discountcodes.css" asp-append-version="true" />
+}
+
+<div class="dc-page">
+    <!-- HEADER -->
+    <div class="dc-header">
+        <div>
+            <h1 class="dc-title">Quản lý mã giảm giá</h1>
+            <p class="dc-subtitle">
+                Thêm, chỉnh sửa và theo dõi trạng thái các mã giảm giá trong hệ thống.
+            </p>
+        </div>
+        <span class="dc-badge">
+            Admin · Discount Codes
+        </span>
+    </div>
+
+    <!-- FORM -->
+    <div class="dc-card">
+        <h2 class="dc-card-title">Thêm / chỉnh sửa mã giảm giá</h2>
+
+        <input type="hidden" id="dcId" value="0" />
+
+        <div class="dc-form-grid">
+            <div class="dc-form-group">
+                <label class="dc-label">Mã code <span class="text-red">*</span></label>
+                <input id="dcCode" type="text" class="dc-input" placeholder="VD: BOOK10, WEEKEND50" />
+            </div>
+
+            <div class="dc-form-group">
+                <label class="dc-label">Giá trị giảm <span class="text-red">*</span></label>
+                <input id="dcValue" type="number" class="dc-input" min="0" step="1000" placeholder="VD: 10 (10%) hoặc 30000 (30.000đ)" />
+                <p class="dc-hint">
+                    &bull; Nếu &lt; 100 → hiểu là %, ví dụ 10 = giảm 10% đơn hàng.<br />
+                    &bull; Nếu ≥ 1000 → hiểu là số tiền VNĐ, ví dụ 30000 = giảm 30.000đ.
+                </p>
+            </div>
+
+            <div class="dc-form-group">
+                <label class="dc-label">Ngày bắt đầu</label>
+                <input id="dcStart" type="date" class="dc-input" />
+            </div>
+
+            <div class="dc-form-group">
+                <label class="dc-label">Ngày kết thúc</label>
+                <input id="dcEnd" type="date" class="dc-input" />
+            </div>
+
+            <div class="dc-form-group">
+                <label class="dc-label">Trạng thái</label>
+                <select id="dcActive" class="dc-input">
+                    <option value="true">Đang hoạt động</option>
+                    <option value="false">Tạm tắt</option>
+                </select>
+            </div>
+
+            <div class="dc-form-group" style="grid-column: 1 / -1;">
+                <label class="dc-label">Mô tả</label>
+                <textarea id="dcDesc" rows="2" class="dc-input" placeholder="Giảm 10% cho toàn bộ đơn sách..."></textarea>
+            </div>
+        </div>
+
+        <div class="dc-btn-row">
+            <button type="button" id="btnClear" class="btn-secondary">Làm mới</button>
+            <button type="button" id="btnSave" class="btn-primary">Lưu mã giảm</button>
+        </div>
+
+        <p id="dcMessage" class="dc-message" style="display:none"></p>
+    </div>
+
+    <!-- TABLE -->
+    <div class="dc-card">
+        <div class="dc-toolbar">
+            <h2 class="dc-card-title">Danh sách mã giảm</h2>
+            <div class="dc-meta">
+                Tổng: <span id="dcTotal">0</span> mã
+            </div>
+        </div>
+
+        <div class="dc-table-wrapper">
+            <table class="dc-table">
+                <thead>
+                    <tr>
+                        <th style="width:70px;">Mã</th>
+                        <th style="min-width:160px;">Mô tả</th>
+                        <th style="width:90px;">Giá trị</th>
+                        <th style="width:130px;">Ngày bắt đầu</th>
+                        <th style="width:130px;">Ngày kết thúc</th>
+                        <th style="width:120px;">Trạng thái</th>
+                        <th style="width:140px; text-align:right;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="dcTableBody">
+                    <!-- JS render -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="dcEmpty" class="dc-empty" style="display:none;">
+            Chưa có mã giảm giá nào.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/discountcodes.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,479 @@
+﻿@using System.Security.Claims
+@using ProjectInternWebBanSach.Models
+@model IEnumerable<ProjectInternWebBanSach.Models.LichSuDangNhap>
+@using ProjectInternWebBanSach.DTO;
+
+@{
+    ViewData["Title"] = "Quản lý tài khoản";
+    var hoTen = ViewBag.HoTen as string ?? (User.Identity?.Name ?? "Người dùng");
+    var soDu = ViewBag.SoDu as string ?? "0";
+    var anh = ViewBag.AnhDaiDien as string ?? "default.png";
+
+    decimal tongNap = ViewBag.TotalRecharge ?? 0m;
+    int donThanhCong = ViewBag.OrderSuccess ?? 0;
+    int dangVanChuyen = ViewBag.OrderShipping ?? 0;
+    int tongDon = ViewBag.OrderTotal ?? 0;
+
+    var nap = ViewBag.RechargeHistory as List<LichSuNapTien>
+              ?? new List<LichSuNapTien>();
+    var orders = ViewBag.Orders as List<DonHang>
+                 ?? new List<DonHang>();
+    var shippingOrders = ViewBag.ShippingOrders as List<DonHang>
+                        ?? new List<DonHang>();
+    var balanceHistory = ViewBag.BalanceHistory as List<BalanceChangeDto>
+         ?? new List<BalanceChangeDto>();
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/manage.css" asp-append-version="true" />
+}
+
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Welcome Section -->
+    <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-6 mb-8 text-white shadow-lg">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+            <img src="~/img/anhdaidien/@anh"
+                 alt="Avatar"
+                 class="w-20 h-20 rounded-full border-4 border-white/30 object-cover shadow-lg" />
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-2xl md:text-3xl font-bold mb-2">Xin chào, @hoTen!</h1>
+                <p class="text-amber-50">Chào mừng bạn quay trở lại trang quản lý</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">Tổng nạp tiền</p>
+                    <p class="text-xl font-bold text-gray-900">@tongNap.ToString("N0") ₫</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">Đơn thành công</p>
+                    <p class="text-xl font-bold text-gray-900">@donThanhCong</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">Đang vận chuyển</p>
+                    <p class="text-xl font-bold text-gray-900">@dangVanChuyen</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">Tổng đơn hàng</p>
+                    <p class="text-xl font-bold text-gray-900">@tongDon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="bg-white rounded-xl shadow-md mb-6 overflow-x-auto">
+        <div class="flex border-b border-gray-200 min-w-max">
+            <button class="tab-btn active px-6 py-4 font-medium text-sm whitespace-nowrap" data-tab="recharge">
+                💰 Quản lý nạp tiền
+            </button>
+            <button class="tab-btn px-6 py-4 font-medium text-sm whitespace-nowrap" data-tab="balance">
+                📊 Biến động số dư
+            </button>
+            <button class="tab-btn px-6 py-4 font-medium text-sm whitespace-nowrap" data-tab="shipping">
+                🚚 Đơn đang vận chuyển
+            </button>
+            <button class="tab-btn px-6 py-4 font-medium text-sm whitespace-nowrap" data-tab="history">
+                📦 Lịch sử mua hàng
+            </button>
+            <button class="tab-btn px-6 py-4 font-medium text-sm whitespace-nowrap" data-tab="activity">
+                📝 Nhật ký hoạt động
+            </button>
+        </div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+
+        <!-- Quản lý nạp tiền -->
+        <div class="tab-content active" id="recharge">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <h2 class="text-xl font-bold text-gray-900">Quản lý nạp tiền</h2>
+                <a href="@Url.Action("Recharge", "Recharge")"
+                   class="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    Nạp tiền ngay
+                </a>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-200 text-left text-sm text-gray-500">
+                            <th class="pb-3 font-semibold">Mã giao dịch</th>
+                            <th class="pb-3 font-semibold">Số tiền</th>
+                            <th class="pb-3 font-semibold">Thời gian</th>
+                            <th class="pb-3 font-semibold">Trạng thái</th>
+                            <th class="pb-3 font-semibold">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (!nap.Any())
+                        {
+                            <tr>
+                                <td colspan="5" class="py-12 text-center">
+                                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                    </svg>
+                                    <p class="text-gray-500 font-medium">Chưa có giao dịch nạp tiền</p>
+                                    <p class="text-gray-400 text-sm mt-1">Giao dịch của bạn sẽ hiển thị tại đây</p>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            foreach (var item in nap)
+                            {
+                                <tr class="border-b border-gray-100 text-sm">
+
+                                    <!-- Mã giao dịch -->
+                                    <td class="py-2 font-semibold">
+                                        @(item.MaGiaoDich ?? "__")
+                                    </td>
+
+                                    <!-- Số tiền -->
+                                    <td class="py-2 text-orange-600 font-bold">@item.SoTien.ToString("N0") ₫</td>
+
+                                    <!-- Thời gian -->
+                                    <td class="py-2">@item.NgayTao?.ToString("dd/MM/yyyy HH:mm:ss")</td>
+
+                                    <!-- Trạng thái -->
+                                    <td class="py-2">
+                                        <span class="px-2.5 py-1 rounded-full text-xs font-medium
+                                            @(item.TrangThai == "Hoàn thành" ? "bg-green-100 text-green-700" :
+                                              item.TrangThai == "Chờ duyệt" ? "bg-blue-100 text-blue-700" :
+                                              "bg-yellow-100 text-yellow-700")">
+                                            @item.TrangThai
+                                        </span>
+                                    </td>
+
+                                    <!-- Thao tác -->
+                                    <td class="py-2">
+                                        @if (item.TrangThai == "Chờ thanh toán" || item.TrangThai == "Chờ duyệt")
+                                        {
+                                            <button class="px-3 py-1 text-xs rounded-lg bg-red-100 text-red-700 hover:bg-red-200 cursor-pointer"
+                                                    onclick="cancelRecharge(@item.MaNapTien)">
+                                                Hủy
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-gray-400 text-xs">—</span>
+                                        }
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- Biến động số dư -->
+        <div class="tab-content" id="balance">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Biến động số dư</h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-200 text-left text-sm text-gray-500">
+                            <th class="pb-3 font-semibold">Thời gian</th>
+                            <th class="pb-3 font-semibold">Loại giao dịch</th>
+                            <th class="pb-3 font-semibold">Số tiền</th>
+                            <th class="pb-3 font-semibold">Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (!balanceHistory.Any())
+                        {
+                            <tr>
+                                <td colspan="4" class="py-12 text-center">
+                                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2z" />
+                                    </svg>
+                                    <p class="text-gray-500 font-medium">Chưa có biến động số dư</p>
+                                    <p class="text-gray-400 text-sm mt-1">Lịch sử biến động sẽ hiển thị tại đây</p>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var b in balanceHistory.OrderByDescending(x => x.Time))
+                            {
+                                var isPlus = b.Type == "Nạp tiền" || b.Type == "Hoàn tiền hủy đơn"; // nạp tiền,hoàn tiền = cộng, thanh toán = trừ
+                                <tr class="border-b border-gray-100 text-sm">
+                                    <td class="py-2">@b.Time.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td class="py-2">@b.Type</td>
+                                    <td class="py-2 font-semibold @(isPlus ? "text-emerald-600" : "text-red-600")">
+                                        @(isPlus ? "+" : "-")@b.Amount.ToString("N0") ₫
+                                    </td>
+                                    <td class="py-2 text-gray-500">@b.Note</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Đơn đang vận chuyển -->
+        <div class="tab-content" id="shipping">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Đơn hàng đang vận chuyển</h2>
+
+            @if (!shippingOrders.Any())
+            {
+                <div class="text-center py-12">
+                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                    </svg>
+                    <p class="text-gray-500 font-medium">Không có đơn hàng đang vận chuyển</p>
+                    <p class="text-gray-400 text-sm mt-1">Các đơn hàng đang giao sẽ hiển thị tại đây</p>
+                </div>
+            }
+            else
+            {
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-200 text-left text-sm text-gray-500">
+                                <th class="pb-3 font-semibold">Mã đơn</th>
+                                <th class="pb-3 font-semibold">Ngày đặt</th>
+                                <th class="pb-3 font-semibold">Tổng tiền</th>
+                                <th class="pb-3 font-semibold">Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var o in shippingOrders)
+                            {
+                                <tr class="border-b border-gray-100 text-sm">
+                                    <td class="py-2 font-semibold">#@o.MaDonHang</td>
+                                    <td class="py-2">@o.NgayDat?.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td class="py-2 text-orange-600 font-bold">@((o.TongTien ?? 0m).ToString("N0")) ₫</td>
+                                    <td class="py-2">
+                                        <span class="status-badge status-shipping">@o.TrangThai</span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+
+        <!-- Lịch sử mua hàng -->
+        <div class="tab-content" id="history">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <h2 class="text-xl font-bold text-gray-900">Lịch sử mua hàng</h2>
+                <div class="flex gap-2">
+                    <select id="orderFilter"
+                            class="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        <option value="all">Tất cả đơn hàng</option>
+                        <option value="Chờ xác nhận">Chờ xác nhận</option>
+                        <option value="Đang xử lý">Đang xử lý</option>
+                        <option value="Đang giao">Đang giao</option>
+                        <option value="Hoàn thành">Hoàn thành</option>
+                        <option value="Đã hủy">Đã hủy</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-200 text-left text-sm text-gray-500">
+                            <th class="pb-3 font-semibold">Mã đơn</th>
+                            <th class="pb-3 font-semibold">Ngày đặt</th>
+                            <th class="pb-3 font-semibold">Tổng tiền</th>
+                            <th class="pb-3 font-semibold">Trạng thái</th>
+                            <th class="pb-3 font-semibold">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (orders == null || !orders.Any())
+                        {
+                            <tr>
+                                <td colspan="5" class="py-12 text-center">
+                                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                    </svg>
+                                    <p class="text-gray-500 font-medium">Chưa có đơn hàng nào</p>
+                                    <p class="text-gray-400 text-sm mt-1">Bắt đầu mua sắm ngay hôm nay!</p>
+                                    <a href="@Url.Action("Index", "Home")"
+                                       class="inline-block mt-4 px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
+                                        Khám phá sản phẩm
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var o in orders)
+                            {
+                                <tr class="border-b border-gray-100 text-sm order-row"
+                                    data-status="@o.TrangThai">
+                                    <td class="py-2 font-semibold">@o.MaDonHang</td>
+                                    <td class="py-2">@o.NgayDat?.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td class="py-2 text-orange-600 font-bold">@((o.TongTien ?? 0m).ToString("N0")) ₫</td>
+                                    <td class="py-2">
+                                        <span class="status-badge
+                                            @(o.TrangThai == "Chờ xác nhận" || o.TrangThai == "Chờ thanh toán" ? "status-pending" :
+                                              o.TrangThai == "Đang xử lý" ? "status-processing" :
+                                              o.TrangThai == "Đang giao" ? "status-shipping" :
+                                              o.TrangThai == "Hoàn thành" ? "status-completed" :
+                                              "status-cancelled")">
+                                            @o.TrangThai
+                                        </span>
+                                    </td>
+                                    <td class="py-2">
+                                        <div class="flex flex-wrap items-center gap-2">
+
+                                            @if (o.TrangThai == "Chờ xác nhận"
+                                           || o.TrangThai == "Chờ thanh toán"
+                                           || o.TrangThai == "Đang xử lý")
+                                            {
+                                                <button type="button"
+                                                        class="px-3 py-1 text-xs rounded-lg bg-red-100 text-red-700 hover:bg-red-200 cursor-pointer"
+                                                        onclick="cancelOrder(@o.MaDonHang)">
+                                                    Hủy
+                                                </button>
+
+                                                <a asp-controller="Checkout"
+                                                   asp-action="EditOrder"
+                                                   asp-route-id="@o.MaDonHang"
+                                                   class="px-3 py-1 text-xs rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 cursor-pointer inline-block">
+                                                    Sửa đơn
+                                                </a>
+                                            }
+                                            @if (o.TrangThai == "Hoàn thành")
+                                            {
+                                                <a asp-controller="Checkout"
+                                                   asp-action="OrderDetails"
+                                                   asp-route-id="@o.MaDonHang"
+                                                   asp-fragment="review"
+                                                   class="px-3 py-1 text-xs rounded-lg bg-emerald-100 text-emerald-700 hover:bg-emerald-200 cursor-pointer inline-block">
+                                                    Đánh giá
+                                                </a>
+                                            }
+                                            <a asp-controller="Checkout"
+                                               asp-action="OrderDetails"
+                                               asp-route-id="@o.MaDonHang"
+                                               class="px-3 py-1 text-xs rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 cursor-pointer inline-block">
+                                                Xem
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Nhật ký hoạt động -->
+        <div class="tab-content" id="activity">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Nhật ký hoạt động</h2>
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-200 text-left text-sm text-gray-500">
+                                <th class="pb-3 font-semibold">Thời gian</th>
+                                <th class="pb-3 font-semibold">Địa chỉ IP</th>
+                                <th class="pb-3 font-semibold">Thiết bị</th>
+                                <th class="pb-3 font-semibold">Trình duyệt</th>
+                                <th class="pb-3 font-semibold">Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="border-b border-gray-100 text-sm">
+                                    <td class="py-2">
+                                        @(item.NgayDangNhap?.ToString("dd/MM/yyyy HH:mm:ss") ?? "")
+                                    </td>
+                                    <td class="py-2">
+                                        @item.DiaChiIp
+                                    </td>
+                                    <td class="py-2">
+                                        @item.ThietBi
+                                    </td>
+                                    <td class="py-2">
+                                        @item.TrinhDuyet
+                                    </td>
+                                    <td class="py-2">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            @item.TrangThai
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-12">
+                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <p class="text-gray-500 font-medium">Chưa có hoạt động nào được ghi nhận</p>
+                    <p class="text-gray-400 text-sm mt-1">Các hoạt động đăng nhập của bạn sẽ được lưu lại tại đây</p>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/manage.js" asp-append-version="true"></script>
+}

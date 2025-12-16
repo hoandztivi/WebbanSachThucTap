@@ -1,0 +1,204 @@
+﻿/* ===== QR box ===== */
+.qr-wrapper {
+    width: 260px;
+    height: 260px;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    border: 2px solid #fb923c;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+#qrImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.qr-placeholder {
+    text-align: center;
+    animation: qrPulse 2s ease-in-out infinite;
+}
+
+@keyframes qrPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+}
+
+/* ===== Buttons ===== */
+.btn-orange {
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    background: #f97316; /* orange-500 */
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 16px rgba(249, 115, 22, 0.25);
+}
+
+    .btn-orange:hover {
+        background: #ea580c; /* orange-600 */
+        transform: translateY(-1px);
+        box-shadow: 0 12px 20px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-orange:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(249, 115, 22, 0.25);
+    }
+    /* Nút cam nhỏ hơn */
+    .btn-orange.btn-sm {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+/* Nút xác nhận thanh toán */
+.btn-confirm {
+    padding: 0.45rem 0.9rem;
+    border-radius: 0.75rem;
+    border: 1px solid #22c55e; /* green-500 */
+    background: #ecfdf3;
+    color: #15803d;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+    .btn-confirm:hover {
+        background: #22c55e;
+        color: #fff;
+        border-color: #16a34a;
+        transform: translateY(-1px);
+    }
+
+    .btn-confirm:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+/* ===== Section title ===== */
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+/* ===== Amount input ===== */
+.amount-input {
+    width: 100%;
+    padding: 0.75rem 3.5rem 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 2px solid #e5e7eb;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+    .amount-input:focus {
+        border-color: #f97316;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+    }
+
+/* Ẩn mũi tên number */
+#amountInput::-webkit-inner-spin-button,
+#amountInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#amountInput {
+    -moz-appearance: textfield;
+}
+
+/* VND suffix */
+.amount-suffix {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Quick amount buttons */
+.quick-btn {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+    .quick-btn:hover {
+        background: #fff7ed; /* orange-50 */
+        border-color: #fed7aa; /* orange-200 */
+        color: #ea580c; /* orange-600 */
+    }
+
+/* Gộp card */
+.recharge-card {
+    max-width: 100%;
+}
+
+/* Notes */
+.note-card {
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+.note-blue {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.note-red {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.note-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.note-list {
+    padding-left: 1.1rem;
+}
+
+    .note-list li {
+        list-style: disc;
+        margin-bottom: 0.3rem;
+    }
+
+/* Mobile QR size */
+@media (max-width: 640px) {
+    .qr-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+}

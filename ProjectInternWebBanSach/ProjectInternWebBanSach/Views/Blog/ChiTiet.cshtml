@@ -1,0 +1,16 @@
+﻿@model ProjectInternWebBanSach.Models.BaiViet
+
+<div class="max-w-3xl mx-auto py-10">
+    <h1 class="text-4xl font-bold mb-4">@Model.TieuDe</h1>
+
+    <p class="text-gray-500 mb-6">
+        ✍ @Model.TacGia • @(Model.NgayTao?.ToString("dd/MM/yyyy") ?? "")
+    </p>
+
+    <img src="@Url.Content("~/img/blog/" + Model.HinhAnh)"
+         class="w-full max-w-2xl mx-auto h-72 object-cover rounded-xl shadow mb-6" />
+
+    <div class="prose prose-lg">
+        @Html.Raw(Model.NoiDung)
+    </div>
+</div>

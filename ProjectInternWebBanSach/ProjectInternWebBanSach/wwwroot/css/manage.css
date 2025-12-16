@@ -1,0 +1,288 @@
+﻿/* Tabs Navigation */
+.tab-btn {
+    position: relative;
+    color: #6b7280;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+    .tab-btn:hover {
+        color: #d97706;
+        background-color: #fef3c7;
+    }
+
+    .tab-btn.active {
+        color: #d97706;
+        font-weight: 600;
+        border-bottom-color: #d97706;
+        background-color: #fef3c7;
+    }
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table thead th {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    table tbody tr {
+        border-bottom: 1px solid #e5e7eb;
+        transition: background-color 0.2s;
+    }
+
+        table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+
+    table tbody td {
+        padding: 1rem 0;
+    }
+
+/* Status Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-processing {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-shipping {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.status-completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Activity Timeline */
+.activity-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+    .activity-item::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: #d97706;
+        border-radius: 50%;
+    }
+
+    .activity-item::after {
+        content: '';
+        position: absolute;
+        left: 0.625rem;
+        top: 1.5rem;
+        width: 2px;
+        height: calc(100% - 1rem);
+        background-color: #e5e7eb;
+    }
+
+    .activity-item:last-child::after {
+        display: none;
+    }
+
+/* Responsive */
+@media (max-width: 640px) {
+    table {
+        font-size: 0.875rem;
+    }
+
+        table thead th,
+        table tbody td {
+            padding: 0.75rem 0.5rem;
+        }
+
+    .status-badge {
+        font-size: 0.625rem;
+        padding: 0.125rem 0.5rem;
+    }
+}
+
+/* Order Card for Mobile */
+@media (max-width: 768px) {
+    .order-card {
+        display: block;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .order-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .order-card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .order-card-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.loading-spinner {
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #e5e7eb;
+    border-top-color: #d97706;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.empty-state-icon {
+    width: 4rem;
+    height: 4rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+}
+
+.empty-state-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.empty-state-description {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+/* Transaction Card */
+.transaction-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s;
+}
+
+    .transaction-card:hover {
+        border-color: #d97706;
+        box-shadow: 0 4px 6px -1px rgba(217, 119, 6, 0.1);
+    }
+
+.transaction-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+    .transaction-icon.income {
+        background-color: #d1fae5;
+        color: #065f46;
+    }
+
+    .transaction-icon.expense {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+
+/* Print Styles */
+@media print {
+    .tab-btn,
+    button,
+    a[href] {
+        display: none !important;
+    }
+
+    .tab-content {
+        display: block !important;
+    }
+
+    .bg-gradient-to-r {
+        background: #f59e0b !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
